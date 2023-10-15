@@ -54,7 +54,7 @@
             this.panel1.Controls.Add(this.rjTextBox3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.rjTextBox2);
-            this.panel1.Location = new System.Drawing.Point(378, 119);
+            this.panel1.Location = new System.Drawing.Point(391, 195);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 417);
             this.panel1.TabIndex = 2;
@@ -158,7 +158,7 @@
             this.rjTextBox2.Multiline = false;
             this.rjTextBox2.Name = "rjTextBox2";
             this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
+            this.rjTextBox2.PasswordChar = true;
             this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.rjTextBox2.PlaceholderText = "";
             this.rjTextBox2.Size = new System.Drawing.Size(250, 37);

@@ -8,7 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TaskTracking.PresentationLayer.DAL;
 using TaskTracking.PresentationLayer.DesignForm;
+using TaskTracking.PresentationLayer.Entities;
+using TaskTracking.PresentationLayer.Management.Concrete;
 
 namespace TaskTracking.PresentationLayer
 {
@@ -22,7 +25,7 @@ namespace TaskTracking.PresentationLayer
             SetRoundShape(panel1, 10);
             //BackColor = Color.FromArgb(60, 154, 226);
 
-            CustomCenter customCenter= new CustomCenter();
+            CustomCenter customCenter = new CustomCenter();
 
             customCenter.CenterToolAll(this, panel1);
             customCenter.CenterToolLeft(panel1, pictureBox1);
@@ -52,11 +55,14 @@ namespace TaskTracking.PresentationLayer
 
             dummyLabel = new Label();
             dummyLabel.Size = new Size(0, 0);
-            dummyLabel.Location = new Point(-100, -100); 
+            dummyLabel.Location = new Point(-100, -100);
             this.Controls.Add(dummyLabel);
 
             // Dummy Label'e focus yapmayı sağlar
             dummyLabel.Select();
+
+
+
         }
         private void SetRoundShape(Control control, int radius)
         {
@@ -108,7 +114,25 @@ namespace TaskTracking.PresentationLayer
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
+            EmployeeRepository employeeRepository = new EmployeeRepository();
+            Employee entity = new Employee()
+            {
+                UserName = rjTextBox3.Texts,
+                Password=rjTextBox2.Texts
+            };
+            var verifyData = employeeRepository.VerifyUser(entity);
 
+            if (verifyData!=null)
+            {
+                HomeForm homeForm = new HomeForm();
+                this.Hide();
+                homeForm.Show(this);
+
+            }
+            else
+            {
+                MessageBox.Show("Kullanıcı adı veya şifre yanlış");
+            }
         }
     }
 }
