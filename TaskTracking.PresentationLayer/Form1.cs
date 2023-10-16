@@ -18,6 +18,7 @@ namespace TaskTracking.PresentationLayer
     public partial class Form1 : Form
     {
         private Label dummyLabel;
+        CustomCenter customCenter = new CustomCenter();
 
         public Form1()
         {
@@ -25,13 +26,13 @@ namespace TaskTracking.PresentationLayer
             SetRoundShape(panel1, 10);
             //BackColor = Color.FromArgb(60, 154, 226);
 
-            CustomCenter customCenter = new CustomCenter();
-
             customCenter.CenterToolAll(this, panel1);
             customCenter.CenterToolLeft(panel1, pictureBox1);
             customCenter.CenterToolLeft(panel1, rjTextBox2);
             customCenter.CenterToolLeft(panel1, rjTextBox3);
             customCenter.CenterToolLeft(panel1, rjButton1);
+            customCenter.CenterToolLeft(panel1, label1);
+            customCenter.CenterToolLeft(panel1, label2);
 
         }
 
@@ -118,20 +119,27 @@ namespace TaskTracking.PresentationLayer
             Employee entity = new Employee()
             {
                 UserName = rjTextBox3.Texts,
-                Password=rjTextBox2.Texts
+                Password = rjTextBox2.Texts
             };
             var verifyData = employeeRepository.VerifyUser(entity);
 
-            if (verifyData!=null)
+            if (verifyData != null)
             {
                 HomeForm homeForm = new HomeForm();
                 this.Hide();
                 homeForm.Show(this);
 
             }
+            else if (rjTextBox3.Texts=="Kullanıcı Adı" || rjTextBox2.Texts=="Şifre")
+            {
+                label2.ForeColor = Color.Red;
+                label2.Text = "Lütfen Kullanıcı adı ve şifreyi giriniz";
+                customCenter.CenterToolLeft(panel1, label2);
+            }
             else
             {
-                MessageBox.Show("Kullanıcı adı veya şifre yanlış");
+                label2.Text = "Kullanıcı adı veya şifre yanlış";
+                label2.ForeColor = Color.Red;
             }
         }
     }

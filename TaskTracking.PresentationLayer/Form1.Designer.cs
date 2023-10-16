@@ -34,6 +34,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.rjTextBox3 = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
@@ -47,6 +48,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.rjButton1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -63,7 +65,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(124, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(128, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(168, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -73,7 +75,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(29, 268);
+            this.pictureBox3.Location = new System.Drawing.Point(16, 267);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 37);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -83,7 +85,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(29, 223);
+            this.pictureBox2.Location = new System.Drawing.Point(16, 222);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -94,11 +96,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(154, 178);
+            this.label1.Location = new System.Drawing.Point(161, 169);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "Giriş Yap";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(114, 308);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(204, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Kullanıcı adı veya şifre yanlış";
             // 
             // rjButton1
             // 
@@ -111,7 +124,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(124, 334);
+            this.rjButton1.Location = new System.Drawing.Point(128, 351);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(168, 40);
             this.rjButton1.TabIndex = 9;
@@ -129,7 +142,7 @@
             this.rjTextBox3.BorderSize = 2;
             this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox3.Location = new System.Drawing.Point(87, 223);
+            this.rjTextBox3.Location = new System.Drawing.Point(95, 222);
             this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
             this.rjTextBox3.Multiline = false;
             this.rjTextBox3.Name = "rjTextBox3";
@@ -153,7 +166,7 @@
             this.rjTextBox2.BorderSize = 2;
             this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox2.Location = new System.Drawing.Point(87, 268);
+            this.rjTextBox2.Location = new System.Drawing.Point(95, 267);
             this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.rjTextBox2.Multiline = false;
             this.rjTextBox2.Name = "rjTextBox2";
@@ -199,6 +212,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private CustomControls.RJControls.RJButton rjButton1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

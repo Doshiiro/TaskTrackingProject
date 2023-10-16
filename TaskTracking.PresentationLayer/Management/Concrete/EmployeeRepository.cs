@@ -15,7 +15,6 @@ namespace TaskTracking.PresentationLayer.Management.Concrete
 {
     public class EmployeeRepository : IGenericRepository<Employee>
     {
-        private readonly string ConnectionString = "Data Source = DESKTOP-ONGKPN7; Initial Catalog = TaskTrackingDB; Integrated Security=true; MultipleActiveResultSets=true; TrustServerCertificate=True;";
         public Task Create(Employee entity)
         {
             throw new NotImplementedException();
