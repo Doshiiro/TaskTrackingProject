@@ -104,3 +104,5 @@ C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTra
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\Microsoft.EntityFrameworkCore.Design.xml
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.HomeForm.resources
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\MetroFramework.dll
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\MetroFramework.Fonts.dll

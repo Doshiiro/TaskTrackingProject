@@ -125,9 +125,12 @@ namespace TaskTracking.PresentationLayer
 
             if (verifyData != null)
             {
-                HomeForm homeForm = new HomeForm();
                 this.Hide();
-                homeForm.Show(this);
+
+                HomeForm homeForm = new HomeForm();
+                homeForm.ShowDialog();
+
+                this.Close();
 
             }
             else if (rjTextBox3.Texts=="Kullanıcı Adı" || rjTextBox2.Texts=="Şifre")
@@ -141,6 +144,7 @@ namespace TaskTracking.PresentationLayer
                 label2.Text = "Kullanıcı adı veya şifre yanlış";
                 label2.ForeColor = Color.Red;
             }
+
         }
     }
 }

@@ -11,7 +11,7 @@ using TaskTracking.PresentationLayer.Management.Concrete;
 
 namespace TaskTracking.PresentationLayer
 {
-    public partial class HomeForm : Form
+    public partial class HomeForm : MetroFramework.Forms.MetroForm
     {
         public HomeForm()
         {
@@ -23,5 +23,9 @@ namespace TaskTracking.PresentationLayer
             EmployeeRepository employeeRepository = new EmployeeRepository();
             dataGridView1.DataSource = employeeRepository.GetAll();
         }
+
+        
+
+      
     }
 }

@@ -36,11 +36,21 @@ namespace TaskTracking.PresentationLayer.Management.Concrete
         }
         public Employee VerifyUser(Employee entity)
         {
-            using (var context = new TaskTrackingContext())
+
+            try
             {
-                Employee data = context.Employees.FirstOrDefault(u => u.UserName == entity.UserName && u.Password == entity.Password);
-                return data;
+                using (var context = new TaskTrackingContext())
+                {
+                    Employee data = context.Employees.FirstOrDefault(u => u.UserName == entity.UserName && u.Password == entity.Password);
+                    return data;
+                }
             }
+            catch (Exception)
+            {
+                //veri tabanı kapalı
+                throw;
+            }
+
         }
 
         public Task Update(int id, Employee entity)
