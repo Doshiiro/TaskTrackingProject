@@ -11,7 +11,7 @@ using TaskTracking.PresentationLayer.Management.Concrete;
 
 namespace TaskTracking.PresentationLayer
 {
-    public partial class HomeForm : MetroFramework.Forms.MetroForm
+    public partial class HomeForm : Form
     {
         public HomeForm()
         {
@@ -21,11 +21,60 @@ namespace TaskTracking.PresentationLayer
         private void HomeForm_Load(object sender, EventArgs e)
         {
             EmployeeRepository employeeRepository = new EmployeeRepository();
-            dataGridView1.DataSource = employeeRepository.GetAll();
+        }
+        bool menuExpand = false;
+        private void menuTransition_Tick(object sender, EventArgs e)
+        {
+            if (menuExpand == false)
+            {
+                menuContainer.Height += 10;
+                if (menuContainer.Height >= 228)
+                {
+                    menuTransition.Stop();
+                    menuExpand = true;
+                }
+            }
+            else
+            {
+                menuContainer.Height -= 10;
+                if (menuContainer.Height <= 62)
+                {
+                    menuTransition.Stop();
+                    menuExpand = false;
+                }
+            }
         }
 
-        
+        private void menubtn_Click(object sender, EventArgs e)
+        {
+            menuTransition.Start();
+        }
+        bool sidebarExpand = true;
+        private void sidebartransition_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                sidebar.Width -= 7;
+                if (sidebar.Width <= 55)
+                {
+                    sidebarExpand = false;
+                    sidebartransition.Stop();
+                }
+            }
+            else
+            {
+                sidebar.Width += 7;
+                if (sidebar.Width >=240)
+                {
+                    sidebarExpand = true;
+                    sidebartransition.Stop();
+                }
+            }
+        }
 
-      
+        private void btnHam_Click(object sender, EventArgs e)
+        {
+            sidebartransition.Start();
+        }
     }
 }

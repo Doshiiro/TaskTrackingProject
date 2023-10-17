@@ -26,7 +26,6 @@ namespace TaskTracking.PresentationLayer
             SetRoundShape(panel1, 10);
             //BackColor = Color.FromArgb(60, 154, 226);
 
-            customCenter.CenterToolAll(this, panel1);
             customCenter.CenterToolLeft(panel1, pictureBox1);
             customCenter.CenterToolLeft(panel1, rjTextBox2);
             customCenter.CenterToolLeft(panel1, rjTextBox3);
@@ -145,6 +144,11 @@ namespace TaskTracking.PresentationLayer
                 label2.ForeColor = Color.Red;
             }
 
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
