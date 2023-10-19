@@ -185,12 +185,43 @@
   <ItemGroup>
     <Compile Include="DAL\TaskTrackingContext.cs" />
     <Compile Include="DesignForm\CustomCenter.cs" />
+    <Compile Include="Entities\Dto\DtoEmployee.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCalendar.Designer.cs">
+      <DependentUpon>formCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDashBoard.Designer.cs">
+      <DependentUpon>formDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formSubmenu1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSubmenu1.Designer.cs">
+      <DependentUpon>formSubmenu1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formSubmenu2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSubmenu2.Designer.cs">
+      <DependentUpon>formSubmenu2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formToDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formToDo.Designer.cs">
+      <DependentUpon>formToDo.cs</DependentUpon>
     </Compile>
     <Compile Include="HomeForm.cs">
       <SubType>Form</SubType>
@@ -218,6 +249,21 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCalendar.resx">
+      <DependentUpon>formCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDashBoard.resx">
+      <DependentUpon>formDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSubmenu1.resx">
+      <DependentUpon>formSubmenu1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSubmenu2.resx">
+      <DependentUpon>formSubmenu2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formToDo.resx">
+      <DependentUpon>formToDo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
