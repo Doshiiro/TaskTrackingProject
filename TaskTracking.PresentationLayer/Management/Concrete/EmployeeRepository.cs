@@ -15,14 +15,27 @@ namespace TaskTracking.PresentationLayer.Management.Concrete
 {
     public class EmployeeRepository : IGenericRepository<Employee>
     {
-        public Task Create(Employee entity)
+        public async Task Create(Employee entity)
         {
-            throw new NotImplementedException();
+            using (var context = new TaskTrackingContext())
+            {
+                context.Add(entity);
+                await context.SaveChangesAsync();
+            }
         }
 
-        public Task Delete(int id)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            using (var context = new TaskTrackingContext())
+            {
+                var employee = await context.Employees.FindAsync(id);
+
+                if (employee != null)
+                {
+                    context.Remove(employee);
+                    await context.SaveChangesAsync();
+                }
+            }
         }
 
         public List<Employee> GetAll()

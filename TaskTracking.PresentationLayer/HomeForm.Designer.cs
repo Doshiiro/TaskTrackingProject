@@ -36,20 +36,20 @@
             this.btnHam = new System.Windows.Forms.PictureBox();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.pnDashboard = new ReaLTaiizor.Controls.Panel();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.pnSettings = new ReaLTaiizor.Controls.Panel();
-            this.calenderbtn = new CustomControls.RJControls.RJButton();
             this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new ReaLTaiizor.Controls.Panel();
-            this.menubtn = new CustomControls.RJControls.RJButton();
             this.panel6 = new ReaLTaiizor.Controls.Panel();
-            this.submenu1btn = new CustomControls.RJControls.RJButton();
             this.panel4 = new ReaLTaiizor.Controls.Panel();
-            this.submenu2btn = new CustomControls.RJControls.RJButton();
             this.panel8 = new ReaLTaiizor.Controls.Panel();
-            this.submenu3btn = new CustomControls.RJControls.RJButton();
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.sidebartransition = new System.Windows.Forms.Timer(this.components);
+            this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.calenderbtn = new CustomControls.RJControls.RJButton();
+            this.menubtn = new CustomControls.RJControls.RJButton();
+            this.submenu1btn = new CustomControls.RJControls.RJButton();
+            this.submenu2btn = new CustomControls.RJControls.RJButton();
+            this.submenu3btn = new CustomControls.RJControls.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             this.sidebar.SuspendLayout();
@@ -145,29 +145,6 @@
             this.pnDashboard.TabIndex = 4;
             this.pnDashboard.Text = "panel2";
             // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Image = ((System.Drawing.Image)(resources.GetObject("rjButton1.Image")));
-            this.rjButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rjButton1.Location = new System.Drawing.Point(0, 0);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Padding = new System.Windows.Forms.Padding(0, 0, 80, 0);
-            this.rjButton1.Size = new System.Drawing.Size(240, 62);
-            this.rjButton1.TabIndex = 5;
-            this.rjButton1.Text = "Dashboard";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
-            // 
             // pnSettings
             // 
             this.pnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
@@ -180,29 +157,6 @@
             this.pnSettings.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.pnSettings.TabIndex = 10;
             this.pnSettings.Text = "Settings";
-            // 
-            // calenderbtn
-            // 
-            this.calenderbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.calenderbtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.calenderbtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.calenderbtn.BorderRadius = 0;
-            this.calenderbtn.BorderSize = 0;
-            this.calenderbtn.FlatAppearance.BorderSize = 0;
-            this.calenderbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.calenderbtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.calenderbtn.ForeColor = System.Drawing.Color.White;
-            this.calenderbtn.Image = ((System.Drawing.Image)(resources.GetObject("calenderbtn.Image")));
-            this.calenderbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.calenderbtn.Location = new System.Drawing.Point(-3, -1);
-            this.calenderbtn.Name = "calenderbtn";
-            this.calenderbtn.Padding = new System.Windows.Forms.Padding(2, 0, 100, 0);
-            this.calenderbtn.Size = new System.Drawing.Size(243, 62);
-            this.calenderbtn.TabIndex = 5;
-            this.calenderbtn.Text = "Takvim";
-            this.calenderbtn.TextColor = System.Drawing.Color.White;
-            this.calenderbtn.UseVisualStyleBackColor = false;
-            this.calenderbtn.Click += new System.EventHandler(this.calenderbtn_Click);
             // 
             // menuContainer
             // 
@@ -229,6 +183,101 @@
             this.panel3.TabIndex = 9;
             this.panel3.Text = "panel3";
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.panel6.Controls.Add(this.submenu1btn);
+            this.panel6.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.panel6.Location = new System.Drawing.Point(3, 64);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(5);
+            this.panel6.Size = new System.Drawing.Size(237, 50);
+            this.panel6.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.panel6.TabIndex = 11;
+            this.panel6.Text = "panel6";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.panel4.Controls.Add(this.submenu2btn);
+            this.panel4.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.panel4.Location = new System.Drawing.Point(3, 120);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(5);
+            this.panel4.Size = new System.Drawing.Size(237, 50);
+            this.panel4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.panel4.TabIndex = 12;
+            this.panel4.Text = "panel4";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.panel8.Controls.Add(this.submenu3btn);
+            this.panel8.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.panel8.Location = new System.Drawing.Point(3, 176);
+            this.panel8.Name = "panel8";
+            this.panel8.Padding = new System.Windows.Forms.Padding(5);
+            this.panel8.Size = new System.Drawing.Size(237, 50);
+            this.panel8.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.panel8.TabIndex = 14;
+            this.panel8.Text = "panel8";
+            // 
+            // menuTransition
+            // 
+            this.menuTransition.Interval = 10;
+            this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
+            // 
+            // sidebartransition
+            // 
+            this.sidebartransition.Interval = 10;
+            this.sidebartransition.Tick += new System.EventHandler(this.sidebartransition_Tick);
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 0;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Image = ((System.Drawing.Image)(resources.GetObject("rjButton1.Image")));
+            this.rjButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjButton1.Location = new System.Drawing.Point(0, 0);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Padding = new System.Windows.Forms.Padding(0, 0, 80, 0);
+            this.rjButton1.Size = new System.Drawing.Size(240, 62);
+            this.rjButton1.TabIndex = 5;
+            this.rjButton1.Text = "Dashboard";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
+            // 
+            // calenderbtn
+            // 
+            this.calenderbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.calenderbtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.calenderbtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.calenderbtn.BorderRadius = 0;
+            this.calenderbtn.BorderSize = 0;
+            this.calenderbtn.FlatAppearance.BorderSize = 0;
+            this.calenderbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.calenderbtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calenderbtn.ForeColor = System.Drawing.Color.White;
+            this.calenderbtn.Image = ((System.Drawing.Image)(resources.GetObject("calenderbtn.Image")));
+            this.calenderbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.calenderbtn.Location = new System.Drawing.Point(-3, -1);
+            this.calenderbtn.Name = "calenderbtn";
+            this.calenderbtn.Padding = new System.Windows.Forms.Padding(2, 0, 100, 0);
+            this.calenderbtn.Size = new System.Drawing.Size(243, 62);
+            this.calenderbtn.TabIndex = 5;
+            this.calenderbtn.Text = "Takvim";
+            this.calenderbtn.TextColor = System.Drawing.Color.White;
+            this.calenderbtn.UseVisualStyleBackColor = false;
+            this.calenderbtn.Click += new System.EventHandler(this.calenderbtn_Click);
+            // 
             // menubtn
             // 
             this.menubtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
@@ -251,19 +300,6 @@
             this.menubtn.TextColor = System.Drawing.Color.White;
             this.menubtn.UseVisualStyleBackColor = false;
             this.menubtn.Click += new System.EventHandler(this.menubtn_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.panel6.Controls.Add(this.submenu1btn);
-            this.panel6.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.panel6.Location = new System.Drawing.Point(3, 64);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(5);
-            this.panel6.Size = new System.Drawing.Size(237, 50);
-            this.panel6.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel6.TabIndex = 11;
-            this.panel6.Text = "panel6";
             // 
             // submenu1btn
             // 
@@ -288,19 +324,6 @@
             this.submenu1btn.UseVisualStyleBackColor = false;
             this.submenu1btn.Click += new System.EventHandler(this.submenu1btn_Click);
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.panel4.Controls.Add(this.submenu2btn);
-            this.panel4.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.panel4.Location = new System.Drawing.Point(3, 120);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(5);
-            this.panel4.Size = new System.Drawing.Size(237, 50);
-            this.panel4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel4.TabIndex = 12;
-            this.panel4.Text = "panel4";
-            // 
             // submenu2btn
             // 
             this.submenu2btn.BackColor = System.Drawing.Color.Transparent;
@@ -324,19 +347,6 @@
             this.submenu2btn.UseVisualStyleBackColor = false;
             this.submenu2btn.Click += new System.EventHandler(this.submenu2btn_Click_1);
             // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.panel8.Controls.Add(this.submenu3btn);
-            this.panel8.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.panel8.Location = new System.Drawing.Point(3, 176);
-            this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(5);
-            this.panel8.Size = new System.Drawing.Size(237, 50);
-            this.panel8.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel8.TabIndex = 14;
-            this.panel8.Text = "panel8";
-            // 
             // submenu3btn
             // 
             this.submenu3btn.BackColor = System.Drawing.Color.Transparent;
@@ -358,16 +368,6 @@
             this.submenu3btn.Text = "Menu 1";
             this.submenu3btn.TextColor = System.Drawing.Color.White;
             this.submenu3btn.UseVisualStyleBackColor = false;
-            // 
-            // menuTransition
-            // 
-            this.menuTransition.Interval = 10;
-            this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
-            // 
-            // sidebartransition
-            // 
-            this.sidebartransition.Interval = 10;
-            this.sidebartransition.Tick += new System.EventHandler(this.sidebartransition_Tick);
             // 
             // HomeForm
             // 

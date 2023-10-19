@@ -17,7 +17,7 @@ namespace TaskTracking.PresentationLayer
         formCalendar frmcalendar;
         formSubmenu1 sub1;
         formSubmenu2 sub2;
-        formToDo frmtodo;
+        //formToDo frmtodo;
         public HomeForm()
         {
             InitializeComponent();
@@ -25,7 +25,10 @@ namespace TaskTracking.PresentationLayer
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
-            EmployeeRepository employeeRepository = new EmployeeRepository();
+            dashBoard=new formDashBoard();
+            dashBoard.Show();
+            dashBoard.MdiParent = this;
+
         }
         bool menuExpand = false;
         private void menuTransition_Tick(object sender, EventArgs e)

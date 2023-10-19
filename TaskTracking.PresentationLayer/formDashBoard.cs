@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReaLTaiizor.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace TaskTracking.PresentationLayer
 {
     public partial class formDashBoard : Form
     {
+        EmployeeRepository employeeRepository = new EmployeeRepository();
+
         public formDashBoard()
         {
             InitializeComponent();
@@ -21,23 +24,82 @@ namespace TaskTracking.PresentationLayer
 
         private void formDashBoard_Load(object sender, EventArgs e)
         {
+            poisonDataGridView1.ReadOnly = true;
+
             this.ControlBox = false;
 
-            EmployeeRepository employeeRepository = new EmployeeRepository();
             var datas = employeeRepository.GetAll();
 
             foreach (var item in datas)
             {
-                poisonDataGridView1.Rows.Add(item.emp_ID,item.UserName);
+                poisonDataGridView1.Rows.Add(item.emp_ID, item.UserName, item.Departman, item.Email);
             }
 
             poisonDataGridView1.AllowUserToAddRows = false;
-            
+            poisonDataGridView1.ClearSelection();
 
         }
-        private void poisonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            poisonDataGridView1.DataSource = null;
+            poisonDataGridView1.Rows.Clear();
+            var datas = employeeRepository.GetAll();
+
+            foreach (var item in datas)
+            {
+                poisonDataGridView1.Rows.Add(item.emp_ID, item.UserName, item.Departman, item.Email);
+            }
+        }
+
+        private async void rjButton3_Click(object sender, EventArgs e)
+        {
+            EmployeeRepository employeeRepository = new EmployeeRepository();
+            if (poisonDataGridView1.SelectedRows.Count > 0)
+            {
+                var deletedData = poisonDataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+                int data = Convert.ToInt32(deletedData);
+                await employeeRepository.Delete(data);
+                poisonDataGridView1.Rows.RemoveAt(poisonDataGridView1.SelectedRows[0].Index);
+                poisonDataGridView1.ClearSelection();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen silinecek Kullanıcıyı seçiniz");
+            }
+        }
+
+        private void KullaniciEkleBtn_Click(object sender, EventArgs e)
+        {
+            Form formBackground = new Form();
+            try
+            {
+                using (modelForm1 uu = new modelForm1())
+                {
+                    formBackground.StartPosition = FormStartPosition.Manual;
+                    formBackground.FormBorderStyle = FormBorderStyle.None;
+                    formBackground.Opacity = .50d;
+                    formBackground.BackColor = Color.Black;
+                    formBackground.WindowState = FormWindowState.Maximized;
+                    formBackground.TopMost = true;
+                    formBackground.Location = this.Location;
+                    formBackground.ShowInTaskbar = false;
+                    formBackground.Show();
+
+                    uu.Owner = formBackground;
+                    uu.ShowDialog();
+
+                    formBackground.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
         }
     }
 }
