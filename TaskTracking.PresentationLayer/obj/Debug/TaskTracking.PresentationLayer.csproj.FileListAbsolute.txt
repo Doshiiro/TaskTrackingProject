@@ -112,7 +112,9 @@ C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTra
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.formSubmenu1.resources
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.formSubmenu2.resources
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.formToDo.resources
-C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.formCalendar.resources
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.modelForm1.resources
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\FluentValidation.dll
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\FluentValidation.xml
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\takvim.FormCalendar.resources
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\takvim.UserControlBlank.resources
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\takvim.UserControlDays.resources

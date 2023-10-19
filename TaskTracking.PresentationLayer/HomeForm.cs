@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using takvim;
 using TaskTracking.PresentationLayer.Management.Concrete;
 
 namespace TaskTracking.PresentationLayer
@@ -14,10 +16,13 @@ namespace TaskTracking.PresentationLayer
     public partial class HomeForm : Form
     {
         formDashBoard dashBoard;
-        formCalendar frmcalendar;
+        //formCalendar frmcalendar;
         formSubmenu1 sub1;
         formSubmenu2 sub2;
         //formToDo frmtodo;
+        FormCalendar frmcalendar;
+        
+
         public HomeForm()
         {
             InitializeComponent();
@@ -150,7 +155,7 @@ namespace TaskTracking.PresentationLayer
         {
             if (frmcalendar == null)
             {
-                frmcalendar = new formCalendar();
+                frmcalendar = new FormCalendar();
                 frmcalendar.FormClosed += Calender_FormClosed;
                 frmcalendar.MdiParent = this;
                 frmcalendar.Dock = DockStyle.Fill;
