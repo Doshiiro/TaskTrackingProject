@@ -14,6 +14,9 @@ namespace takvim
     public partial class FormCalendar : Form
     {
         int month, year;
+        
+        public static int static_month, static_year;
+
         public FormCalendar()
         {
             InitializeComponent();
@@ -32,6 +35,9 @@ namespace takvim
 
             string ayismi = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lbtarih.Text = ayismi + " " + year;
+
+            static_month = month;
+            static_year = year;
 
             DateTime aybaslangic = new DateTime(year,month,1);
             int gunler = DateTime.DaysInMonth(year,month);
@@ -57,6 +63,10 @@ namespace takvim
             daycontainer.Controls.Clear();
 
             month--;
+
+
+            static_month = month;
+            static_year = year;
 
             string ayismi = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lbtarih.Text = ayismi + " " + year;
@@ -87,11 +97,16 @@ namespace takvim
 
             month++;
 
+
+            static_month = month;
+            static_year = year;
+
             string ayismi = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lbtarih.Text = ayismi + " " + year;
 
 
             DateTime aybaslangic = new DateTime(year,month, 1);
+            //month değeri 13 e geliyor ve bu yüzden program burada patlıyor daha sonra fixlencek.
             int gunler = DateTime.DaysInMonth(year,month);
 
 

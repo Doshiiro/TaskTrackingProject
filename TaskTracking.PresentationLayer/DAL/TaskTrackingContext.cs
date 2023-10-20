@@ -15,6 +15,6 @@ namespace TaskTracking.PresentationLayer.DAL
             optionsBuilder.UseSqlServer("Data Source = DESKTOP-ONGKPN7; Initial Catalog = TaskTrackingDB; Integrated Security=true; MultipleActiveResultSets=true; TrustServerCertificate=True;");
         }
         public DbSet<Employee> Employees{ get; set; }
-
+        public DbSet<CalendarEntity> Calendars { get; set; }
     }
 }

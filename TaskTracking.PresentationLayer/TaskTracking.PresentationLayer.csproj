@@ -188,9 +188,16 @@
   <ItemGroup>
     <Compile Include="DAL\TaskTrackingContext.cs" />
     <Compile Include="DesignForm\CustomCenter.cs" />
+    <Compile Include="Entities\CalendarEntity.cs" />
     <Compile Include="Entities\Dto\DtoEmployee.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Validations\EmployeeValidation.cs" />
+    <Compile Include="EventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventForm.Designer.cs">
+      <DependentUpon>EventForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +250,10 @@
     <Compile Include="Migrations\20231019104242_init2.designer.cs">
       <DependentUpon>20231019104242_init2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20231020054317_calenderInit.cs" />
+    <Compile Include="Migrations\20231020054317_calenderInit.designer.cs">
+      <DependentUpon>20231020054317_calenderInit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\TaskTrackingContextModelSnapshot.cs" />
     <Compile Include="modelForm1.cs">
       <SubType>Form</SubType>
@@ -273,6 +284,9 @@
     <Compile Include="UserControlDays.designer.cs">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EventForm.resx">
+      <DependentUpon>EventForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
