@@ -40,12 +40,21 @@ namespace takvim
 
         private void displayEvent()
         {
+            //using (TaskTrackingContext context = new TaskTrackingContext())
+            //{
+
+            //    var cal = context.Calendars.FirstOrDefault(c => c.emp_ID == emp_Fk);
+            //    if (cal != null)
+            //    {
+            //        displaDays();
+            //    }
+            //}
             using (TaskTrackingContext context = new TaskTrackingContext())
             {
                 string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text;
 
                 var calendarEvent = context.Calendars
-                    .FirstOrDefault(e => e.date == dateString);
+                    .FirstOrDefault(e => e.date == dateString && e.emp_ID == FormCalendar.emp_Fk);
 
                 if (calendarEvent != null)
                 {

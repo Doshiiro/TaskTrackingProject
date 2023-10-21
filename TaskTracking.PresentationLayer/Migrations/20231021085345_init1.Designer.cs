@@ -9,8 +9,8 @@ using TaskTracking.PresentationLayer.DAL;
 namespace TaskTracking.PresentationLayer.Migrations
 {
     [DbContext(typeof(TaskTrackingContext))]
-    [Migration("20231020054317_calenderInit")]
-    partial class calenderInit
+    [Migration("20231021085345_init1")]
+    partial class init1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,10 +30,18 @@ namespace TaskTracking.PresentationLayer.Migrations
                     b.Property<string>("date")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("emp_ID")
+                        .HasColumnType("int");
+
                     b.Property<string>("events")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("status")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("calender_ID");
+
+                    b.HasIndex("emp_ID");
 
                     b.ToTable("Calendars");
                 });
@@ -44,6 +52,9 @@ namespace TaskTracking.PresentationLayer.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Access")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Departman")
                         .HasColumnType("nvarchar(max)");
@@ -60,6 +71,15 @@ namespace TaskTracking.PresentationLayer.Migrations
                     b.HasKey("emp_ID");
 
                     b.ToTable("Employees");
+                });
+
+            modelBuilder.Entity("TaskTracking.PresentationLayer.Entities.CalendarEntity", b =>
+                {
+                    b.HasOne("TaskTracking.PresentationLayer.Entities.Employee", "Employees")
+                        .WithMany("Calendars")
+                        .HasForeignKey("emp_ID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

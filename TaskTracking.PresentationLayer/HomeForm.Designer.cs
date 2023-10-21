@@ -71,7 +71,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1324, 34);
+            this.panel1.Size = new System.Drawing.Size(1355, 34);
             this.panel1.TabIndex = 1;
             // 
             // nightControlBox1
@@ -89,7 +89,7 @@
             this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.nightControlBox1.EnableMinimizeButton = true;
             this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(1185, 0);
+            this.nightControlBox1.Location = new System.Drawing.Point(1216, 0);
             this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
             this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -101,17 +101,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(103, 9);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(86, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 19);
+            this.label1.Size = new System.Drawing.Size(154, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "İş Takip Otomasyonu";
             // 
             // btnHam
             // 
             this.btnHam.Image = ((System.Drawing.Image)(resources.GetObject("btnHam.Image")));
-            this.btnHam.Location = new System.Drawing.Point(6, 2);
+            this.btnHam.Location = new System.Drawing.Point(6, 1);
             this.btnHam.Name = "btnHam";
             this.btnHam.Size = new System.Drawing.Size(37, 32);
             this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -129,7 +129,7 @@
             this.sidebar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.sidebar.Location = new System.Drawing.Point(0, 34);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(240, 786);
+            this.sidebar.Size = new System.Drawing.Size(240, 785);
             this.sidebar.TabIndex = 2;
             // 
             // pnDashboard
@@ -245,7 +245,7 @@
             this.rjButton1.ForeColor = System.Drawing.Color.White;
             this.rjButton1.Image = ((System.Drawing.Image)(resources.GetObject("rjButton1.Image")));
             this.rjButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rjButton1.Location = new System.Drawing.Point(0, 0);
+            this.rjButton1.Location = new System.Drawing.Point(-2, 0);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Padding = new System.Windows.Forms.Padding(0, 0, 80, 0);
             this.rjButton1.Size = new System.Drawing.Size(240, 62);
@@ -268,7 +268,7 @@
             this.calenderbtn.ForeColor = System.Drawing.Color.White;
             this.calenderbtn.Image = ((System.Drawing.Image)(resources.GetObject("calenderbtn.Image")));
             this.calenderbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.calenderbtn.Location = new System.Drawing.Point(-3, -1);
+            this.calenderbtn.Location = new System.Drawing.Point(-3, 0);
             this.calenderbtn.Name = "calenderbtn";
             this.calenderbtn.Padding = new System.Windows.Forms.Padding(2, 0, 100, 0);
             this.calenderbtn.Size = new System.Drawing.Size(243, 62);
@@ -372,7 +372,8 @@
             // HomeForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1324, 820);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1355, 819);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

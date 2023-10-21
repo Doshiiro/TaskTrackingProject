@@ -242,17 +242,9 @@
     </Compile>
     <Compile Include="Management\Abstract\IGenericRepository.cs" />
     <Compile Include="Management\Concrete\EmployeeRepository.cs" />
-    <Compile Include="Migrations\20231015161128_mig1.cs" />
-    <Compile Include="Migrations\20231015161128_mig1.designer.cs">
-      <DependentUpon>20231015161128_mig1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20231019104242_init2.cs" />
-    <Compile Include="Migrations\20231019104242_init2.designer.cs">
-      <DependentUpon>20231019104242_init2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20231020054317_calenderInit.cs" />
-    <Compile Include="Migrations\20231020054317_calenderInit.designer.cs">
-      <DependentUpon>20231020054317_calenderInit.cs</DependentUpon>
+    <Compile Include="Migrations\20231021085345_init1.cs" />
+    <Compile Include="Migrations\20231021085345_init1.designer.cs">
+      <DependentUpon>20231021085345_init1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\TaskTrackingContextModelSnapshot.cs" />
     <Compile Include="modelForm1.cs">

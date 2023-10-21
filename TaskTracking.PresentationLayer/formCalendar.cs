@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TaskTracking.PresentationLayer;
+using TaskTracking.PresentationLayer.DAL;
 
 namespace takvim
 {
@@ -21,10 +24,10 @@ namespace takvim
         {
             InitializeComponent();
         }
-
+        public static int emp_Fk;
         private void Form1_Load(object sender, EventArgs e)
         {
-            displaDays();
+                    displaDays();
         }
 
         private void displaDays()

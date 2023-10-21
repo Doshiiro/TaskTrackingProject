@@ -16,5 +16,13 @@ namespace TaskTracking.PresentationLayer.DAL
         }
         public DbSet<Employee> Employees{ get; set; }
         public DbSet<CalendarEntity> Calendars { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Employee>()
+                .HasMany(e => e.Calendars)
+                .WithOne(c => c.Employees)
+                .HasForeignKey(c => c.emp_ID);
+        }
     }
 }

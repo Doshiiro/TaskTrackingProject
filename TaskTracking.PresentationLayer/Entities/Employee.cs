@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,8 @@ namespace TaskTracking.PresentationLayer.Entities
         public string Password { get; set; }
         public string Email { get; set; }
         public string Departman { get; set; }
+        public bool Access { get; set; }
+        public ICollection<CalendarEntity> Calendars { get; set; }
 
     }
 }

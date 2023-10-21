@@ -17,7 +17,7 @@ namespace TaskTracking.PresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeForm());
+            Application.Run(new Form1());
         }
     }
 }

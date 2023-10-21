@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using takvim;
 using TaskTracking.PresentationLayer.DAL;
 using TaskTracking.PresentationLayer.DesignForm;
 using TaskTracking.PresentationLayer.Entities;
@@ -112,6 +113,7 @@ namespace TaskTracking.PresentationLayer
         }
         #endregion
 
+        
         private void rjButton1_Click(object sender, EventArgs e)
         {
             EmployeeRepository employeeRepository = new EmployeeRepository();
@@ -127,6 +129,11 @@ namespace TaskTracking.PresentationLayer
                 this.Hide();
 
                 HomeForm homeForm = new HomeForm();
+
+                homeForm.employeeRole =Convert.ToString(verifyData.Access);
+
+                homeForm.emp_id= verifyData.emp_ID;
+
                 homeForm.ShowDialog();
 
                 this.Close();
@@ -149,6 +156,11 @@ namespace TaskTracking.PresentationLayer
         private void rjButton2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

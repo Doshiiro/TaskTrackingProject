@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,7 @@ using System.Windows.Forms;
 using takvim;
 using TaskTracking.PresentationLayer.DAL;
 using TaskTracking.PresentationLayer.Entities;
+using TaskTracking.PresentationLayer.Management.Concrete;
 
 namespace TaskTracking.PresentationLayer
 {
@@ -23,7 +25,8 @@ namespace TaskTracking.PresentationLayer
 
         private void EvenForm_Load(object sender, EventArgs e)
         {
-            txtDate.Texts = FormCalendar.static_year + "/" + FormCalendar.static_month+ "/" + UserControlDays.static_day;
+            txtDate.Texts = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + UserControlDays.static_day;
+           
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -33,10 +36,11 @@ namespace TaskTracking.PresentationLayer
             {
                 date = txtDate.Texts,
                 events = txtEvent.Texts,
-            };
-            context.Add(_calendar);
+                emp_ID = Convert.ToInt32(empIdTxt.Texts)
+        };
+        context.Add(_calendar);
             context.SaveChanges();
             MessageBox.Show("Etkinlik eklendi");
         }
-    }
+}
 }

@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSave = new CustomControls.RJControls.RJButton();
+            this.empIdTxt = new CustomControls.RJControls.RJTextBox();
             this.SuspendLayout();
             // 
             // txtEvent
@@ -108,7 +109,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(430, 268);
+            this.btnSave.Location = new System.Drawing.Point(430, 295);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(106, 35);
             this.btnSave.TabIndex = 17;
@@ -117,17 +118,40 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // EvenForm
+            // empIdTxt
+            // 
+            this.empIdTxt.BackColor = System.Drawing.SystemColors.Window;
+            this.empIdTxt.BorderColor = System.Drawing.Color.Silver;
+            this.empIdTxt.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
+            this.empIdTxt.BorderRadius = 10;
+            this.empIdTxt.BorderSize = 2;
+            this.empIdTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empIdTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.empIdTxt.Location = new System.Drawing.Point(139, 233);
+            this.empIdTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.empIdTxt.Multiline = false;
+            this.empIdTxt.Name = "empIdTxt";
+            this.empIdTxt.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.empIdTxt.PasswordChar = false;
+            this.empIdTxt.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.empIdTxt.PlaceholderText = "";
+            this.empIdTxt.Size = new System.Drawing.Size(397, 37);
+            this.empIdTxt.TabIndex = 18;
+            this.empIdTxt.Texts = "";
+            this.empIdTxt.UnderlinedStyle = false;
+            // 
+            // EventForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(683, 382);
+            this.Controls.Add(this.empIdTxt);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEvent);
             this.Controls.Add(this.txtDate);
-            this.Name = "EvenForm";
+            this.Name = "EventForm";
             this.Text = "EvenForm";
             this.Load += new System.EventHandler(this.EvenForm_Load);
             this.ResumeLayout(false);
@@ -142,5 +166,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private CustomControls.RJControls.RJButton btnSave;
+        private CustomControls.RJControls.RJTextBox empIdTxt;
     }
 }

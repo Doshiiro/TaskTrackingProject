@@ -16,23 +16,34 @@ namespace TaskTracking.PresentationLayer
     public partial class HomeForm : Form
     {
         formDashBoard dashBoard;
-        //formCalendar frmcalendar;
         formSubmenu1 sub1;
         formSubmenu2 sub2;
-        //formToDo frmtodo;
         FormCalendar frmcalendar;
-        
+
 
         public HomeForm()
         {
             InitializeComponent();
         }
 
+        public string employeeRole;
+        public int emp_id;
+       
         private void HomeForm_Load(object sender, EventArgs e)
         {
-            dashBoard=new formDashBoard();
+
+            dashBoard = new formDashBoard();
             dashBoard.Show();
             dashBoard.MdiParent = this;
+            dashBoard.Dock = DockStyle.Fill;
+            
+            //if (employeeRole != "True")
+            //{
+            //    dashBoard.Visible = false;
+            //    rjButton1.Visible = false;
+            //    pnDashboard.Visible = false;
+
+            //}
 
         }
         bool menuExpand = false;
@@ -155,18 +166,20 @@ namespace TaskTracking.PresentationLayer
         {
             if (frmcalendar == null)
             {
+                
                 frmcalendar = new FormCalendar();
                 frmcalendar.FormClosed += Calender_FormClosed;
                 frmcalendar.MdiParent = this;
                 frmcalendar.Dock = DockStyle.Fill;
+                FormCalendar.emp_Fk = emp_id;
                 frmcalendar.Show();
             }
             else
             {
                 frmcalendar.Activate();
             }
-        }
 
+        }
         private void Calender_FormClosed(object sender, FormClosedEventArgs e)
         {
             frmcalendar = null;
