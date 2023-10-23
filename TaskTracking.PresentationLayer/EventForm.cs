@@ -26,21 +26,47 @@ namespace TaskTracking.PresentationLayer
         private void EvenForm_Load(object sender, EventArgs e)
         {
             txtDate.Texts = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + UserControlDays.static_day;
-           
+
+            EmployeeRepository employeeRepository = new EmployeeRepository();
+
+            var entity = employeeRepository.GetAll();
+            foreach (var item in entity)
+            {
+                metroComboBox1.Items.Add(item.UserName);
+              
+            }
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             TaskTrackingContext context = new TaskTrackingContext();
-            CalendarEntity _calendar = new CalendarEntity()
+
+
+           
+            if (metroComboBox1.SelectedItem == null)
             {
-                date = txtDate.Texts,
-                events = txtEvent.Texts,
-                emp_ID = Convert.ToInt32(empIdTxt.Texts)
-        };
-        context.Add(_calendar);
-            context.SaveChanges();
-            MessageBox.Show("Etkinlik eklendi");
+                MessageBox.Show("Lütfen personel seçiniz");
+            }
+
+            else
+            {
+                string selectedUserName = metroComboBox1.SelectedItem.ToString();
+                Employee selectedEmployee = context.Employees.FirstOrDefault(em => em.UserName == selectedUserName);
+
+
+                CalendarEntity _calendar = new CalendarEntity()
+                {
+                    date = txtDate.Texts,
+                    events = txtEvent.Texts,
+                    emp_ID = selectedEmployee.emp_ID,
+                };
+                context.Add(_calendar);
+                context.SaveChanges();
+                MessageBox.Show("Etkinlik eklendi");
+            }
         }
-}
+
+          
+    }
 }
