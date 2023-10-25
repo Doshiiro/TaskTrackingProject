@@ -32,10 +32,41 @@ namespace takvim
 
         private void UserControlDays_Click(object sender, EventArgs e)
         {
-            static_day = lbgunler.Text;
-            timer1.Start();
-            EventForm eventForm = new EventForm();
-            eventForm.Show();
+            if (FormCalendar.accessCalender !=0 )
+            {
+                Form formBackground = new Form();
+                try
+                {
+                    static_day = lbgunler.Text;
+                    timer1.Start();
+                    using (EventForm uu = new EventForm())
+                    {
+                        formBackground.StartPosition = FormStartPosition.Manual;
+                        formBackground.FormBorderStyle = FormBorderStyle.None;
+                        formBackground.Opacity = .50d;
+                        formBackground.BackColor = Color.Black;
+                        formBackground.WindowState = FormWindowState.Maximized;
+                        formBackground.TopMost = true;
+                        formBackground.Location = this.Location;
+                        formBackground.ShowInTaskbar = false;
+                        formBackground.Show();
+
+                        uu.Owner = formBackground;
+                        uu.ShowDialog();
+
+                        formBackground.Dispose();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    formBackground.Dispose();
+                }
+            }
+          
         }
 
         private void displayEvent()
@@ -58,6 +89,11 @@ namespace takvim
         private void timer1_Tick(object sender, EventArgs e)
         {
             displayEvent();
+        }
+
+        private void lblEvent_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

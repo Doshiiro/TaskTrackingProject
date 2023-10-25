@@ -25,6 +25,7 @@ namespace takvim
             InitializeComponent();
         }
         public static int emp_Fk;
+        public static int accessCalender;
         private void Form1_Load(object sender, EventArgs e)
         {
                     displaDays();

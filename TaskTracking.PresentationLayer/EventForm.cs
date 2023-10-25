@@ -33,27 +33,27 @@ namespace TaskTracking.PresentationLayer
             foreach (var item in entity)
             {
                 metroComboBox1.Items.Add(item.UserName);
-              
             }
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             TaskTrackingContext context = new TaskTrackingContext();
 
-
            
             if (metroComboBox1.SelectedItem == null)
             {
                 MessageBox.Show("Lütfen personel seçiniz");
+            }
+            else if (txtEvent.Texts=="")
+            {
+                MessageBox.Show("Lütfen eventi doldurunuz");
             }
 
             else
             {
                 string selectedUserName = metroComboBox1.SelectedItem.ToString();
                 Employee selectedEmployee = context.Employees.FirstOrDefault(em => em.UserName == selectedUserName);
-
 
                 CalendarEntity _calendar = new CalendarEntity()
                 {
@@ -64,9 +64,13 @@ namespace TaskTracking.PresentationLayer
                 context.Add(_calendar);
                 context.SaveChanges();
                 MessageBox.Show("Etkinlik eklendi");
+                txtEvent.Texts = "";
             }
         }
 
-          
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

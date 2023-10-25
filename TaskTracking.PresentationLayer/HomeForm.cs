@@ -28,6 +28,7 @@ namespace TaskTracking.PresentationLayer
 
         public string employeeRole;
         public int emp_id;
+        public int emp_calendarAccess;
        
         private void HomeForm_Load(object sender, EventArgs e)
         {
@@ -172,6 +173,7 @@ namespace TaskTracking.PresentationLayer
                 frmcalendar.MdiParent = this;
                 frmcalendar.Dock = DockStyle.Fill;
                 FormCalendar.emp_Fk = emp_id;
+                FormCalendar.accessCalender = emp_calendarAccess;
                 frmcalendar.Show();
             }
             else

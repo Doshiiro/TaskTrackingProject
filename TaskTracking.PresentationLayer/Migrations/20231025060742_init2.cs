@@ -2,7 +2,7 @@
 
 namespace TaskTracking.PresentationLayer.Migrations
 {
-    public partial class init1 : Migration
+    public partial class init2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,7 +16,7 @@ namespace TaskTracking.PresentationLayer.Migrations
                     Password = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
                     Departman = table.Column<string>(nullable: true),
-                    Access = table.Column<bool>(nullable: false)
+                    Access = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

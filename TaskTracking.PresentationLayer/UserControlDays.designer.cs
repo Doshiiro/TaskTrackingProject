@@ -55,6 +55,7 @@
             this.lblEvent.Size = new System.Drawing.Size(124, 35);
             this.lblEvent.TabIndex = 1;
             this.lblEvent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEvent.Click += new System.EventHandler(this.lblEvent_Click);
             // 
             // timer1
             // 

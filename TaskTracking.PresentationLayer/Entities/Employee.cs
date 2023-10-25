@@ -16,7 +16,7 @@ namespace TaskTracking.PresentationLayer.Entities
         public string Password { get; set; }
         public string Email { get; set; }
         public string Departman { get; set; }
-        public bool Access { get; set; }
+        public int Access { get; set; }
         public ICollection<CalendarEntity> Calendars { get; set; }
 
     }

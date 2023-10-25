@@ -9,8 +9,8 @@ using TaskTracking.PresentationLayer.DAL;
 namespace TaskTracking.PresentationLayer.Migrations
 {
     [DbContext(typeof(TaskTrackingContext))]
-    [Migration("20231021085345_init1")]
-    partial class init1
+    [Migration("20231025060742_init2")]
+    partial class init2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,8 +53,8 @@ namespace TaskTracking.PresentationLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool>("Access")
-                        .HasColumnType("bit");
+                    b.Property<int>("Access")
+                        .HasColumnType("int");
 
                     b.Property<string>("Departman")
                         .HasColumnType("nvarchar(max)");
