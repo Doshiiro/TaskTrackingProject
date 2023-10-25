@@ -29,7 +29,6 @@ namespace TaskTracking.PresentationLayer
         public string employeeRole;
         public int emp_id;
         public int emp_calendarAccess;
-        //gittest
        
         private void HomeForm_Load(object sender, EventArgs e)
         {
