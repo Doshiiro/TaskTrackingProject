@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaskTracking.PresentationLayer;
 using TaskTracking.PresentationLayer.DAL;
+using TaskTracking.PresentationLayer.DesignForm;
 
 namespace takvim
 {
@@ -30,82 +31,22 @@ namespace takvim
             lbgunler.Text = numday + "";
         }
 
+        PopupFormDesign popupFrm = new PopupFormDesign();
         private void UserControlDays_Click(object sender, EventArgs e)
         {
             if (FormCalendar.accessCalender != 0)
             {
-                Form formBackground = new Form();
-                try
-                {
-                    static_day = lbgunler.Text;
-                    timer1.Start();
-                    using (EventForm uu = new EventForm())
-                    {
-                        formBackground.StartPosition = FormStartPosition.Manual;
-                        formBackground.FormBorderStyle = FormBorderStyle.None;
-                        formBackground.Opacity = .50d;
-                        formBackground.BackColor = Color.Black;
-                        formBackground.WindowState = FormWindowState.Maximized;
-                        formBackground.TopMost = true;
-                        formBackground.Location = this.Location;
-                        formBackground.ShowInTaskbar = false;
-                        formBackground.Show();
-
-                        uu.Owner = formBackground;
-                        uu.ShowDialog();
-
-                        formBackground.Dispose();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    formBackground.Dispose();
-                }
+                static_day = lbgunler.Text;
+                timer1.Start();
+                popupFrm.Popup<EventForm>();
             }
             //default user 0 yetkisine sahip olanlar
             else
             {
-                Form formBackground = new Form();
-                try
-                {
-                    static_day = lbgunler.Text;
-                    timer1.Start();
-                    using (DefaultUserEvent uu = new DefaultUserEvent())
-                    {
-                        formBackground.StartPosition = FormStartPosition.CenterScreen;
-                        formBackground.FormBorderStyle = FormBorderStyle.None;
-                        formBackground.Opacity = .50d;
-                        formBackground.BackColor = Color.Black;
-                        formBackground.WindowState = FormWindowState.Maximized;
-                        formBackground.TopMost = true;
-                        formBackground.Location = this.Location;
-                        formBackground.ShowInTaskbar = false;
-                        formBackground.Show();
-
-                        string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text;
-                        DefaultUserEvent.DateData = dateString;
-
-                        uu.Owner = formBackground;
-                        uu.ShowDialog();
-
-                        formBackground.Dispose();
-                        
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    formBackground.Dispose();
-                }
+                string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text;
+                DefaultUserEvent.DateData = dateString;
+                popupFrm.Popup<DefaultUserEvent>();
             }
-
         }
 
 
@@ -115,7 +56,7 @@ namespace takvim
             using (TaskTrackingContext context = new TaskTrackingContext())
             {
                 string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text;
-                
+
 
                 var calenderEvent = context.Calendars.Count(e => e.date == dateString && e.emp_ID == FormCalendar.emp_Fk);
 

@@ -194,6 +194,7 @@
       <DependentUpon>DefaultUserEvent.cs</DependentUpon>
     </Compile>
     <Compile Include="DesignForm\CustomCenter.cs" />
+    <Compile Include="DesignForm\PopupFormDesign.cs" />
     <Compile Include="Entities\CalendarEntity.cs" />
     <Compile Include="Entities\Dto\DtoEmployee.cs" />
     <Compile Include="Entities\Employee.cs" />

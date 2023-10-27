@@ -32,7 +32,11 @@ namespace TaskTracking.PresentationLayer
             var entity = employeeRepository.GetAll();
             foreach (var item in entity)
             {
-                metroComboBox1.Items.Add(item.UserName);
+                if (item.Access!=1)
+                {
+                    metroComboBox1.Items.Add(item.UserName);
+                }
+              
             }
         }
 
