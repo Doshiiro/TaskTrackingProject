@@ -1,13 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using takvim;
 using TaskTracking.PresentationLayer.DAL;
@@ -32,11 +24,11 @@ namespace TaskTracking.PresentationLayer
             var entity = employeeRepository.GetAll();
             foreach (var item in entity)
             {
-                if (item.Access!=1)
+                if (item.Access != 1)
                 {
                     metroComboBox1.Items.Add(item.UserName);
                 }
-              
+
             }
         }
 
@@ -44,12 +36,12 @@ namespace TaskTracking.PresentationLayer
         {
             TaskTrackingContext context = new TaskTrackingContext();
 
-           
+
             if (metroComboBox1.SelectedItem == null)
             {
                 MessageBox.Show("Lütfen personel seçiniz");
             }
-            else if (txtEvent.Texts=="")
+            else if (txtEvent.Texts == "")
             {
                 MessageBox.Show("Lütfen eventi doldurunuz");
             }

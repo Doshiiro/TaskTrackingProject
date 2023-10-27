@@ -61,7 +61,7 @@ namespace TaskTracking.PresentationLayer
             }
             else
             {
-                menuContainer.Height -= 10;
+                menuContainer.Height -= 4;
                 if (menuContainer.Height <= 62)
                 {
                     menuTransition.Stop();
