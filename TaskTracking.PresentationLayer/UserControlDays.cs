@@ -32,7 +32,7 @@ namespace takvim
 
         private void UserControlDays_Click(object sender, EventArgs e)
         {
-            if (FormCalendar.accessCalender !=0 )
+            if (FormCalendar.accessCalender != 0)
             {
                 Form formBackground = new Form();
                 try
@@ -66,8 +66,48 @@ namespace takvim
                     formBackground.Dispose();
                 }
             }
-          
+            //default user 0 yetkisine sahip olanlar
+            else
+            {
+                Form formBackground = new Form();
+                try
+                {
+                    static_day = lbgunler.Text;
+                    timer1.Start();
+                    using (DefaultUserEvent uu = new DefaultUserEvent())
+                    {
+                        formBackground.StartPosition = FormStartPosition.CenterScreen;
+                        formBackground.FormBorderStyle = FormBorderStyle.None;
+                        formBackground.Opacity = .50d;
+                        formBackground.BackColor = Color.Black;
+                        formBackground.WindowState = FormWindowState.Maximized;
+                        formBackground.TopMost = true;
+                        formBackground.Location = this.Location;
+                        formBackground.ShowInTaskbar = false;
+                        formBackground.Show();
+
+                        string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text;
+                        DefaultUserEvent.DateData = dateString;
+
+                        uu.Owner = formBackground;
+                        uu.ShowDialog();
+
+                        formBackground.Dispose();
+                        
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    formBackground.Dispose();
+                }
+            }
+
         }
+
 
         private void displayEvent()
         {
@@ -75,13 +115,20 @@ namespace takvim
             using (TaskTrackingContext context = new TaskTrackingContext())
             {
                 string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text;
+                
 
-                var calendarEvent = context.Calendars
-                    .FirstOrDefault(e => e.date == dateString && e.emp_ID == FormCalendar.emp_Fk);
+                var calenderEvent = context.Calendars.Count(e => e.date == dateString && e.emp_ID == FormCalendar.emp_Fk);
 
-                if (calendarEvent != null)
+                if (calenderEvent != null)
                 {
-                    lblEvent.Text = calendarEvent.events;
+                    if (calenderEvent == 0)
+                    {
+                        lblEvent.Text = "";
+                    }
+                    else
+                    {
+                        lblEvent.Text = calenderEvent.ToString() + " Etkinlik";
+                    }
                 }
             }
         }

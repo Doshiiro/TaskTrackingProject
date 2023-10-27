@@ -49,7 +49,7 @@
             // 
             this.lblEvent.BackColor = System.Drawing.Color.Transparent;
             this.lblEvent.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblEvent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblEvent.ForeColor = System.Drawing.Color.Maroon;
             this.lblEvent.Location = new System.Drawing.Point(3, 50);
             this.lblEvent.Name = "lblEvent";
             this.lblEvent.Size = new System.Drawing.Size(124, 35);
