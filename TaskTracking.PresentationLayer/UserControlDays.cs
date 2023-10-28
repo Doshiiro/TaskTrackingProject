@@ -39,27 +39,14 @@ namespace takvim
         PopupFormDesign popupFrm = new PopupFormDesign();
         private void UserControlDays_Click(object sender, EventArgs e)
         {
-            //if (FormCalendar.accessCalender != 0)
-            //{
-            //    static_day = lbgunler.Text;
-            //    timer1.Start();
-            //}
-            ////default user 0 yetkisine sahip olanlar
-            //else
-            //{
-            //    string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text;
-            //    DefaultUserEvent.DateData = dateString;
-            //    popupFrm.Popup<DefaultUserEvent>();
-            //}
+           
         }
-
-
         private void displayEvent()
         {
 
             using (TaskTrackingContext context = new TaskTrackingContext())
             {
-                string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text;
+                string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text ;
 
 
                 var calenderEvent = context.Calendars.Count(e => e.date == dateString && e.emp_ID == FormCalendar.emp_Fk);
