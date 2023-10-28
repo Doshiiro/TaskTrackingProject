@@ -33,10 +33,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.metroComboBox1 = new ReaLTaiizor.Controls.MetroComboBox();
-            this.closeBtn = new CustomControls.RJControls.RJButton();
             this.btnSave = new CustomControls.RJControls.RJButton();
             this.txtEvent = new CustomControls.RJControls.RJTextBox();
             this.txtDate = new CustomControls.RJControls.RJTextBox();
+            this.closeBtn = new CustomControls.RJControls.RJButton();
             this.SuspendLayout();
             // 
             // label1
@@ -93,26 +93,6 @@
             this.metroComboBox1.TabIndex = 20;
             this.metroComboBox1.ThemeAuthor = "Taiizor";
             this.metroComboBox1.ThemeName = "MetroLight";
-            // 
-            // closeBtn
-            // 
-            this.closeBtn.BackColor = System.Drawing.Color.Gray;
-            this.closeBtn.BackgroundColor = System.Drawing.Color.Gray;
-            this.closeBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.closeBtn.BorderRadius = 0;
-            this.closeBtn.BorderSize = 0;
-            this.closeBtn.FlatAppearance.BorderSize = 0;
-            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.closeBtn.ForeColor = System.Drawing.Color.White;
-            this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
-            this.closeBtn.Location = new System.Drawing.Point(642, -1);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(41, 31);
-            this.closeBtn.TabIndex = 21;
-            this.closeBtn.TextColor = System.Drawing.Color.White;
-            this.closeBtn.UseVisualStyleBackColor = false;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // btnSave
             // 
@@ -178,6 +158,26 @@
             this.txtDate.TabIndex = 12;
             this.txtDate.Texts = "";
             this.txtDate.UnderlinedStyle = false;
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.BackColor = System.Drawing.Color.Gray;
+            this.closeBtn.BackgroundColor = System.Drawing.Color.Gray;
+            this.closeBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.closeBtn.BorderRadius = 0;
+            this.closeBtn.BorderSize = 0;
+            this.closeBtn.FlatAppearance.BorderSize = 0;
+            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.closeBtn.ForeColor = System.Drawing.Color.White;
+            this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
+            this.closeBtn.Location = new System.Drawing.Point(642, -1);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(41, 31);
+            this.closeBtn.TabIndex = 21;
+            this.closeBtn.TextColor = System.Drawing.Color.White;
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // EventForm
             // 

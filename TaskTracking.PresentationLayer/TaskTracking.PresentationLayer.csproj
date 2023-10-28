@@ -186,6 +186,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllEventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllEventForm.Designer.cs">
+      <DependentUpon>AllEventForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAL\TaskTrackingContext.cs" />
     <Compile Include="DefaultUserEvent.cs">
       <SubType>Form</SubType>
@@ -248,6 +254,7 @@
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Management\Abstract\IGenericRepository.cs" />
+    <Compile Include="Management\Concrete\CalendarRepository.cs" />
     <Compile Include="Management\Concrete\EmployeeRepository.cs" />
     <Compile Include="Migrations\20231025060742_init2.cs" />
     <Compile Include="Migrations\20231025060742_init2.designer.cs">
@@ -283,6 +290,9 @@
     <Compile Include="UserControlDays.designer.cs">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AllEventForm.resx">
+      <DependentUpon>AllEventForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DefaultUserEvent.resx">
       <DependentUpon>DefaultUserEvent.cs</DependentUpon>
     </EmbeddedResource>

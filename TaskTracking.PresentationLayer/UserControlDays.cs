@@ -24,7 +24,12 @@ namespace takvim
 
         private void UserControlDays_Load(object sender, EventArgs e)
         {
+            if (FormCalendar.accessCalender == 0)
+            {
+                rjButton2.Visible = false;
+            }
             displayEvent();
+
         }
         public void days(int numday)
         {
@@ -34,19 +39,18 @@ namespace takvim
         PopupFormDesign popupFrm = new PopupFormDesign();
         private void UserControlDays_Click(object sender, EventArgs e)
         {
-            if (FormCalendar.accessCalender != 0)
-            {
-                static_day = lbgunler.Text;
-                timer1.Start();
-                popupFrm.Popup<EventForm>();
-            }
-            //default user 0 yetkisine sahip olanlar
-            else
-            {
-                string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text;
-                DefaultUserEvent.DateData = dateString;
-                popupFrm.Popup<DefaultUserEvent>();
-            }
+            //if (FormCalendar.accessCalender != 0)
+            //{
+            //    static_day = lbgunler.Text;
+            //    timer1.Start();
+            //}
+            ////default user 0 yetkisine sahip olanlar
+            //else
+            //{
+            //    string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text;
+            //    DefaultUserEvent.DateData = dateString;
+            //    popupFrm.Popup<DefaultUserEvent>();
+            //}
         }
 
 
@@ -81,7 +85,16 @@ namespace takvim
 
         private void lblEvent_Click(object sender, EventArgs e)
         {
+            string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text;
+            DefaultUserEvent.DateData = dateString;
+            popupFrm.Popup<DefaultUserEvent>();
+        }
 
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            static_day = lbgunler.Text;
+            timer1.Start();
+            popupFrm.Popup<EventForm>();
         }
     }
 }

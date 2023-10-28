@@ -39,12 +39,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lbtarih = new System.Windows.Forms.Label();
+            this.eventShowBtn = new ReaLTaiizor.Controls.Button();
             this.SuspendLayout();
             // 
             // daycontainer
             // 
             this.daycontainer.Location = new System.Drawing.Point(81, 118);
-            this.daycontainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.daycontainer.Margin = new System.Windows.Forms.Padding(2);
             this.daycontainer.Name = "daycontainer";
             this.daycontainer.Size = new System.Drawing.Size(956, 552);
             this.daycontainer.TabIndex = 0;
@@ -52,7 +53,7 @@
             // btnonce
             // 
             this.btnonce.Location = new System.Drawing.Point(958, 692);
-            this.btnonce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnonce.Margin = new System.Windows.Forms.Padding(2);
             this.btnonce.Name = "btnonce";
             this.btnonce.Size = new System.Drawing.Size(70, 30);
             this.btnonce.TabIndex = 1;
@@ -63,7 +64,7 @@
             // btnsonraki
             // 
             this.btnsonraki.Location = new System.Drawing.Point(81, 692);
-            this.btnsonraki.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsonraki.Margin = new System.Windows.Forms.Padding(2);
             this.btnsonraki.Name = "btnsonraki";
             this.btnsonraki.Size = new System.Drawing.Size(62, 30);
             this.btnsonraki.TabIndex = 1;
@@ -159,11 +160,30 @@
             this.lbtarih.Text = "AY YIL ";
             this.lbtarih.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // eventShowBtn
+            // 
+            this.eventShowBtn.BackColor = System.Drawing.Color.Transparent;
+            this.eventShowBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.eventShowBtn.EnteredColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.eventShowBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.eventShowBtn.Image = null;
+            this.eventShowBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.eventShowBtn.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.eventShowBtn.Location = new System.Drawing.Point(500, 679);
+            this.eventShowBtn.Name = "eventShowBtn";
+            this.eventShowBtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.eventShowBtn.Size = new System.Drawing.Size(121, 47);
+            this.eventShowBtn.TabIndex = 0;
+            this.eventShowBtn.Text = "Görevler";
+            this.eventShowBtn.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.eventShowBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 732);
+            this.Controls.Add(this.eventShowBtn);
             this.Controls.Add(this.lbtarih);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -176,7 +196,7 @@
             this.Controls.Add(this.btnonce);
             this.Controls.Add(this.daycontainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormCalendar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -199,6 +219,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbtarih;
+        private ReaLTaiizor.Controls.Button eventShowBtn;
     }
 }
 

@@ -75,5 +75,10 @@ namespace TaskTracking.PresentationLayer
             PopupFormDesign popupFormDesign = new PopupFormDesign();
             popupFormDesign.Popup<modelForm1>();
         }
+
+        private void poisonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

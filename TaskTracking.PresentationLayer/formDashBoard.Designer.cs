@@ -34,14 +34,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formDashBoard));
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.poisonDataGridView1 = new ReaLTaiizor.Controls.PoisonDataGridView();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.rjButton2 = new CustomControls.RJControls.RJButton();
-            this.rjButton3 = new CustomControls.RJControls.RJButton();
-            this.KullaniciEkleBtn = new CustomControls.RJControls.RJButton();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.rjButton2 = new CustomControls.RJControls.RJButton();
+            this.rjButton3 = new CustomControls.RJControls.RJButton();
+            this.KullaniciEkleBtn = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,6 +91,7 @@
             this.poisonDataGridView1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.poisonDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.poisonDataGridView1.Location = new System.Drawing.Point(0, -3);
+            this.poisonDataGridView1.MultiSelect = false;
             this.poisonDataGridView1.Name = "poisonDataGridView1";
             this.poisonDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -105,63 +106,7 @@
             this.poisonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.poisonDataGridView1.Size = new System.Drawing.Size(518, 411);
             this.poisonDataGridView1.TabIndex = 1;
-            // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.Color.Transparent;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 0;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Image = ((System.Drawing.Image)(resources.GetObject("rjButton2.Image")));
-            this.rjButton2.Location = new System.Drawing.Point(521, 3);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(30, 24);
-            this.rjButton2.TabIndex = 3;
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
-            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
-            // 
-            // rjButton3
-            // 
-            this.rjButton3.BackColor = System.Drawing.Color.Transparent;
-            this.rjButton3.BackgroundColor = System.Drawing.Color.Transparent;
-            this.rjButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton3.BorderRadius = 0;
-            this.rjButton3.BorderSize = 0;
-            this.rjButton3.FlatAppearance.BorderSize = 0;
-            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Image = ((System.Drawing.Image)(resources.GetObject("rjButton3.Image")));
-            this.rjButton3.Location = new System.Drawing.Point(521, 39);
-            this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(30, 24);
-            this.rjButton3.TabIndex = 4;
-            this.rjButton3.TextColor = System.Drawing.Color.White;
-            this.rjButton3.UseVisualStyleBackColor = false;
-            this.rjButton3.Click += new System.EventHandler(this.rjButton3_Click);
-            // 
-            // KullaniciEkleBtn
-            // 
-            this.KullaniciEkleBtn.BackColor = System.Drawing.Color.Transparent;
-            this.KullaniciEkleBtn.BackgroundColor = System.Drawing.Color.Transparent;
-            this.KullaniciEkleBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.KullaniciEkleBtn.BorderRadius = 0;
-            this.KullaniciEkleBtn.BorderSize = 0;
-            this.KullaniciEkleBtn.FlatAppearance.BorderSize = 0;
-            this.KullaniciEkleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.KullaniciEkleBtn.ForeColor = System.Drawing.Color.White;
-            this.KullaniciEkleBtn.Image = ((System.Drawing.Image)(resources.GetObject("KullaniciEkleBtn.Image")));
-            this.KullaniciEkleBtn.Location = new System.Drawing.Point(521, 78);
-            this.KullaniciEkleBtn.Name = "KullaniciEkleBtn";
-            this.KullaniciEkleBtn.Size = new System.Drawing.Size(30, 24);
-            this.KullaniciEkleBtn.TabIndex = 5;
-            this.KullaniciEkleBtn.TextColor = System.Drawing.Color.White;
-            this.KullaniciEkleBtn.UseVisualStyleBackColor = false;
-            this.KullaniciEkleBtn.Click += new System.EventHandler(this.KullaniciEkleBtn_Click);
+            this.poisonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.poisonDataGridView1_CellContentClick);
             // 
             // ID
             // 
@@ -183,6 +128,63 @@
             this.Column3.HeaderText = "Email";
             this.Column3.Name = "Column3";
             this.Column3.Width = 177;
+            // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.Transparent;
+            this.rjButton2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton2.BorderRadius = 0;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Image = ((System.Drawing.Image)(resources.GetObject("rjButton2.Image")));
+            this.rjButton2.Location = new System.Drawing.Point(521, 78);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(30, 24);
+            this.rjButton2.TabIndex = 3;
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
+            // 
+            // rjButton3
+            // 
+            this.rjButton3.BackColor = System.Drawing.Color.Transparent;
+            this.rjButton3.BackgroundColor = System.Drawing.Color.Transparent;
+            this.rjButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton3.BorderRadius = 0;
+            this.rjButton3.BorderSize = 0;
+            this.rjButton3.FlatAppearance.BorderSize = 0;
+            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton3.ForeColor = System.Drawing.Color.White;
+            this.rjButton3.Image = ((System.Drawing.Image)(resources.GetObject("rjButton3.Image")));
+            this.rjButton3.Location = new System.Drawing.Point(521, 39);
+            this.rjButton3.Name = "rjButton3";
+            this.rjButton3.Size = new System.Drawing.Size(30, 33);
+            this.rjButton3.TabIndex = 4;
+            this.rjButton3.TextColor = System.Drawing.Color.White;
+            this.rjButton3.UseVisualStyleBackColor = false;
+            this.rjButton3.Click += new System.EventHandler(this.rjButton3_Click);
+            // 
+            // KullaniciEkleBtn
+            // 
+            this.KullaniciEkleBtn.BackColor = System.Drawing.Color.Transparent;
+            this.KullaniciEkleBtn.BackgroundColor = System.Drawing.Color.Transparent;
+            this.KullaniciEkleBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.KullaniciEkleBtn.BorderRadius = 0;
+            this.KullaniciEkleBtn.BorderSize = 0;
+            this.KullaniciEkleBtn.FlatAppearance.BorderSize = 0;
+            this.KullaniciEkleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.KullaniciEkleBtn.ForeColor = System.Drawing.Color.White;
+            this.KullaniciEkleBtn.Image = ((System.Drawing.Image)(resources.GetObject("KullaniciEkleBtn.Image")));
+            this.KullaniciEkleBtn.Location = new System.Drawing.Point(521, 2);
+            this.KullaniciEkleBtn.Name = "KullaniciEkleBtn";
+            this.KullaniciEkleBtn.Size = new System.Drawing.Size(30, 31);
+            this.KullaniciEkleBtn.TabIndex = 5;
+            this.KullaniciEkleBtn.TextColor = System.Drawing.Color.White;
+            this.KullaniciEkleBtn.UseVisualStyleBackColor = false;
+            this.KullaniciEkleBtn.Click += new System.EventHandler(this.KullaniciEkleBtn_Click);
             // 
             // formDashBoard
             // 

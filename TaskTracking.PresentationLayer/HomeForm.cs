@@ -26,7 +26,7 @@ namespace TaskTracking.PresentationLayer
             InitializeComponent();
         }
 
-        public string employeeRole;
+        public int employeeRole;
         public int emp_id;
         public int emp_calendarAccess;
        
@@ -37,14 +37,14 @@ namespace TaskTracking.PresentationLayer
             dashBoard.Show();
             dashBoard.MdiParent = this;
             dashBoard.Dock = DockStyle.Fill;
-            
-            //if (employeeRole != "True")
-            //{
-            //    dashBoard.Visible = false;
-            //    rjButton1.Visible = false;
-            //    pnDashboard.Visible = false;
 
-            //}
+            if (employeeRole !=1 )
+            {
+                dashBoard.Visible = false;
+                rjButton1.Visible = false;
+                pnDashboard.Visible = false;
+
+            }
 
         }
         bool menuExpand = false;
