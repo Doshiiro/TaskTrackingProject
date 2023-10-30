@@ -44,6 +44,7 @@
             this.panel8 = new ReaLTaiizor.Controls.Panel();
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.sidebartransition = new System.Windows.Forms.Timer(this.components);
+            this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.calenderbtn = new CustomControls.RJControls.RJButton();
             this.menubtn = new CustomControls.RJControls.RJButton();
@@ -122,6 +123,7 @@
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.sidebar.Controls.Add(this.rjButton2);
             this.sidebar.Controls.Add(this.pnDashboard);
             this.sidebar.Controls.Add(this.pnSettings);
             this.sidebar.Controls.Add(this.menuContainer);
@@ -137,7 +139,7 @@
             this.pnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
             this.pnDashboard.Controls.Add(this.rjButton1);
             this.pnDashboard.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.pnDashboard.Location = new System.Drawing.Point(3, 3);
+            this.pnDashboard.Location = new System.Drawing.Point(3, 71);
             this.pnDashboard.Name = "pnDashboard";
             this.pnDashboard.Padding = new System.Windows.Forms.Padding(5);
             this.pnDashboard.Size = new System.Drawing.Size(272, 62);
@@ -150,7 +152,7 @@
             this.pnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
             this.pnSettings.Controls.Add(this.calenderbtn);
             this.pnSettings.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.pnSettings.Location = new System.Drawing.Point(3, 71);
+            this.pnSettings.Location = new System.Drawing.Point(3, 139);
             this.pnSettings.Name = "pnSettings";
             this.pnSettings.Padding = new System.Windows.Forms.Padding(5);
             this.pnSettings.Size = new System.Drawing.Size(272, 61);
@@ -165,7 +167,7 @@
             this.menuContainer.Controls.Add(this.panel6);
             this.menuContainer.Controls.Add(this.panel4);
             this.menuContainer.Controls.Add(this.panel8);
-            this.menuContainer.Location = new System.Drawing.Point(3, 138);
+            this.menuContainer.Location = new System.Drawing.Point(3, 206);
             this.menuContainer.Name = "menuContainer";
             this.menuContainer.Size = new System.Drawing.Size(240, 62);
             this.menuContainer.TabIndex = 8;
@@ -231,6 +233,29 @@
             // 
             this.sidebartransition.Interval = 10;
             this.sidebartransition.Tick += new System.EventHandler(this.sidebartransition_Tick);
+            // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton2.BorderRadius = 0;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Image = ((System.Drawing.Image)(resources.GetObject("rjButton2.Image")));
+            this.rjButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjButton2.Location = new System.Drawing.Point(3, 3);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Padding = new System.Windows.Forms.Padding(0, 0, 80, 0);
+            this.rjButton2.Size = new System.Drawing.Size(240, 62);
+            this.rjButton2.TabIndex = 6;
+            this.rjButton2.Text = "Ana Sayfa";
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // rjButton1
             // 
@@ -418,5 +443,6 @@
         private CustomControls.RJControls.RJButton submenu3btn;
         private System.Windows.Forms.Timer menuTransition;
         private System.Windows.Forms.Timer sidebartransition;
+        private CustomControls.RJControls.RJButton rjButton2;
     }
 }

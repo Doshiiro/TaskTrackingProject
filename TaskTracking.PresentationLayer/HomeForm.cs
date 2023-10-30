@@ -16,6 +16,7 @@ namespace TaskTracking.PresentationLayer
     public partial class HomeForm : Form
     {
         formDashBoard dashBoard;
+        formDefaultDashboard defaultDashboard;
         formSubmenu1 sub1;
         formSubmenu2 sub2;
         FormCalendar frmcalendar;
@@ -26,24 +27,32 @@ namespace TaskTracking.PresentationLayer
             InitializeComponent();
         }
 
-        public string employeeRole;
+        public int employeeRole;
         public int emp_id;
-       
+        public int emp_calendarAccess;
+
         private void HomeForm_Load(object sender, EventArgs e)
         {
+            if (employeeRole != 1)
+            {
+                defaultDashboard = new formDefaultDashboard();
+                defaultDashboard.Show();
+                defaultDashboard.MdiParent = this;
+                defaultDashboard.Dock = DockStyle.Fill;
 
-            dashBoard = new formDashBoard();
-            dashBoard.Show();
-            dashBoard.MdiParent = this;
-            dashBoard.Dock = DockStyle.Fill;
-            
-            //if (employeeRole != "True")
-            //{
-            //    dashBoard.Visible = false;
-            //    rjButton1.Visible = false;
-            //    pnDashboard.Visible = false;
+                rjButton1.Visible = false;
+                pnDashboard.Visible = false;
+            }
+            else
+            {
+                dashBoard = new formDashBoard();
+                dashBoard.Show();
+                dashBoard.MdiParent = this;
+                dashBoard.Dock = DockStyle.Fill;
+                rjButton2.Visible = false;
+            }
 
-            //}
+
 
         }
         bool menuExpand = false;
@@ -60,7 +69,7 @@ namespace TaskTracking.PresentationLayer
             }
             else
             {
-                menuContainer.Height -= 10;
+                menuContainer.Height -= 4;
                 if (menuContainer.Height <= 62)
                 {
                     menuTransition.Stop();
@@ -103,6 +112,8 @@ namespace TaskTracking.PresentationLayer
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
+
+
             if (dashBoard == null)
             {
                 dashBoard = new formDashBoard();
@@ -110,6 +121,7 @@ namespace TaskTracking.PresentationLayer
                 dashBoard.MdiParent = this;
                 dashBoard.Dock = DockStyle.Fill;
                 dashBoard.Show();
+
             }
             else
             {
@@ -121,6 +133,7 @@ namespace TaskTracking.PresentationLayer
         {
             dashBoard = null;
         }
+
 
         private void submenu1btn_Click(object sender, EventArgs e)
         {
@@ -166,12 +179,13 @@ namespace TaskTracking.PresentationLayer
         {
             if (frmcalendar == null)
             {
-                
+
                 frmcalendar = new FormCalendar();
                 frmcalendar.FormClosed += Calender_FormClosed;
                 frmcalendar.MdiParent = this;
                 frmcalendar.Dock = DockStyle.Fill;
                 FormCalendar.emp_Fk = emp_id;
+                FormCalendar.accessCalender = emp_calendarAccess;
                 frmcalendar.Show();
             }
             else
@@ -183,6 +197,29 @@ namespace TaskTracking.PresentationLayer
         private void Calender_FormClosed(object sender, FormClosedEventArgs e)
         {
             frmcalendar = null;
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            if (defaultDashboard == null)
+            {
+
+                defaultDashboard = new formDefaultDashboard();
+                defaultDashboard.FormClosed += DefaultDashboard_FormClosed;
+                defaultDashboard.MdiParent = this;
+                defaultDashboard.Dock = DockStyle.Fill;
+                defaultDashboard.Show();
+
+            }
+
+            else
+            {
+                defaultDashboard.Activate();
+            }
+        }
+        private void DefaultDashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dashBoard = null;
         }
     }
 }

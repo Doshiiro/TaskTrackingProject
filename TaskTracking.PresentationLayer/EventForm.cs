@@ -1,13 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using takvim;
 using TaskTracking.PresentationLayer.DAL;
@@ -32,10 +24,12 @@ namespace TaskTracking.PresentationLayer
             var entity = employeeRepository.GetAll();
             foreach (var item in entity)
             {
-                metroComboBox1.Items.Add(item.UserName);
-              
-            }
+                if (item.Access != 1)
+                {
+                    metroComboBox1.Items.Add(item.UserName);
+                }
 
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -43,17 +37,19 @@ namespace TaskTracking.PresentationLayer
             TaskTrackingContext context = new TaskTrackingContext();
 
 
-           
             if (metroComboBox1.SelectedItem == null)
             {
                 MessageBox.Show("Lütfen personel seçiniz");
+            }
+            else if (txtEvent.Texts == "")
+            {
+                MessageBox.Show("Lütfen eventi doldurunuz");
             }
 
             else
             {
                 string selectedUserName = metroComboBox1.SelectedItem.ToString();
                 Employee selectedEmployee = context.Employees.FirstOrDefault(em => em.UserName == selectedUserName);
-
 
                 CalendarEntity _calendar = new CalendarEntity()
                 {
@@ -64,9 +60,13 @@ namespace TaskTracking.PresentationLayer
                 context.Add(_calendar);
                 context.SaveChanges();
                 MessageBox.Show("Etkinlik eklendi");
+                txtEvent.Texts = "";
             }
         }
 
-          
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

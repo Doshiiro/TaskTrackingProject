@@ -119,6 +119,7 @@ C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTra
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\takvim.UserControlBlank.resources
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\takvim.UserControlDays.resources
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.EventForm.resources
+<<<<<<< HEAD
 C:\Users\umut0\OneDrive\Belgeler\GitHub\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\TaskTracking.PresentationLayer.exe.config
 C:\Users\umut0\OneDrive\Belgeler\GitHub\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\TaskTracking.PresentationLayer.exe
 C:\Users\umut0\OneDrive\Belgeler\GitHub\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\TaskTracking.PresentationLayer.pdb
@@ -229,3 +230,11 @@ C:\Users\umut0\OneDrive\Belgeler\GitHub\TaskTrackingProject\TaskTracking.Present
 C:\Users\umut0\OneDrive\Belgeler\GitHub\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.csproj.CopyComplete
 C:\Users\umut0\OneDrive\Belgeler\GitHub\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.exe
 C:\Users\umut0\OneDrive\Belgeler\GitHub\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.pdb
+=======
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.DefaultUserEvent.resources
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.AllEventForm.resources
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.formDefaultDashboard.resources
+>>>>>>> ba3e06d8da1e76628e97720feb6155906cf00ae0
+C:\Users\umut0\OneDrive\Belgeler\GitHub\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.AllEventForm.resources
+C:\Users\umut0\OneDrive\Belgeler\GitHub\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.DefaultUserEvent.resources
+C:\Users\umut0\OneDrive\Belgeler\GitHub\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.formDefaultDashboard.resources

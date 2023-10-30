@@ -186,8 +186,21 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllEventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllEventForm.Designer.cs">
+      <DependentUpon>AllEventForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAL\TaskTrackingContext.cs" />
+    <Compile Include="DefaultUserEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefaultUserEvent.Designer.cs">
+      <DependentUpon>DefaultUserEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="DesignForm\CustomCenter.cs" />
+    <Compile Include="DesignForm\PopupFormDesign.cs" />
     <Compile Include="Entities\CalendarEntity.cs" />
     <Compile Include="Entities\Dto\DtoEmployee.cs" />
     <Compile Include="Entities\Employee.cs" />
@@ -215,6 +228,12 @@
     </Compile>
     <Compile Include="formDashBoard.Designer.cs">
       <DependentUpon>formDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDefaultDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDefaultDashboard.Designer.cs">
+      <DependentUpon>formDefaultDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="formSubmenu1.cs">
       <SubType>Form</SubType>
@@ -247,10 +266,11 @@
       <DependentUpon>LoginPageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Management\Abstract\IGenericRepository.cs" />
+    <Compile Include="Management\Concrete\CalendarRepository.cs" />
     <Compile Include="Management\Concrete\EmployeeRepository.cs" />
-    <Compile Include="Migrations\20231021085345_init1.cs" />
-    <Compile Include="Migrations\20231021085345_init1.designer.cs">
-      <DependentUpon>20231021085345_init1.cs</DependentUpon>
+    <Compile Include="Migrations\20231025060742_init2.cs" />
+    <Compile Include="Migrations\20231025060742_init2.designer.cs">
+      <DependentUpon>20231025060742_init2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\TaskTrackingContextModelSnapshot.cs" />
     <Compile Include="modelForm1.cs">
@@ -282,6 +302,12 @@
     <Compile Include="UserControlDays.designer.cs">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AllEventForm.resx">
+      <DependentUpon>AllEventForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultUserEvent.resx">
+      <DependentUpon>DefaultUserEvent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EventForm.resx">
       <DependentUpon>EventForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -293,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formDashBoard.resx">
       <DependentUpon>formDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDefaultDashboard.resx">
+      <DependentUpon>formDefaultDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formSubmenu1.resx">
       <DependentUpon>formSubmenu1.cs</DependentUpon>

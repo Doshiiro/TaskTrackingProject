@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaskTracking.PresentationLayer;
 using TaskTracking.PresentationLayer.DAL;
+using TaskTracking.PresentationLayer.DesignForm;
 
 namespace takvim
 {
@@ -25,8 +26,13 @@ namespace takvim
             InitializeComponent();
         }
         public static int emp_Fk;
+        public static int accessCalender;
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (accessCalender == 0)
+            {
+                eventShowBtn.Visible = false;
+            }
                     displaDays();
         }
 
@@ -59,6 +65,12 @@ namespace takvim
                 ucdays.days(i);
                 daycontainer.Controls.Add(ucdays);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PopupFormDesign popupFormDesign = new PopupFormDesign();
+            popupFormDesign.Popup<AllEventForm>();
         }
 
         private void btnsonraki_Click(object sender, EventArgs e)

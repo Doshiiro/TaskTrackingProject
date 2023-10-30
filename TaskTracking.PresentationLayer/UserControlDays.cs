@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaskTracking.PresentationLayer;
 using TaskTracking.PresentationLayer.DAL;
+using TaskTracking.PresentationLayer.DesignForm;
 
 namespace takvim
 {
@@ -23,34 +24,43 @@ namespace takvim
 
         private void UserControlDays_Load(object sender, EventArgs e)
         {
+            if (FormCalendar.accessCalender == 0)
+            {
+                rjButton2.Visible = false;
+            }
             displayEvent();
+
         }
         public void days(int numday)
         {
             lbgunler.Text = numday + "";
         }
 
+        PopupFormDesign popupFrm = new PopupFormDesign();
         private void UserControlDays_Click(object sender, EventArgs e)
         {
-            static_day = lbgunler.Text;
-            timer1.Start();
-            EventForm eventForm = new EventForm();
-            eventForm.Show();
+           
         }
-
         private void displayEvent()
         {
 
             using (TaskTrackingContext context = new TaskTrackingContext())
             {
-                string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text;
+                string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text ;
 
-                var calendarEvent = context.Calendars
-                    .FirstOrDefault(e => e.date == dateString && e.emp_ID == FormCalendar.emp_Fk);
 
-                if (calendarEvent != null)
+                var calenderEvent = context.Calendars.Count(e => e.date == dateString && e.emp_ID == FormCalendar.emp_Fk);
+
+                if (calenderEvent != null)
                 {
-                    lblEvent.Text = calendarEvent.events;
+                    if (calenderEvent == 0)
+                    {
+                        lblEvent.Text = "";
+                    }
+                    else
+                    {
+                        lblEvent.Text = calenderEvent.ToString() + " Etkinlik";
+                    }
                 }
             }
         }
@@ -58,6 +68,20 @@ namespace takvim
         private void timer1_Tick(object sender, EventArgs e)
         {
             displayEvent();
+        }
+
+        private void lblEvent_Click(object sender, EventArgs e)
+        {
+            string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text;
+            DefaultUserEvent.DateData = dateString;
+            popupFrm.Popup<DefaultUserEvent>();
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            static_day = lbgunler.Text;
+            timer1.Start();
+            popupFrm.Popup<EventForm>();
         }
     }
 }

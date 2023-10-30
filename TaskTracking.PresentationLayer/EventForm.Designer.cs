@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -35,12 +36,13 @@
             this.btnSave = new CustomControls.RJControls.RJButton();
             this.txtEvent = new CustomControls.RJControls.RJTextBox();
             this.txtDate = new CustomControls.RJControls.RJTextBox();
+            this.closeBtn = new CustomControls.RJControls.RJButton();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(149, 31);
+            this.label1.Location = new System.Drawing.Point(141, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 15;
@@ -49,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(149, 131);
+            this.label2.Location = new System.Drawing.Point(141, 162);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 16;
@@ -58,7 +60,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(149, 216);
+            this.label3.Location = new System.Drawing.Point(141, 252);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 19;
@@ -81,7 +83,7 @@
             this.metroComboBox1.FormattingEnabled = true;
             this.metroComboBox1.IsDerivedStyle = true;
             this.metroComboBox1.ItemHeight = 20;
-            this.metroComboBox1.Location = new System.Drawing.Point(139, 246);
+            this.metroComboBox1.Location = new System.Drawing.Point(131, 277);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroComboBox1.SelectedItemForeColor = System.Drawing.Color.White;
@@ -103,7 +105,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(139, 300);
+            this.btnSave.Location = new System.Drawing.Point(422, 273);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(106, 35);
             this.btnSave.TabIndex = 17;
@@ -121,7 +123,7 @@
             this.txtEvent.BorderSize = 2;
             this.txtEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEvent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEvent.Location = new System.Drawing.Point(139, 148);
+            this.txtEvent.Location = new System.Drawing.Point(131, 179);
             this.txtEvent.Margin = new System.Windows.Forms.Padding(4);
             this.txtEvent.Multiline = false;
             this.txtEvent.Name = "txtEvent";
@@ -144,7 +146,7 @@
             this.txtDate.Enabled = false;
             this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDate.ForeColor = System.Drawing.Color.Black;
-            this.txtDate.Location = new System.Drawing.Point(139, 48);
+            this.txtDate.Location = new System.Drawing.Point(131, 79);
             this.txtDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtDate.Multiline = false;
             this.txtDate.Name = "txtDate";
@@ -157,11 +159,33 @@
             this.txtDate.Texts = "";
             this.txtDate.UnderlinedStyle = false;
             // 
+            // closeBtn
+            // 
+            this.closeBtn.BackColor = System.Drawing.Color.Gray;
+            this.closeBtn.BackgroundColor = System.Drawing.Color.Gray;
+            this.closeBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.closeBtn.BorderRadius = 0;
+            this.closeBtn.BorderSize = 0;
+            this.closeBtn.FlatAppearance.BorderSize = 0;
+            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.closeBtn.ForeColor = System.Drawing.Color.White;
+            this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
+            this.closeBtn.Location = new System.Drawing.Point(642, -1);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(41, 31);
+            this.closeBtn.TabIndex = 21;
+            this.closeBtn.TextColor = System.Drawing.Color.White;
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
             // EventForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(683, 382);
+            this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSave);
@@ -169,8 +193,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEvent);
             this.Controls.Add(this.txtDate);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EventForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EvenForm";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.EvenForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -186,5 +213,6 @@
         private CustomControls.RJControls.RJButton btnSave;
         private System.Windows.Forms.Label label3;
         private ReaLTaiizor.Controls.MetroComboBox metroComboBox1;
+        private CustomControls.RJControls.RJButton closeBtn;
     }
 }

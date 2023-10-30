@@ -66,7 +66,7 @@ namespace TaskTracking.PresentationLayer.Management.Concrete
 
         }
 
-        public Task Update(int id, Employee entity)
+        public Task Update(Employee entity)
         {
             throw new NotImplementedException();
         }

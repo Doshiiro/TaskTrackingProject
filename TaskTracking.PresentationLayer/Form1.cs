@@ -113,7 +113,7 @@ namespace TaskTracking.PresentationLayer
         }
         #endregion
 
-        
+
         private void rjButton1_Click(object sender, EventArgs e)
         {
             EmployeeRepository employeeRepository = new EmployeeRepository();
@@ -130,16 +130,17 @@ namespace TaskTracking.PresentationLayer
 
                 HomeForm homeForm = new HomeForm();
 
-                homeForm.employeeRole =Convert.ToString(verifyData.Access);
+                homeForm.employeeRole = verifyData.Access;
 
-                homeForm.emp_id= verifyData.emp_ID;
+                homeForm.emp_id = verifyData.emp_ID;
+                homeForm.emp_calendarAccess = verifyData.Access;
 
                 homeForm.ShowDialog();
 
                 this.Close();
 
             }
-            else if (rjTextBox3.Texts=="Kullanıcı Adı" || rjTextBox2.Texts=="Şifre")
+            else if (rjTextBox3.Texts == "Kullanıcı Adı" || rjTextBox2.Texts == "Şifre")
             {
                 label2.ForeColor = Color.Red;
                 label2.Text = "Lütfen Kullanıcı adı ve şifreyi giriniz";

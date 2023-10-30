@@ -251,6 +251,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "modelForm1";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.modelForm1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

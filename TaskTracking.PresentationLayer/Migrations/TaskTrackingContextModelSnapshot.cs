@@ -51,8 +51,8 @@ namespace TaskTracking.PresentationLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool>("Access")
-                        .HasColumnType("bit");
+                    b.Property<int>("Access")
+                        .HasColumnType("int");
 
                     b.Property<string>("Departman")
                         .HasColumnType("nvarchar(max)");

@@ -54,6 +54,10 @@ namespace TaskTracking.PresentationLayer
             }
             
         }
-       
+
+        private void modelForm1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
