@@ -260,6 +260,12 @@
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPageForm.Designer.cs">
+      <DependentUpon>LoginPageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Management\Abstract\IGenericRepository.cs" />
     <Compile Include="Management\Concrete\CalendarRepository.cs" />
     <Compile Include="Management\Concrete\EmployeeRepository.cs" />
@@ -329,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPageForm.resx">
+      <DependentUpon>LoginPageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modelForm1.resx">
       <DependentUpon>modelForm1.cs</DependentUpon>
