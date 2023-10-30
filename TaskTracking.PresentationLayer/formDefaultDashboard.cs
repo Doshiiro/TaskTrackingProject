@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using TaskTracking.PresentationLayer.Management.Concrete;
 using static ReaLTaiizor.Controls.ToggleEdit;
 
@@ -27,12 +28,15 @@ namespace TaskTracking.PresentationLayer
             var caldata = calendarRepository.GetAll();
             int calStatusData = 0;
 
-            tasklbl.Text = calStatusData + " / " + caldata.Count.ToString();
-
             foreach (var item in caldata)
             {
-                    dataGridView1.Rows.Add(item.date,item.events,"Null");
+                dataGridView1.Rows.Add(item.date, item.events, "Null");
+                if (item.status !=null)
+                {
+                    calStatusData++;
+                }
             }
+            tasklbl.Text = calStatusData + " / " + caldata.Count.ToString();
 
 
             DatagridviewSetting(dataGridView1);
@@ -46,7 +50,7 @@ namespace TaskTracking.PresentationLayer
             dataGridView.DefaultCellStyle.SelectionForeColor = Color.Transparent;
             dataGridView.EnableHeadersVisualStyles = false;
             dataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(220,220, 220);
+            dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(220, 220, 220);
             dataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView.DefaultCellStyle.BackColor = Color.FromArgb(220, 220, 220);
@@ -56,7 +60,7 @@ namespace TaskTracking.PresentationLayer
             dataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridView.AllowUserToAddRows = false;
-            
+
         }
 
         private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -68,6 +72,11 @@ namespace TaskTracking.PresentationLayer
         }
 
         private void dungeonLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
         {
 
         }
