@@ -51,7 +51,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dungeonLabel2 = new ReaLTaiizor.Controls.DungeonLabel();
             this.hopeGroupBox3 = new ReaLTaiizor.Controls.HopeGroupBox();
-            this.crownScrollBar1 = new ReaLTaiizor.Controls.CrownScrollBar();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,7 +59,6 @@
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.hopeGroupBox4 = new ReaLTaiizor.Controls.HopeGroupBox();
-            this.crownScrollBar2 = new ReaLTaiizor.Controls.CrownScrollBar();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -190,14 +188,13 @@
             this.dungeonLabel2.ForeColor = System.Drawing.Color.Black;
             this.dungeonLabel2.Location = new System.Drawing.Point(12, 7);
             this.dungeonLabel2.Name = "dungeonLabel2";
-            this.dungeonLabel2.Size = new System.Drawing.Size(92, 21);
+            this.dungeonLabel2.Size = new System.Drawing.Size(70, 21);
             this.dungeonLabel2.TabIndex = 1;
-            this.dungeonLabel2.Text = "Yapılacaklar";
+            this.dungeonLabel2.Text = "Görevler";
             // 
             // hopeGroupBox3
             // 
             this.hopeGroupBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeGroupBox3.Controls.Add(this.crownScrollBar1);
             this.hopeGroupBox3.Controls.Add(this.dataGridView1);
             this.hopeGroupBox3.Controls.Add(this.dungeonLabel3);
             this.hopeGroupBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -206,19 +203,11 @@
             this.hopeGroupBox3.Location = new System.Drawing.Point(19, 134);
             this.hopeGroupBox3.Name = "hopeGroupBox3";
             this.hopeGroupBox3.ShowText = false;
-            this.hopeGroupBox3.Size = new System.Drawing.Size(570, 296);
+            this.hopeGroupBox3.Size = new System.Drawing.Size(570, 326);
             this.hopeGroupBox3.TabIndex = 3;
             this.hopeGroupBox3.TabStop = false;
             this.hopeGroupBox3.Text = "hopeGroupBox3";
             this.hopeGroupBox3.ThemeColor = System.Drawing.Color.Gainsboro;
-            // 
-            // crownScrollBar1
-            // 
-            this.crownScrollBar1.Location = new System.Drawing.Point(542, 57);
-            this.crownScrollBar1.Name = "crownScrollBar1";
-            this.crownScrollBar1.Size = new System.Drawing.Size(19, 220);
-            this.crownScrollBar1.TabIndex = 4;
-            this.crownScrollBar1.Text = "crownScrollBar1";
             // 
             // dataGridView1
             // 
@@ -227,6 +216,7 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
@@ -256,7 +246,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.RowTemplate.Height = 75;
-            this.dataGridView1.Size = new System.Drawing.Size(545, 220);
+            this.dataGridView1.Size = new System.Drawing.Size(545, 263);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView1_CellPainting);
             // 
@@ -271,7 +261,6 @@
             this.Column2.HeaderText = "Görev";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 300;
             // 
             // Column3
             // 
@@ -287,9 +276,9 @@
             this.dungeonLabel3.ForeColor = System.Drawing.Color.DimGray;
             this.dungeonLabel3.Location = new System.Drawing.Point(20, 12);
             this.dungeonLabel3.Name = "dungeonLabel3";
-            this.dungeonLabel3.Size = new System.Drawing.Size(117, 25);
+            this.dungeonLabel3.Size = new System.Drawing.Size(89, 25);
             this.dungeonLabel3.TabIndex = 1;
-            this.dungeonLabel3.Text = "Yapılacaklar";
+            this.dungeonLabel3.Text = "Görevler";
             this.dungeonLabel3.Click += new System.EventHandler(this.dungeonLabel3_Click);
             // 
             // chart2
@@ -329,7 +318,6 @@
             // hopeGroupBox4
             // 
             this.hopeGroupBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeGroupBox4.Controls.Add(this.crownScrollBar2);
             this.hopeGroupBox4.Controls.Add(this.dataGridView2);
             this.hopeGroupBox4.Controls.Add(this.dungeonLabel4);
             this.hopeGroupBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -338,19 +326,11 @@
             this.hopeGroupBox4.Location = new System.Drawing.Point(19, 466);
             this.hopeGroupBox4.Name = "hopeGroupBox4";
             this.hopeGroupBox4.ShowText = false;
-            this.hopeGroupBox4.Size = new System.Drawing.Size(570, 292);
+            this.hopeGroupBox4.Size = new System.Drawing.Size(570, 293);
             this.hopeGroupBox4.TabIndex = 8;
             this.hopeGroupBox4.TabStop = false;
             this.hopeGroupBox4.Text = "hopeGroupBox4";
             this.hopeGroupBox4.ThemeColor = System.Drawing.Color.Gainsboro;
-            // 
-            // crownScrollBar2
-            // 
-            this.crownScrollBar2.Location = new System.Drawing.Point(542, 57);
-            this.crownScrollBar2.Name = "crownScrollBar2";
-            this.crownScrollBar2.Size = new System.Drawing.Size(19, 220);
-            this.crownScrollBar2.TabIndex = 4;
-            this.crownScrollBar2.Text = "crownScrollBar2";
             // 
             // dataGridView2
             // 
@@ -359,6 +339,7 @@
             this.dataGridView2.AllowUserToResizeRows = false;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gainsboro;
@@ -388,7 +369,7 @@
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Gainsboro;
             this.dataGridView2.RowTemplate.Height = 75;
-            this.dataGridView2.Size = new System.Drawing.Size(545, 220);
+            this.dataGridView2.Size = new System.Drawing.Size(545, 223);
             this.dataGridView2.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -402,7 +383,6 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Görev";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 300;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -474,11 +454,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private ReaLTaiizor.Controls.CrownScrollBar crownScrollBar1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private ReaLTaiizor.Controls.HopeGroupBox hopeGroupBox4;
-        private ReaLTaiizor.Controls.CrownScrollBar crownScrollBar2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

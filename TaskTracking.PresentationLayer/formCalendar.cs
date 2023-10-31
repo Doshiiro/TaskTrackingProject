@@ -18,7 +18,7 @@ namespace takvim
     public partial class FormCalendar : Form
     {
         int month, year;
-        
+
         public static int static_month, static_year;
 
         public FormCalendar()
@@ -33,7 +33,7 @@ namespace takvim
             {
                 eventShowBtn.Visible = false;
             }
-                    displaDays();
+            displaDays();
         }
 
         private void displaDays()
@@ -48,13 +48,13 @@ namespace takvim
             static_month = month;
             static_year = year;
 
-            DateTime aybaslangic = new DateTime(year,month,1);
-            int gunler = DateTime.DaysInMonth(year,month);
+            DateTime aybaslangic = new DateTime(year, month, 1);
+            int gunler = DateTime.DaysInMonth(year, month);
 
 
             int haftaningunleri = ((int)aybaslangic.DayOfWeek - 1 + 7) % 7;
 
-            for (int i=0; i < haftaningunleri; i++)
+            for (int i = 0; i < haftaningunleri; i++)
             {
                 UserControlBlank ucblank = new UserControlBlank();
                 daycontainer.Controls.Add(ucblank);
@@ -120,9 +120,9 @@ namespace takvim
             lbtarih.Text = ayismi + " " + year;
 
 
-            DateTime aybaslangic = new DateTime(year,month, 1);
+            DateTime aybaslangic = new DateTime(year, month, 1);
             //month değeri 13 e geliyor ve bu yüzden program burada patlıyor daha sonra fixlencek.
-            int gunler = DateTime.DaysInMonth(year,month);
+            int gunler = DateTime.DaysInMonth(year, month);
 
 
             int haftaningunleri = ((int)aybaslangic.DayOfWeek - 1 + 7) % 7;

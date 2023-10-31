@@ -31,7 +31,7 @@ namespace TaskTracking.PresentationLayer
             foreach (var item in caldata)
             {
                 dataGridView1.Rows.Add(item.date, item.events, "Null");
-                if (item.status !=null)
+                if (item.status != null)
                 {
                     calStatusData++;
                 }
@@ -40,6 +40,10 @@ namespace TaskTracking.PresentationLayer
 
 
             DatagridviewSetting(dataGridView1);
+            dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Ascending);
+            dataGridView1.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView1.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
+
 
         }
         public void DatagridviewSetting(DataGridView dataGridView)
@@ -53,7 +57,7 @@ namespace TaskTracking.PresentationLayer
             dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(220, 220, 220);
             dataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView.DefaultCellStyle.BackColor = Color.FromArgb(220, 220, 220);
+            dataGridView.DefaultCellStyle.BackColor = Color.Red;
             dataGridView.DefaultCellStyle.ForeColor = Color.Black;
 
             //alt çizgi

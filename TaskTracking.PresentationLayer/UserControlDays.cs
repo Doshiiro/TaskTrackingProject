@@ -83,5 +83,10 @@ namespace takvim
             timer1.Start();
             popupFrm.Popup<EventForm>();
         }
+
+        private void lbgunler_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

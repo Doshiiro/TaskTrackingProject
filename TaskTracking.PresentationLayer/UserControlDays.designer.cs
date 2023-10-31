@@ -46,6 +46,7 @@
             this.lbgunler.Size = new System.Drawing.Size(24, 18);
             this.lbgunler.TabIndex = 0;
             this.lbgunler.Text = "00";
+            this.lbgunler.Click += new System.EventHandler(this.lbgunler_Click);
             // 
             // lblEvent
             // 

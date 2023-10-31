@@ -123,17 +123,17 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="rjButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAIBSURBVEhL7VbLSsNQEC3oF/j4BTe+cOVj053YNu29XRRR
-        f0Bw5WMj+CdSrborNKmuiy78A1eCteK6CnVfqXPSCYnpNObGghsPHLgkM+ckc+c+Uv+IQvouPZ511Fqu
-        Vtyx6oV90B3behXvOGx0IPFFEr+wHPVuObonMeeoN8Tkr/MLnJYc1o01lbP1JYl+SmYS+7Gqom09yTJm
-        oL+cI9OWJB6P6hkaLBcPSKCyfciCJlQdKv0sy0YDJaKEpixkTqray0a1NM3yw0GmV5LA76gqLC8DHRmn
-        kXYbe73G661LjKWYIKFZqBeW2GYQ/SUjJwd5fH/S84CxFBMmlfycbb4DG4C7FoWkMBMZk7a4yWBHkhIk
-        JjEG87XiCtv5cLc+IRjEPMLA4+lDmW177jj4LmrO87beYjsf1HlHUjCIJooLxEoaIJX7kO184KEUDI7K
-        mJr3gO180B9vi8HEUZWaPDbZzsefNVepWhqjtdaWEsJMYjx0OQHY2qSkMBMZ2/qMbQaRcdQ8fVlXSgwS
-        84gmAqPntE9o/nhExv1rM6oyyw/HerU0QWV5kgXMSVot3GRYPho4vOkrO5KQGQ0uAh4ytp6hr32UBeNQ
-        NY1NPfBtpELNYXLZ66KDMWUskxxut9N5irUomYH0vu3GmF7w4gCbDHYfnDLehR7jbL2wjHcc9g8BqdQX
-        FYf0ae/52mcAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EQAACxEBf2RfkQAAAgFJREFUSEvtVstKw1AQLegX+PgFN75w5WPTndg27b1dFFF/QHDlYyP4J1Ktuis0
+        qa6LLvwDV4K14roKdV+pc9IJiek05saCGw8cuCQz5yRz5z5S/4hC+i49nnXUWq5W3LHqhX3QHdt6Fe84
+        bHQg8UUSv7Ac9W45uicx56g3xOSv8wuclhzWjTWVs/UliX5KZhL7saqibT3JMmagv5wj05YkHo/qGRos
+        Fw9IoLJ9yIImVB0q/SzLRgMlooSmLGROqtrLRrU0zfLDQaZXksDvqCosLwMdGaeRdht7vcbrrUuMpZgg
+        oVmoF5bYZhD9JSMnB3l8f9LzgLEUEyaV/JxtvgMbgLsWhaQwExmTtrjJYEeSEiQmMQbzteIK2/lwtz4h
+        GMQ8wsDj6UOZbXvuOPguas7ztt5iOx/UeUdSMIgmigvEShoglfuQ7XzgoRQMjsqYmveA7XzQH2+LwcRR
+        lZo8NtnOx581V6laGqO11pYSwkxiPHQ5AdjapKQwExnb+oxtBpFx1Dx9WVdKDBLziCYCo+e0T2j+eETG
+        /WszqjLLD8d6tTRBZXmSBcxJWi3cZFg+Gji86Ss7kpAZDS4CHjK2nqGvfZQF41A1jU098G2kQs1hctnr
+        ooMxZSyTHG6303mKtSiZgfS+7caYXvDiAJsMdh+cMt6FHuNsvbCMdxz2DwGp1BcVh/Rp7/naZwAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
 </root>

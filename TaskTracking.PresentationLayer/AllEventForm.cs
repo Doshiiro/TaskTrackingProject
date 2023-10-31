@@ -41,11 +41,17 @@ namespace TaskTracking.PresentationLayer
                     poisonDataGridView1.Rows.Add(item.calender_ID, matchingEmployee.UserName, item.date, item.events, item.emp_ID);
                 }
             }
+
+            poisonDataGridView1.Sort(poisonDataGridView1.Columns["CalenderDate"], ListSortDirection.Ascending);
+            poisonDataGridView1.Columns["PersonelName"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            poisonDataGridView1.Columns["PersonelEvent"].SortMode = DataGridViewColumnSortMode.NotSortable;
         }
         private void AllEventForm_Load(object sender, EventArgs e)
         {
             AllEventShow();
             poisonDataGridView1.ClearSelection();
+
+
         }
 
 
@@ -88,7 +94,7 @@ namespace TaskTracking.PresentationLayer
 
         private void poisonDataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if (poisonDataGridView1.SelectedRows.Count>0)
+            if (poisonDataGridView1.SelectedRows.Count > 0)
             {
                 poisonDateTime1.Text = poisonDataGridView1.SelectedRows[0].Cells["CalenderDate"].Value.ToString();
                 txtEvent.Texts = poisonDataGridView1.SelectedRows[0].Cells["PersonelEvent"].Value.ToString();

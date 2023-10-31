@@ -143,6 +143,7 @@ namespace TaskTracking.PresentationLayer
                 sub1.FormClosed += Sub1_FormClosed;
                 sub1.MdiParent = this;
                 sub1.Dock = DockStyle.Fill;
+                formSubmenu1.taskEmp_Fk = emp_id;
                 sub1.Show();
             }
             else
@@ -220,6 +221,11 @@ namespace TaskTracking.PresentationLayer
         private void DefaultDashboard_FormClosed(object sender, FormClosedEventArgs e)
         {
             dashBoard = null;
+        }
+
+        private void sidebar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
