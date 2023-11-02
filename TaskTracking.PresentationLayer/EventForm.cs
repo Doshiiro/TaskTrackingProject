@@ -17,7 +17,7 @@ namespace TaskTracking.PresentationLayer
 
         private void EvenForm_Load(object sender, EventArgs e)
         {
-            txtDate.Texts = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + "0" + UserControlDays.static_day;
+            txtDate.Texts = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" +  UserControlDays.static_day;
 
             EmployeeRepository employeeRepository = new EmployeeRepository();
 

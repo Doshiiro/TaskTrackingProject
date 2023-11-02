@@ -121,5 +121,10 @@ namespace TaskTracking.PresentationLayer
                 MessageBox.Show("Lütfen silinecek görevi seçiniz");
             }
         }
+
+        private void poisonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

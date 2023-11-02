@@ -39,17 +39,17 @@
             this.PersonelEvent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FkID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ribbonGroupBox1 = new ReaLTaiizor.Controls.RibbonGroupBox();
-            this.poisonDateTime1 = new ReaLTaiizor.Controls.PoisonDateTime();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.closeBtn = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.poisonDateTime1 = new ReaLTaiizor.Controls.PoisonDateTime();
             this.txtFK = new CustomControls.RJControls.RJTextBox();
             this.txtCalendarID = new CustomControls.RJControls.RJTextBox();
             this.txtPersonel = new CustomControls.RJControls.RJTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new CustomControls.RJControls.RJButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtEvent = new CustomControls.RJControls.RJTextBox();
+            this.closeBtn = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).BeginInit();
             this.ribbonGroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +109,7 @@
             this.poisonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.poisonDataGridView1.Size = new System.Drawing.Size(762, 355);
             this.poisonDataGridView1.TabIndex = 25;
+            this.poisonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.poisonDataGridView1_CellContentClick);
             this.poisonDataGridView1.SelectionChanged += new System.EventHandler(this.poisonDataGridView1_SelectionChanged);
             // 
             // CalendarID
@@ -167,61 +168,6 @@
             this.ribbonGroupBox1.TabIndex = 29;
             this.ribbonGroupBox1.Text = "Düzenle";
             // 
-            // poisonDateTime1
-            // 
-            this.poisonDateTime1.Location = new System.Drawing.Point(55, 76);
-            this.poisonDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
-            this.poisonDateTime1.Name = "poisonDateTime1";
-            this.poisonDateTime1.Size = new System.Drawing.Size(200, 29);
-            this.poisonDateTime1.TabIndex = 32;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(438, 47);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 17);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Personel";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 17);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Event";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 17);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Date";
-            // 
-            // closeBtn
-            // 
-            this.closeBtn.BackColor = System.Drawing.Color.Gray;
-            this.closeBtn.BackgroundColor = System.Drawing.Color.Gray;
-            this.closeBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.closeBtn.BorderRadius = 0;
-            this.closeBtn.BorderSize = 0;
-            this.closeBtn.FlatAppearance.BorderSize = 0;
-            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.closeBtn.ForeColor = System.Drawing.Color.White;
-            this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
-            this.closeBtn.Location = new System.Drawing.Point(727, 0);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(37, 32);
-            this.closeBtn.TabIndex = 22;
-            this.closeBtn.TextColor = System.Drawing.Color.White;
-            this.closeBtn.UseVisualStyleBackColor = false;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
-            // 
             // rjButton1
             // 
             this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -241,6 +187,14 @@
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
+            // 
+            // poisonDateTime1
+            // 
+            this.poisonDateTime1.Location = new System.Drawing.Point(55, 76);
+            this.poisonDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
+            this.poisonDateTime1.Name = "poisonDateTime1";
+            this.poisonDateTime1.Size = new System.Drawing.Size(200, 29);
+            this.poisonDateTime1.TabIndex = 32;
             // 
             // txtFK
             // 
@@ -311,6 +265,15 @@
             this.txtPersonel.Texts = "";
             this.txtPersonel.UnderlinedStyle = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(438, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 17);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Personel";
+            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -330,6 +293,24 @@
             this.btnSave.TextColor = System.Drawing.Color.White;
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(52, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 17);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Event";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(52, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 17);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Date";
             // 
             // txtEvent
             // 
@@ -352,6 +333,26 @@
             this.txtEvent.TabIndex = 22;
             this.txtEvent.Texts = "";
             this.txtEvent.UnderlinedStyle = false;
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.BackColor = System.Drawing.Color.Gray;
+            this.closeBtn.BackgroundColor = System.Drawing.Color.Gray;
+            this.closeBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.closeBtn.BorderRadius = 0;
+            this.closeBtn.BorderSize = 0;
+            this.closeBtn.FlatAppearance.BorderSize = 0;
+            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.closeBtn.ForeColor = System.Drawing.Color.White;
+            this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
+            this.closeBtn.Location = new System.Drawing.Point(727, 0);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(37, 32);
+            this.closeBtn.TabIndex = 22;
+            this.closeBtn.TextColor = System.Drawing.Color.White;
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // AllEventForm
             // 

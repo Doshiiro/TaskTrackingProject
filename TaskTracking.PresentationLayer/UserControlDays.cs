@@ -33,20 +33,20 @@ namespace takvim
         }
         public void days(int numday)
         {
-            lbgunler.Text = numday + "";
+            lbgunler.Text = (numday < 10) ? "0" + numday : numday.ToString();
         }
 
         PopupFormDesign popupFrm = new PopupFormDesign();
         private void UserControlDays_Click(object sender, EventArgs e)
         {
-           
+
         }
         private void displayEvent()
         {
 
             using (TaskTrackingContext context = new TaskTrackingContext())
             {
-                string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text ;
+                string dateString = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + lbgunler.Text;
 
 
                 var calenderEvent = context.Calendars.Count(e => e.date == dateString && e.emp_ID == FormCalendar.emp_Fk);

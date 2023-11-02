@@ -91,31 +91,39 @@ namespace TaskTracking.PresentationLayer
 
         private async void eventShowBtn_Click(object sender, EventArgs e)
         {
-            string dateText = dataGridView1.SelectedRows[0].Cells["Column1"].Value.ToString();
-            string eventText = dataGridView1.SelectedRows[0].Cells["Column2"].Value.ToString();
-            string calID = dataGridView1.SelectedRows[0].Cells["CalendarID"].Value.ToString();
-            int id = Convert.ToInt32(calID);
+            if (dataGridView1.SelectedCells.Count > 0)
+            {
+                string dateText = dataGridView1.SelectedRows[0].Cells["Column1"].Value.ToString();
+                string eventText = dataGridView1.SelectedRows[0].Cells["Column2"].Value.ToString();
+                string calID = dataGridView1.SelectedRows[0].Cells["CalendarID"].Value.ToString();
+                int id = Convert.ToInt32(calID);
 
-            CalendarRepository calendarRepository = new CalendarRepository();
-            CalendarEntity calendarEntity = new CalendarEntity()
-            {
-                calender_ID = id,
-                date = dateText,
-                events = eventText,
-                status = "Yapıldı",
-                emp_ID = taskEmp_Fk
-            };
-            if (calendarEntity != null)
-            {
-                await calendarRepository.Update(calendarEntity);
-                dataGridView1.DataSource = null;
-                dataGridView1.Rows.Clear();
-                EventShow();
+                CalendarRepository calendarRepository = new CalendarRepository();
+                CalendarEntity calendarEntity = new CalendarEntity()
+                {
+                    calender_ID = id,
+                    date = dateText,
+                    events = eventText,
+                    status = "Yapıldı",
+                    emp_ID = taskEmp_Fk
+                };
+                if (calendarEntity != null)
+                {
+                    await calendarRepository.Update(calendarEntity);
+                    dataGridView1.DataSource = null;
+                    dataGridView1.Rows.Clear();
+                    EventShow();
+                }
+                else
+                {
+                    MessageBox.Show("Hata");
+                }
             }
             else
             {
-                MessageBox.Show("Hata");
+                MessageBox.Show("Lütfen yapılan görevi seçiniz");
             }
+            
 
         }
         private void rjButton2_Click(object sender, EventArgs e)
