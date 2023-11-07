@@ -31,6 +31,8 @@ namespace TaskTracking.PresentationLayer
                     .Where(c => c.emp_ID == taskListId).ToList();
 
             int calStatusData = 0;
+            int calStatusNullData = 0;
+            double calenderTotalEvent = calendarEvent.Count;
 
             foreach (var item in calendarEvent)
             {
@@ -38,9 +40,31 @@ namespace TaskTracking.PresentationLayer
                 if (item.status != null)
                 {
                     calStatusData++;
+
+                }
+                else
+                {
+                    calStatusNullData++;
                 }
             }
             tasklbl.Text = calStatusData + " / " + calendarEvent.Count.ToString();
+
+            chart1.Series["s1"].Points.AddY(calStatusData);
+            chart1.Series["s1"].Points.AddY(calStatusNullData);
+
+
+            chart1.Series["s1"].Points[0].Color = Color.FromArgb(176, 217, 177);//yeşil
+            chart1.Series["s1"].Points[1].Color = Color.FromArgb(239, 98, 98);//kırmızı
+
+            string  resultPercentage= "%" + (((double)calStatusData / calenderTotalEvent) * 100).ToString();
+            if (resultPercentage=="%NaN")
+            {
+                graphPercentage.Text = "Görev yok";
+            }
+            else
+            {
+                graphPercentage.Text=resultPercentage;
+            }
 
 
             DatagridviewSetting(dataGridView1);
@@ -85,6 +109,11 @@ namespace TaskTracking.PresentationLayer
         }
 
         private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart2_Click(object sender, EventArgs e)
         {
 
         }
