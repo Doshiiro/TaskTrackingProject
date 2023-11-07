@@ -5,10 +5,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using TaskTracking.PresentationLayer.DAL;
 using TaskTracking.PresentationLayer.Management.Concrete;
 using static ReaLTaiizor.Controls.ToggleEdit;
 
@@ -20,23 +22,25 @@ namespace TaskTracking.PresentationLayer
         {
             InitializeComponent();
         }
-
+        public static int taskListId;
         private void formDefaultDashboard_Load(object sender, EventArgs e)
         {
 
-            CalendarRepository calendarRepository = new CalendarRepository();
-            var caldata = calendarRepository.GetAll();
+            TaskTrackingContext context = new TaskTrackingContext();
+            var calendarEvent = context.Calendars
+                    .Where(c => c.emp_ID == taskListId).ToList();
+
             int calStatusData = 0;
 
-            foreach (var item in caldata)
+            foreach (var item in calendarEvent)
             {
-                dataGridView1.Rows.Add(item.date, item.events, "Null");
+                dataGridView1.Rows.Add(item.date, item.events, item.status);
                 if (item.status != null)
                 {
                     calStatusData++;
                 }
             }
-            tasklbl.Text = calStatusData + " / " + caldata.Count.ToString();
+            tasklbl.Text = calStatusData + " / " + calendarEvent.Count.ToString();
 
 
             DatagridviewSetting(dataGridView1);

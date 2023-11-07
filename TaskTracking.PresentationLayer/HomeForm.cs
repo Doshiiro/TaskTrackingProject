@@ -33,6 +33,7 @@ namespace TaskTracking.PresentationLayer
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
+            formDefaultDashboard.taskListId = emp_id;
             if (employeeRole != 1)
             {
                 defaultDashboard = new formDefaultDashboard();
@@ -42,6 +43,7 @@ namespace TaskTracking.PresentationLayer
 
                 rjButton1.Visible = false;
                 pnDashboard.Visible = false;
+
             }
             else
             {
@@ -209,6 +211,7 @@ namespace TaskTracking.PresentationLayer
                 defaultDashboard.FormClosed += DefaultDashboard_FormClosed;
                 defaultDashboard.MdiParent = this;
                 defaultDashboard.Dock = DockStyle.Fill;
+                formDefaultDashboard.taskListId = emp_id;
                 defaultDashboard.Show();
 
             }
