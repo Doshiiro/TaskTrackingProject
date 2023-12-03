@@ -103,19 +103,6 @@ namespace TaskTracking.PresentationLayer
             }
         }
 
-        private void dungeonLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chart2_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

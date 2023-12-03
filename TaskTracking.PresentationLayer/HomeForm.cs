@@ -84,33 +84,7 @@ namespace TaskTracking.PresentationLayer
         {
             menuTransition.Start();
         }
-        bool sidebarExpand = true;
-        private void sidebartransition_Tick(object sender, EventArgs e)
-        {
-            if (sidebarExpand)
-            {
-                sidebar.Width -= 7;
-                if (sidebar.Width <= 50)
-                {
-                    sidebarExpand = false;
-                    sidebartransition.Stop();
-                }
-            }
-            else
-            {
-                sidebar.Width += 7;
-                if (sidebar.Width >= 240)
-                {
-                    sidebarExpand = true;
-                    sidebartransition.Stop();
-                }
-            }
-        }
-
-        private void btnHam_Click(object sender, EventArgs e)
-        {
-            sidebartransition.Start();
-        }
+      
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
@@ -229,6 +203,11 @@ namespace TaskTracking.PresentationLayer
         private void sidebar_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

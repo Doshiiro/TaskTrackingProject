@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formDefaultDashboard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.hopeGroupBox1 = new ReaLTaiizor.Controls.HopeGroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.projelbl = new ReaLTaiizor.Controls.BigLabel();
             this.dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.hopeGroupBox2 = new ReaLTaiizor.Controls.HopeGroupBox();
+            this.dungeonLabel2 = new ReaLTaiizor.Controls.DungeonLabel();
             this.tasklbl = new ReaLTaiizor.Controls.BigLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dungeonLabel2 = new ReaLTaiizor.Controls.DungeonLabel();
             this.hopeGroupBox3 = new ReaLTaiizor.Controls.HopeGroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,10 +64,10 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dungeonLabel4 = new ReaLTaiizor.Controls.DungeonLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dungeonLabel5 = new ReaLTaiizor.Controls.DungeonLabel();
             this.dungeonLabel6 = new ReaLTaiizor.Controls.DungeonLabel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dungeonLabel5 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.graphPercentage = new ReaLTaiizor.Controls.BigLabel();
             this.bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -99,7 +99,7 @@
             this.hopeGroupBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.hopeGroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
             this.hopeGroupBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeGroupBox1.Location = new System.Drawing.Point(624, 53);
+            this.hopeGroupBox1.Location = new System.Drawing.Point(12, 384);
             this.hopeGroupBox1.Name = "hopeGroupBox1";
             this.hopeGroupBox1.ShowText = false;
             this.hopeGroupBox1.Size = new System.Drawing.Size(198, 82);
@@ -148,7 +148,7 @@
             this.bigLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel1.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.bigLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel1.Location = new System.Drawing.Point(12, 0);
+            this.bigLabel1.Location = new System.Drawing.Point(974, 3);
             this.bigLabel1.Name = "bigLabel1";
             this.bigLabel1.Size = new System.Drawing.Size(146, 37);
             this.bigLabel1.TabIndex = 1;
@@ -157,20 +157,32 @@
             // hopeGroupBox2
             // 
             this.hopeGroupBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.hopeGroupBox2.Controls.Add(this.dungeonLabel2);
             this.hopeGroupBox2.Controls.Add(this.tasklbl);
             this.hopeGroupBox2.Controls.Add(this.pictureBox2);
-            this.hopeGroupBox2.Controls.Add(this.dungeonLabel2);
             this.hopeGroupBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.hopeGroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
             this.hopeGroupBox2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeGroupBox2.Location = new System.Drawing.Point(25, 53);
+            this.hopeGroupBox2.Location = new System.Drawing.Point(12, 8);
             this.hopeGroupBox2.Name = "hopeGroupBox2";
             this.hopeGroupBox2.ShowText = false;
-            this.hopeGroupBox2.Size = new System.Drawing.Size(198, 82);
+            this.hopeGroupBox2.Size = new System.Drawing.Size(186, 80);
             this.hopeGroupBox2.TabIndex = 2;
             this.hopeGroupBox2.TabStop = false;
             this.hopeGroupBox2.Text = "hopeGroupBox2";
             this.hopeGroupBox2.ThemeColor = System.Drawing.Color.Gainsboro;
+            // 
+            // dungeonLabel2
+            // 
+            this.dungeonLabel2.AutoSize = true;
+            this.dungeonLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.dungeonLabel2.ForeColor = System.Drawing.Color.Black;
+            this.dungeonLabel2.Location = new System.Drawing.Point(6, 11);
+            this.dungeonLabel2.Name = "dungeonLabel2";
+            this.dungeonLabel2.Size = new System.Drawing.Size(70, 21);
+            this.dungeonLabel2.TabIndex = 3;
+            this.dungeonLabel2.Text = "Görevler";
             // 
             // tasklbl
             // 
@@ -178,7 +190,7 @@
             this.tasklbl.BackColor = System.Drawing.Color.Transparent;
             this.tasklbl.Font = new System.Drawing.Font("Segoe UI", 17F);
             this.tasklbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tasklbl.Location = new System.Drawing.Point(23, 37);
+            this.tasklbl.Location = new System.Drawing.Point(23, 35);
             this.tasklbl.Name = "tasklbl";
             this.tasklbl.Size = new System.Drawing.Size(59, 31);
             this.tasklbl.TabIndex = 2;
@@ -188,23 +200,11 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(114, 7);
+            this.pictureBox2.Location = new System.Drawing.Point(116, 11);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(68, 69);
+            this.pictureBox2.Size = new System.Drawing.Size(64, 63);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            // 
-            // dungeonLabel2
-            // 
-            this.dungeonLabel2.AutoSize = true;
-            this.dungeonLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonLabel2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.dungeonLabel2.ForeColor = System.Drawing.Color.Black;
-            this.dungeonLabel2.Location = new System.Drawing.Point(12, 7);
-            this.dungeonLabel2.Name = "dungeonLabel2";
-            this.dungeonLabel2.Size = new System.Drawing.Size(70, 21);
-            this.dungeonLabel2.TabIndex = 1;
-            this.dungeonLabel2.Text = "Görevler";
             // 
             // hopeGroupBox3
             // 
@@ -214,10 +214,10 @@
             this.hopeGroupBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.hopeGroupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
             this.hopeGroupBox3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeGroupBox3.Location = new System.Drawing.Point(19, 437);
+            this.hopeGroupBox3.Location = new System.Drawing.Point(12, 94);
             this.hopeGroupBox3.Name = "hopeGroupBox3";
             this.hopeGroupBox3.ShowText = false;
-            this.hopeGroupBox3.Size = new System.Drawing.Size(574, 326);
+            this.hopeGroupBox3.Size = new System.Drawing.Size(654, 276);
             this.hopeGroupBox3.TabIndex = 3;
             this.hopeGroupBox3.TabStop = false;
             this.hopeGroupBox3.Text = "hopeGroupBox3";
@@ -228,39 +228,39 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle21.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.GridColor = System.Drawing.Color.DimGray;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 57);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 48);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.RowTemplate.Height = 75;
-            this.dataGridView1.Size = new System.Drawing.Size(545, 263);
+            this.dataGridView1.Size = new System.Drawing.Size(626, 222);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView1_CellPainting);
             // 
@@ -293,23 +293,22 @@
             this.dungeonLabel3.Size = new System.Drawing.Size(89, 25);
             this.dungeonLabel3.TabIndex = 1;
             this.dungeonLabel3.Text = "Görevler";
-            this.dungeonLabel3.Click += new System.EventHandler(this.dungeonLabel3_Click);
             // 
             // chart1
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart1.Legends.Add(legend7);
-            this.chart1.Location = new System.Drawing.Point(19, 151);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(672, 93);
             this.chart1.Name = "chart1";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series7.Legend = "Legend1";
-            series7.Name = "s1";
-            series7.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series7);
-            this.chart1.Size = new System.Drawing.Size(464, 280);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Legend = "Legend1";
+            series1.Name = "s1";
+            series1.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(448, 277);
             this.chart1.TabIndex = 7;
             this.chart1.Text = "chart1";
             // 
@@ -321,10 +320,10 @@
             this.hopeGroupBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.hopeGroupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
             this.hopeGroupBox4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeGroupBox4.Location = new System.Drawing.Point(618, 437);
+            this.hopeGroupBox4.Location = new System.Drawing.Point(12, 472);
             this.hopeGroupBox4.Name = "hopeGroupBox4";
             this.hopeGroupBox4.ShowText = false;
-            this.hopeGroupBox4.Size = new System.Drawing.Size(464, 326);
+            this.hopeGroupBox4.Size = new System.Drawing.Size(651, 301);
             this.hopeGroupBox4.TabIndex = 8;
             this.hopeGroupBox4.TabStop = false;
             this.hopeGroupBox4.Text = "hopeGroupBox4";
@@ -335,39 +334,39 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToResizeColumns = false;
             this.dataGridView2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle24.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView2.GridColor = System.Drawing.Color.DimGray;
-            this.dataGridView2.Location = new System.Drawing.Point(16, 57);
+            this.dataGridView2.Location = new System.Drawing.Point(6, 57);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Gainsboro;
             this.dataGridView2.RowTemplate.Height = 75;
-            this.dataGridView2.Size = new System.Drawing.Size(545, 223);
+            this.dataGridView2.Size = new System.Drawing.Size(620, 238);
             this.dataGridView2.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -407,30 +406,10 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.dungeonLabel5);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(338, 151);
+            this.panel1.Location = new System.Drawing.Point(972, 93);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(145, 280);
+            this.panel1.Size = new System.Drawing.Size(148, 277);
             this.panel1.TabIndex = 9;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.panel2.Location = new System.Drawing.Point(3, 32);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(23, 10);
-            this.panel2.TabIndex = 0;
-            // 
-            // dungeonLabel5
-            // 
-            this.dungeonLabel5.AutoSize = true;
-            this.dungeonLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonLabel5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dungeonLabel5.ForeColor = System.Drawing.Color.Black;
-            this.dungeonLabel5.Location = new System.Drawing.Point(28, 27);
-            this.dungeonLabel5.Name = "dungeonLabel5";
-            this.dungeonLabel5.Size = new System.Drawing.Size(111, 19);
-            this.dungeonLabel5.TabIndex = 2;
-            this.dungeonLabel5.Text = "Tamamlanmayan";
             // 
             // dungeonLabel6
             // 
@@ -438,7 +417,7 @@
             this.dungeonLabel6.BackColor = System.Drawing.Color.Transparent;
             this.dungeonLabel6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dungeonLabel6.ForeColor = System.Drawing.Color.Black;
-            this.dungeonLabel6.Location = new System.Drawing.Point(28, 61);
+            this.dungeonLabel6.Location = new System.Drawing.Point(34, 53);
             this.dungeonLabel6.Name = "dungeonLabel6";
             this.dungeonLabel6.Size = new System.Drawing.Size(85, 19);
             this.dungeonLabel6.TabIndex = 4;
@@ -447,10 +426,30 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(217)))), ((int)(((byte)(177)))));
-            this.panel3.Location = new System.Drawing.Point(3, 66);
+            this.panel3.Location = new System.Drawing.Point(9, 58);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(23, 10);
             this.panel3.TabIndex = 3;
+            // 
+            // dungeonLabel5
+            // 
+            this.dungeonLabel5.AutoSize = true;
+            this.dungeonLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dungeonLabel5.ForeColor = System.Drawing.Color.Black;
+            this.dungeonLabel5.Location = new System.Drawing.Point(34, 19);
+            this.dungeonLabel5.Name = "dungeonLabel5";
+            this.dungeonLabel5.Size = new System.Drawing.Size(111, 19);
+            this.dungeonLabel5.TabIndex = 2;
+            this.dungeonLabel5.Text = "Tamamlanmayan";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.panel2.Location = new System.Drawing.Point(9, 24);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(23, 10);
+            this.panel2.TabIndex = 0;
             // 
             // graphPercentage
             // 
@@ -458,7 +457,7 @@
             this.graphPercentage.BackColor = System.Drawing.Color.White;
             this.graphPercentage.Font = new System.Drawing.Font("Segoe UI", 17F);
             this.graphPercentage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.graphPercentage.Location = new System.Drawing.Point(174, 272);
+            this.graphPercentage.Location = new System.Drawing.Point(816, 212);
             this.graphPercentage.Name = "graphPercentage";
             this.graphPercentage.Size = new System.Drawing.Size(33, 31);
             this.graphPercentage.TabIndex = 10;
@@ -470,7 +469,7 @@
             this.bigLabel2.BackColor = System.Drawing.Color.White;
             this.bigLabel2.Font = new System.Drawing.Font("Segoe UI", 17F);
             this.bigLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bigLabel2.Location = new System.Drawing.Point(779, 272);
+            this.bigLabel2.Location = new System.Drawing.Point(816, 596);
             this.bigLabel2.Name = "bigLabel2";
             this.bigLabel2.Size = new System.Drawing.Size(33, 31);
             this.bigLabel2.TabIndex = 13;
@@ -483,9 +482,9 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.dungeonLabel8);
             this.panel4.Controls.Add(this.panel6);
-            this.panel4.Location = new System.Drawing.Point(943, 151);
+            this.panel4.Location = new System.Drawing.Point(981, 472);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(145, 280);
+            this.panel4.Size = new System.Drawing.Size(136, 293);
             this.panel4.TabIndex = 12;
             // 
             // dungeonLabel7
@@ -530,36 +529,36 @@
             // 
             // chart2
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart2.Legends.Add(legend8);
-            this.chart2.Location = new System.Drawing.Point(624, 151);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
+            this.chart2.Location = new System.Drawing.Point(669, 472);
             this.chart2.Name = "chart2";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series8.Legend = "Legend1";
-            series8.Name = "s1";
-            series8.YValuesPerPoint = 4;
-            this.chart2.Series.Add(series8);
-            this.chart2.Size = new System.Drawing.Size(464, 280);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Legend = "Legend1";
+            series2.Name = "s1";
+            series2.YValuesPerPoint = 4;
+            this.chart2.Series.Add(series2);
+            this.chart2.Size = new System.Drawing.Size(448, 293);
             this.chart2.TabIndex = 11;
             this.chart2.Text = "chart2";
-            this.chart2.Click += new System.EventHandler(this.chart2_Click);
             // 
             // formDefaultDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 808);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1120, 777);
             this.Controls.Add(this.bigLabel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.hopeGroupBox4);
-            this.Controls.Add(this.chart2);
+            this.Controls.Add(this.hopeGroupBox2);
             this.Controls.Add(this.graphPercentage);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.chart2);
             this.Controls.Add(this.chart1);
-            this.Controls.Add(this.hopeGroupBox2);
             this.Controls.Add(this.hopeGroupBox3);
             this.Controls.Add(this.bigLabel1);
             this.Controls.Add(this.hopeGroupBox1);
@@ -599,7 +598,6 @@
         private ReaLTaiizor.Controls.HopeGroupBox hopeGroupBox2;
         private ReaLTaiizor.Controls.BigLabel tasklbl;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private ReaLTaiizor.Controls.HopeGroupBox hopeGroupBox3;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel3;
@@ -627,5 +625,6 @@
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel8;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel2;
     }
 }
