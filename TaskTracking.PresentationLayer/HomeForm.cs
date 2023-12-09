@@ -30,9 +30,11 @@ namespace TaskTracking.PresentationLayer
         public int employeeRole;
         public int emp_id;
         public int emp_calendarAccess;
+        public string emp_UserName;
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
+            crownLabel1.Text = emp_UserName;
             formDefaultDashboard.taskListId = emp_id;
             if (employeeRole != 1)
             {
@@ -42,7 +44,6 @@ namespace TaskTracking.PresentationLayer
                 defaultDashboard.Dock = DockStyle.Fill;
 
                 rjButton1.Visible = false;
-                pnDashboard.Visible = false;
 
             }
             else

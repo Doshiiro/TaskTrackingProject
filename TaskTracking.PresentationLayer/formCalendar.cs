@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -79,6 +80,17 @@ namespace takvim
 
             month--;
 
+            if (month == 0)
+            {
+                month = 1;
+
+                if (month == 1)
+                {
+                    month = 12;
+                    year--;
+                }
+            }
+
 
             static_month = month;
             static_year = year;
@@ -110,18 +122,23 @@ namespace takvim
         {
             daycontainer.Controls.Clear();
 
-            month++;
 
+            month++;
+            if (month == 13)
+            {
+                month = 1;
+                year++;
+            }
 
             static_month = month;
             static_year = year;
 
+
             string ayismi = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lbtarih.Text = ayismi + " " + year;
 
-
             DateTime aybaslangic = new DateTime(year, month, 1);
-            //month değeri 13 e geliyor ve bu yüzden program burada patlıyor daha sonra fixlencek.
+
             int gunler = DateTime.DaysInMonth(year, month);
 
 
@@ -137,6 +154,7 @@ namespace takvim
                 UserControlDays ucdays = new UserControlDays();
                 ucdays.days(i);
                 daycontainer.Controls.Add(ucdays);
+
             }
         }
     }

@@ -36,7 +36,7 @@ namespace TaskTracking.PresentationLayer
 
             foreach (var item in calendarEvent)
             {
-                dataGridView1.Rows.Add(item.date, item.events, item.status);
+                dataGridView2.Rows.Add(item.date, item.events, item.status);
                 if (item.status != null)
                 {
                     calStatusData++;
@@ -56,7 +56,9 @@ namespace TaskTracking.PresentationLayer
             chart1.Series["s1"].Points[0].Color = Color.FromArgb(176, 217, 177);//yeşil
             chart1.Series["s1"].Points[1].Color = Color.FromArgb(239, 98, 98);//kırmızı
 
-            string  resultPercentage= "%" + (((double)calStatusData / calenderTotalEvent) * 100).ToString();
+
+            string  resultPercentage= "%" + Math.Round((((double)calStatusData / calenderTotalEvent) * 100)).ToString();
+           
             if (resultPercentage=="%NaN")
             {
                 graphPercentage.Text = "Görev yok";
@@ -66,11 +68,11 @@ namespace TaskTracking.PresentationLayer
                 graphPercentage.Text=resultPercentage;
             }
 
+            dataGridView2.ReadOnly= true;
 
-            DatagridviewSetting(dataGridView1);
-            dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Ascending);
-            dataGridView1.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
-            dataGridView1.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView2.Sort(dataGridView2.Columns[0], ListSortDirection.Ascending);
+            dataGridView2.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView2.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
 
 
         }
@@ -84,25 +86,16 @@ namespace TaskTracking.PresentationLayer
             dataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(220, 220, 220);
             dataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
-            dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView.DefaultCellStyle.BackColor = Color.Red;
-            dataGridView.DefaultCellStyle.ForeColor = Color.Black;
-
-            //alt çizgi
-            dataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridView.AllowUserToAddRows = false;
-
         }
 
-        private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+
+        private void dataGridView2_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            if (e.RowIndex == dataGridView1.RowCount - 1 && e.ColumnIndex >= 0)
+            if (e.RowIndex == dataGridView2.RowCount - 1 && e.ColumnIndex >= 0)
             {
                 e.AdvancedBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.None;
             }
-        }
 
-      
+        }
     }
 }

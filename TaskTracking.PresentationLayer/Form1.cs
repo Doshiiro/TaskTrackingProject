@@ -135,6 +135,8 @@ namespace TaskTracking.PresentationLayer
                 homeForm.emp_id = verifyData.emp_ID;
                 homeForm.emp_calendarAccess = verifyData.Access;
 
+                homeForm.emp_UserName = verifyData.UserName;
+
                 homeForm.ShowDialog();
 
                 this.Close();

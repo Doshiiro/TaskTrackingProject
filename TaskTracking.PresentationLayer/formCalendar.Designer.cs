@@ -57,7 +57,7 @@
             this.btnonce.Name = "btnonce";
             this.btnonce.Size = new System.Drawing.Size(70, 30);
             this.btnonce.TabIndex = 1;
-            this.btnonce.Text = "Önceki";
+            this.btnonce.Text = "Sonraki";
             this.btnonce.UseVisualStyleBackColor = true;
             this.btnonce.Click += new System.EventHandler(this.btnonce_Click);
             // 
@@ -68,7 +68,7 @@
             this.btnsonraki.Name = "btnsonraki";
             this.btnsonraki.Size = new System.Drawing.Size(62, 30);
             this.btnsonraki.TabIndex = 1;
-            this.btnsonraki.Text = "Sonraki";
+            this.btnsonraki.Text = "Önceki";
             this.btnsonraki.UseVisualStyleBackColor = true;
             this.btnsonraki.Click += new System.EventHandler(this.btnsonraki_Click);
             // 
