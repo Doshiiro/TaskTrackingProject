@@ -5,6 +5,7 @@ using takvim;
 using TaskTracking.PresentationLayer.DAL;
 using TaskTracking.PresentationLayer.Entities;
 using TaskTracking.PresentationLayer.Management.Concrete;
+using TaskTracking.PresentationLayer.Services;
 
 namespace TaskTracking.PresentationLayer
 {
@@ -17,7 +18,7 @@ namespace TaskTracking.PresentationLayer
 
         private void EvenForm_Load(object sender, EventArgs e)
         {
-            txtDate.Texts = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" +  UserControlDays.static_day;
+            txtDate.Texts = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + UserControlDays.static_day;
 
             EmployeeRepository employeeRepository = new EmployeeRepository();
 
@@ -35,8 +36,9 @@ namespace TaskTracking.PresentationLayer
         private void btnSave_Click(object sender, EventArgs e)
         {
             //sdasadsad
-         
+
             TaskTrackingContext context = new TaskTrackingContext();
+            MailSendServices mailService = new MailSendServices();
 
 
             if (metroComboBox1.SelectedItem == null)
@@ -62,6 +64,9 @@ namespace TaskTracking.PresentationLayer
                 context.Add(_calendar);
                 context.SaveChanges();
                 MessageBox.Show("Etkinlik eklendi");
+
+                mailService.SendEventMail();
+
                 txtEvent.Texts = "";
             }
         }

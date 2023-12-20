@@ -223,3 +223,9 @@ C:\Users\ozcan\OneDrive\Belgeler\GitHub\TaskTrackingProject\TaskTracking.Present
 C:\Users\ozcan\OneDrive\Belgeler\GitHub\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.csproj.CopyComplete
 C:\Users\ozcan\OneDrive\Belgeler\GitHub\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.exe
 C:\Users\ozcan\OneDrive\Belgeler\GitHub\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.pdb
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\MimeKit.dll
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\MimeKit.pdb
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\MimeKit.xml
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\bin\Debug\MimeKit.dll.config
