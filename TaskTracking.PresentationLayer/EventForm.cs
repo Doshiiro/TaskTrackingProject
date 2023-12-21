@@ -35,7 +35,6 @@ namespace TaskTracking.PresentationLayer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //sdasadsad
 
             TaskTrackingContext context = new TaskTrackingContext();
             MailSendServices mailService = new MailSendServices();
@@ -64,8 +63,8 @@ namespace TaskTracking.PresentationLayer
                 context.Add(_calendar);
                 context.SaveChanges();
                 MessageBox.Show("Etkinlik eklendi");
-
-                mailService.SendEventMail();
+                
+                mailService.SendEventMail(txtEvent.Texts,selectedEmployee.Email);
 
                 txtEvent.Texts = "";
             }
