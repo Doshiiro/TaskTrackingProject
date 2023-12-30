@@ -16,11 +16,6 @@ using TaskTracking.PresentationLayer.DesignForm;
 
 namespace takvim
 {
-    /*
-        veri tabanından bütün kullanıcıların date değerleri alınacak
-        date değerleri alınan kullanıcıların date özelliğini stringtten datetime formatına dönüştürülecek
-        dönüştürülen tarih değeri eğer ileri bir tarih veya bugün ise kullanıcıya mail göndericek.
-     */
     public partial class FormCalendar : Form
     {
         int month, year;

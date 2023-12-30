@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TaskTracking.PresentationLayer.DAL;
 using TaskTracking.PresentationLayer.Entities;
 using TaskTracking.PresentationLayer.Entities.Validations;
 using TaskTracking.PresentationLayer.Management.Concrete;
@@ -28,34 +29,51 @@ namespace TaskTracking.PresentationLayer
 
         private async void rjButton2_Click(object sender, EventArgs e)
         {
+
+            TaskTrackingContext context = new TaskTrackingContext();
+            // Department tablosundan veritabanında Departman adına sahip olanı bul
+            var selectedDepID = context.Departments.FirstOrDefault(d => d.DepartmentName == metroComboBox1.Text);
+
+
             EmployeeRepository employeeRepository = new EmployeeRepository();
             Employee DtoEmp = new Employee()
             {
                 UserName = kullaniciAdiTxt.Texts,
-                Password=passwordTxt.Texts,
-                Departman=departmanTxt.Texts,
-                Email=emailTxt.Texts,
+                Password = passwordTxt.Texts,
+                DepartmentID = selectedDepID.DepID,
+                Email = emailTxt.Texts,
             };
-            if (DtoEmp!=null)
+            if (DtoEmp != null)
             {
                 EmployeeValidation validationRules = new EmployeeValidation();
                 ValidationResult result = validationRules.Validate(DtoEmp);
                 IList<ValidationFailure> failures = result.Errors;
                 if (!result.IsValid)
                 {
-                    foreach(ValidationFailure failure in failures)
+                    foreach (ValidationFailure failure in failures)
                     {
-                        MessageBox.Show(failure.ErrorMessage,"Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(failure.ErrorMessage, "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
                 await employeeRepository.Create(DtoEmp);
                 MessageBox.Show("kullanıcı eklendi");
             }
-            
+
+        }
+        private void modelForm1_Load(object sender, EventArgs e)
+        {
+            using (var context = new TaskTrackingContext())
+            {
+                List<Department> data = context.Departments.ToList();
+                foreach (var department in data)
+                {
+                    metroComboBox1.Items.Add(department.DepartmentName);
+                }
+            }
         }
 
-        private void modelForm1_Load(object sender, EventArgs e)
+        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

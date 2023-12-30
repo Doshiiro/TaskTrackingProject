@@ -210,8 +210,10 @@
     <Compile Include="DesignForm\CustomCenter.cs" />
     <Compile Include="DesignForm\PopupFormDesign.cs" />
     <Compile Include="Entities\CalendarEntity.cs" />
+    <Compile Include="Entities\Department.cs" />
     <Compile Include="Entities\Dto\DtoEmployee.cs" />
     <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\ProjectEntity.cs" />
     <Compile Include="Entities\Validations\EmployeeValidation.cs" />
     <Compile Include="EventForm.cs">
       <SubType>Form</SubType>
@@ -276,9 +278,26 @@
     <Compile Include="Management\Abstract\IGenericRepository.cs" />
     <Compile Include="Management\Concrete\CalendarRepository.cs" />
     <Compile Include="Management\Concrete\EmployeeRepository.cs" />
+    <Compile Include="Management\Concrete\ProjectRepository.cs" />
     <Compile Include="Migrations\20231025060742_init2.cs" />
     <Compile Include="Migrations\20231025060742_init2.designer.cs">
       <DependentUpon>20231025060742_init2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20231224124431_projectinit.cs" />
+    <Compile Include="Migrations\20231224124431_projectinit.designer.cs">
+      <DependentUpon>20231224124431_projectinit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20231230103113_departmaninit1.cs" />
+    <Compile Include="Migrations\20231230103113_departmaninit1.designer.cs">
+      <DependentUpon>20231230103113_departmaninit1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20231230105121_departmaninit2.cs" />
+    <Compile Include="Migrations\20231230105121_departmaninit2.designer.cs">
+      <DependentUpon>20231230105121_departmaninit2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20231230121120_departmaninit3.cs" />
+    <Compile Include="Migrations\20231230121120_departmaninit3.designer.cs">
+      <DependentUpon>20231230121120_departmaninit3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\TaskTrackingContextModelSnapshot.cs" />
     <Compile Include="modelForm1.cs">

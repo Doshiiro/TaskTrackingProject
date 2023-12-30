@@ -5,9 +5,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TaskTracking.PresentationLayer.DAL;
 using TaskTracking.PresentationLayer.DesignForm;
 using TaskTracking.PresentationLayer.Entities;
 using TaskTracking.PresentationLayer.Management.Concrete;
@@ -22,6 +24,8 @@ namespace TaskTracking.PresentationLayer
         {
             InitializeComponent();
         }
+        
+        TaskTrackingContext context = new TaskTrackingContext();
 
         private void formDashBoard_Load(object sender, EventArgs e)
         {
@@ -30,10 +34,11 @@ namespace TaskTracking.PresentationLayer
             this.ControlBox = false;
 
             var datas = employeeRepository.GetAll();
-
             foreach (var item in datas)
             {
-                poisonDataGridView1.Rows.Add(item.emp_ID, item.UserName, item.Departman, item.Email);
+                var dataDep = context.Departments.FirstOrDefault(d => d.DepID == item.DepartmentID);
+
+                poisonDataGridView1.Rows.Add(item.emp_ID, item.UserName, dataDep.DepartmentName, item.Email);
             }
 
             poisonDataGridView1.AllowUserToAddRows = false;
@@ -49,7 +54,9 @@ namespace TaskTracking.PresentationLayer
 
             foreach (var item in datas)
             {
-                poisonDataGridView1.Rows.Add(item.emp_ID, item.UserName, item.Departman, item.Email);
+                var dataDep = context.Departments.FirstOrDefault(d => d.DepID == item.DepartmentID);
+
+                poisonDataGridView1.Rows.Add(item.emp_ID, item.UserName, dataDep.DepartmentName, item.Email);
             }
         }
 

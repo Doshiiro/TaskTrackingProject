@@ -20,6 +20,9 @@ namespace TaskTracking.PresentationLayer
         private void formSubmenu2_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.AllowUserToAddRows = false;
         }
     }
 }

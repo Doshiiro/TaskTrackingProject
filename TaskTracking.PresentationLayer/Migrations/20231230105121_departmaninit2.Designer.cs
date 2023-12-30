@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TaskTracking.PresentationLayer.DAL;
 
 namespace TaskTracking.PresentationLayer.Migrations
 {
     [DbContext(typeof(TaskTrackingContext))]
-    partial class TaskTrackingContextModelSnapshot : ModelSnapshot
+    [Migration("20231230105121_departmaninit2")]
+    partial class departmaninit2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -96,18 +98,19 @@ namespace TaskTracking.PresentationLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("DepartmentID")
-                        .HasColumnType("int");
+                    b.Property<string>("ProjectDescription")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProjectName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectType")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("projectEmp_ID")
                         .HasColumnType("int");
 
                     b.HasKey("ProjectID");
-
-                    b.HasIndex("DepartmentID");
 
                     b.HasIndex("projectEmp_ID");
 
@@ -132,10 +135,6 @@ namespace TaskTracking.PresentationLayer.Migrations
 
             modelBuilder.Entity("TaskTracking.PresentationLayer.Entities.ProjectEntity", b =>
                 {
-                    b.HasOne("TaskTracking.PresentationLayer.Entities.Department", "Department")
-                        .WithMany("Projects")
-                        .HasForeignKey("DepartmentID");
-
                     b.HasOne("TaskTracking.PresentationLayer.Entities.Employee", "Employees")
                         .WithMany("Projects")
                         .HasForeignKey("projectEmp_ID")

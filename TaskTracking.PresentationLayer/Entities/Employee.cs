@@ -15,9 +15,14 @@ namespace TaskTracking.PresentationLayer.Entities
         public string UserName { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
-        public string Departman { get; set; }
+
+        public int? DepartmentID { get; set; }
+        public Department Department { get; set; }
         public int Access { get; set; }
+
         public ICollection<CalendarEntity> Calendars { get; set; }
+        public ICollection<ProjectEntity> Projects { get; set; }
+
 
     }
 }

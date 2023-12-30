@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace TaskTracking.PresentationLayer.Entities.Validations
 {
-    public class EmployeeValidation:AbstractValidator<Employee>
+    public class EmployeeValidation : AbstractValidator<Employee>
     {
         public EmployeeValidation()
         {
             RuleFor(x => x.UserName).NotEmpty().WithMessage("Kullanıcı Adı boş geçilemez");
-            RuleFor(x=>x.Email).NotEmpty().WithMessage("Email alanı boş geçilemez");
-            RuleFor(x=>x.Departman).NotEmpty().WithMessage("Departman alanı boş geçilemez");
+            RuleFor(x => x.Email).NotEmpty().WithMessage("Email alanı boş geçilemez");
+            RuleFor(x => x.DepartmentID).NotEmpty().WithMessage("Departman alanı boş geçilemez");
             RuleFor(x => x.Password).NotEmpty().WithMessage("Şifre alanı boş geçilemez");
 
             RuleFor(x => x.UserName).MinimumLength(3).WithMessage("Kullanıcı Adı 2 karakterden fazla olmalı");

@@ -36,10 +36,10 @@
             this.dungeonLabel4 = new ReaLTaiizor.Controls.DungeonLabel();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.passwordTxt = new CustomControls.RJControls.RJTextBox();
-            this.departmanTxt = new CustomControls.RJControls.RJTextBox();
             this.kullaniciAdiTxt = new CustomControls.RJControls.RJTextBox();
             this.emailTxt = new CustomControls.RJControls.RJTextBox();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.SuspendLayout();
             // 
             // bigLabel1
@@ -144,28 +144,6 @@
             this.passwordTxt.Texts = "";
             this.passwordTxt.UnderlinedStyle = false;
             // 
-            // departmanTxt
-            // 
-            this.departmanTxt.BackColor = System.Drawing.SystemColors.Window;
-            this.departmanTxt.BorderColor = System.Drawing.Color.Silver;
-            this.departmanTxt.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
-            this.departmanTxt.BorderRadius = 10;
-            this.departmanTxt.BorderSize = 2;
-            this.departmanTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.departmanTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.departmanTxt.Location = new System.Drawing.Point(106, 200);
-            this.departmanTxt.Margin = new System.Windows.Forms.Padding(4);
-            this.departmanTxt.Multiline = false;
-            this.departmanTxt.Name = "departmanTxt";
-            this.departmanTxt.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.departmanTxt.PasswordChar = false;
-            this.departmanTxt.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.departmanTxt.PlaceholderText = "";
-            this.departmanTxt.Size = new System.Drawing.Size(250, 37);
-            this.departmanTxt.TabIndex = 11;
-            this.departmanTxt.Texts = "";
-            this.departmanTxt.UnderlinedStyle = false;
-            // 
             // kullaniciAdiTxt
             // 
             this.kullaniciAdiTxt.BackColor = System.Drawing.SystemColors.Window;
@@ -230,16 +208,26 @@
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Location = new System.Drawing.Point(106, 208);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(250, 29);
+            this.metroComboBox1.TabIndex = 16;
+            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
+            // 
             // modelForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(439, 409);
+            this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.dungeonLabel4);
             this.Controls.Add(this.passwordTxt);
             this.Controls.Add(this.dungeonLabel3);
-            this.Controls.Add(this.departmanTxt);
             this.Controls.Add(this.dungeonLabel2);
             this.Controls.Add(this.dungeonLabel1);
             this.Controls.Add(this.kullaniciAdiTxt);
@@ -265,10 +253,10 @@
         private CustomControls.RJControls.RJTextBox emailTxt;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel1;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel2;
-        private CustomControls.RJControls.RJTextBox departmanTxt;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel3;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel4;
         private CustomControls.RJControls.RJTextBox passwordTxt;
         private CustomControls.RJControls.RJButton rjButton2;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
     }
 }

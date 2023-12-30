@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TaskTracking.PresentationLayer.DAL;
 
 namespace TaskTracking.PresentationLayer.Migrations
 {
     [DbContext(typeof(TaskTrackingContext))]
-    partial class TaskTrackingContextModelSnapshot : ModelSnapshot
+    [Migration("20231230121120_departmaninit3")]
+    partial class departmaninit3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
