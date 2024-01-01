@@ -23,7 +23,7 @@ namespace TaskTracking.PresentationLayer.Entities
         public ICollection<CalendarEntity> Calendars { get; set; }
         public ICollection<ProjectEntity> Projects { get; set; }
 
-        public ICollection<ProjectEvent> ProjeEvent { get; set; }
+        //public ICollection<ProjectEvent> ProjeEvent { get; set; }
 
 
     }

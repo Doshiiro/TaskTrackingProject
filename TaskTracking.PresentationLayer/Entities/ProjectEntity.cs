@@ -17,5 +17,7 @@ namespace TaskTracking.PresentationLayer.Entities
         public int projectEmp_ID { get; set; }
         public Employee Employees { get; set; }
 
+        public List<ProjeEvent> ProjeEvents { get; set; }
+
     }
 }

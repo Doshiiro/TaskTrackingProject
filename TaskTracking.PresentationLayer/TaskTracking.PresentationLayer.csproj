@@ -214,6 +214,7 @@
     <Compile Include="Entities\Dto\DtoEmployee.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\ProjectEntity.cs" />
+    <Compile Include="Entities\ProjeEvent.cs" />
     <Compile Include="Entities\Validations\EmployeeValidation.cs" />
     <Compile Include="EventForm.cs">
       <SubType>Form</SubType>
@@ -298,6 +299,14 @@
     <Compile Include="Migrations\20231230121120_departmaninit3.cs" />
     <Compile Include="Migrations\20231230121120_departmaninit3.designer.cs">
       <DependentUpon>20231230121120_departmaninit3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20240101174318_resetinit1.cs" />
+    <Compile Include="Migrations\20240101174318_resetinit1.designer.cs">
+      <DependentUpon>20240101174318_resetinit1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20240101182437_resettestinit1.cs" />
+    <Compile Include="Migrations\20240101182437_resettestinit1.designer.cs">
+      <DependentUpon>20240101182437_resettestinit1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\TaskTrackingContextModelSnapshot.cs" />
     <Compile Include="modelForm1.cs">

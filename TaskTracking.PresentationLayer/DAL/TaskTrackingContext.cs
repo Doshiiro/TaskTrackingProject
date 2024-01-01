@@ -21,7 +21,7 @@ namespace TaskTracking.PresentationLayer.DAL
         public DbSet<CalendarEntity> Calendars { get; set; }
         public DbSet<ProjectEntity> Projects { get; set; }
         public DbSet<Department> Departments { get; set; }
-        public DbSet<ProjectEvent> projectEvents { get; set; }
+        public DbSet<ProjeEvent> ProjeEvent { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Employee>()
@@ -44,10 +44,10 @@ namespace TaskTracking.PresentationLayer.DAL
                 .WithMany(d => d.Projects)
                 .HasForeignKey(p => p.DepartmentID);
 
-            modelBuilder.Entity<ProjectEvent>()
-                .HasOne(e => e.Employees)
-                .WithMany(p => p.ProjeEvent)
-                .HasForeignKey(p => p.projectEmp_ID);
+            modelBuilder.Entity<ProjeEvent>()
+           .HasOne(pe => pe.Project)
+           .WithMany(p => p.ProjeEvents)
+           .HasForeignKey(pe => pe.ProjectID);
 
         }
     }

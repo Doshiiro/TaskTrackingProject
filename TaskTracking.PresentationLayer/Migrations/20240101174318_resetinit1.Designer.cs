@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TaskTracking.PresentationLayer.DAL;
 
 namespace TaskTracking.PresentationLayer.Migrations
 {
     [DbContext(typeof(TaskTrackingContext))]
-    partial class TaskTrackingContextModelSnapshot : ModelSnapshot
+    [Migration("20240101174318_resetinit1")]
+    partial class resetinit1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -89,34 +91,6 @@ namespace TaskTracking.PresentationLayer.Migrations
                     b.ToTable("Employees");
                 });
 
-            modelBuilder.Entity("TaskTracking.PresentationLayer.Entities.ProjeEvent", b =>
-                {
-                    b.Property<int>("ProjeEventID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("Employeesemp_ID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EventEmpFK_ID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ProjeDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ProjectID")
-                        .HasColumnType("int");
-
-                    b.HasKey("ProjeEventID");
-
-                    b.HasIndex("Employeesemp_ID");
-
-                    b.HasIndex("ProjectID");
-
-                    b.ToTable("ProjeEvent");
-                });
-
             modelBuilder.Entity("TaskTracking.PresentationLayer.Entities.ProjectEntity", b =>
                 {
                     b.Property<int>("ProjectID")
@@ -156,19 +130,6 @@ namespace TaskTracking.PresentationLayer.Migrations
                     b.HasOne("TaskTracking.PresentationLayer.Entities.Department", "Department")
                         .WithMany("Employees")
                         .HasForeignKey("DepartmentID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("TaskTracking.PresentationLayer.Entities.ProjeEvent", b =>
-                {
-                    b.HasOne("TaskTracking.PresentationLayer.Entities.Employee", "Employees")
-                        .WithMany()
-                        .HasForeignKey("Employeesemp_ID");
-
-                    b.HasOne("TaskTracking.PresentationLayer.Entities.ProjectEntity", "Project")
-                        .WithMany("ProjeEvents")
-                        .HasForeignKey("ProjectID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
