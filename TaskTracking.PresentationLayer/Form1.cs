@@ -129,8 +129,12 @@ namespace TaskTracking.PresentationLayer
                 this.Hide();
 
                 HomeForm homeForm = new HomeForm();
+                formSubmenu2 projeForm = new formSubmenu2();
 
                 homeForm.employeeRole = verifyData.Access;
+
+                homeForm.projeAccessId = verifyData.Access;
+                homeForm.projeDepIDAccess = verifyData.DepartmentID;
 
                 homeForm.emp_id = verifyData.emp_ID;
                 homeForm.emp_calendarAccess = verifyData.Access;

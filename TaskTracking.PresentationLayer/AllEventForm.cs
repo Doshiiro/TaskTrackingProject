@@ -50,8 +50,6 @@ namespace TaskTracking.PresentationLayer
         {
             AllEventShow();
             poisonDataGridView1.ClearSelection();
-
-
         }
 
 

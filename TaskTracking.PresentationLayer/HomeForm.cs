@@ -32,6 +32,9 @@ namespace TaskTracking.PresentationLayer
         public int emp_calendarAccess;
         public string emp_UserName;
 
+        public int projeAccessId;
+        public int projeDepIDAccess;
+
         private void HomeForm_Load(object sender, EventArgs e)
         {
             crownLabel1.Text = emp_UserName;
@@ -85,7 +88,7 @@ namespace TaskTracking.PresentationLayer
         {
             menuTransition.Start();
         }
-      
+
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
@@ -135,6 +138,8 @@ namespace TaskTracking.PresentationLayer
         }
         private void submenu2btn_Click_1(object sender, EventArgs e)
         {
+            formSubmenu2.ProjeAccess = projeAccessId;
+            formSubmenu2.ProjeDepID = projeDepIDAccess;
             if (sub2 == null)
             {
                 sub2 = new formSubmenu2();

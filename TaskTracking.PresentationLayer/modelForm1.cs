@@ -34,6 +34,12 @@ namespace TaskTracking.PresentationLayer
             // Department tablosundan veritabanında Departman adına sahip olanı bul
             var selectedDepID = context.Departments.FirstOrDefault(d => d.DepartmentName == metroComboBox1.Text);
 
+            int accessID;
+
+            if (metroComboBox2.Text == "Yönetici")
+                accessID = 2;
+            else
+                accessID = 0;
 
             EmployeeRepository employeeRepository = new EmployeeRepository();
             Employee DtoEmp = new Employee()
@@ -42,6 +48,7 @@ namespace TaskTracking.PresentationLayer
                 Password = passwordTxt.Texts,
                 DepartmentID = selectedDepID.DepID,
                 Email = emailTxt.Texts,
+                Access = accessID
             };
             if (DtoEmp != null)
             {
@@ -71,6 +78,15 @@ namespace TaskTracking.PresentationLayer
                     metroComboBox1.Items.Add(department.DepartmentName);
                 }
             }
+            if (metroComboBox1.Items.Count > 0)
+            {
+                metroComboBox1.SelectedIndex = 0;
+            }
+            if (metroComboBox2.Items.Count > 0)
+            {
+                metroComboBox2.SelectedIndex = 0;
+            }
+
         }
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -9,11 +9,15 @@ using TaskTracking.PresentationLayer.Management.Abstract;
 
 namespace TaskTracking.PresentationLayer.Management.Concrete
 {
-    public class ProjectRepository : IGenericRepository<ProjectRepository>
+    public class ProjectRepository : IGenericRepository<ProjectEntity>
     {
-        public Task Create(ProjectRepository entity)
+        public async Task Create(ProjectEntity entity)
         {
-            throw new NotImplementedException();
+            using (var context = new TaskTrackingContext())
+            {
+                context.Add(entity);
+                await context.SaveChangesAsync();
+            }
         }
 
         public Task Delete(int id)
@@ -21,17 +25,21 @@ namespace TaskTracking.PresentationLayer.Management.Concrete
             throw new NotImplementedException();
         }
 
-        public List<ProjectRepository> GetAll()
+        public List<ProjectEntity> GetAll()
+        {
+            using (var context = new TaskTrackingContext())
+            {
+                List<ProjectEntity> data = context.Projects.ToList();
+                return data;
+            }
+        }
+
+        public Task<ProjectEntity> GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ProjectRepository> GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task Update(ProjectRepository entity)
+        public Task Update(ProjectEntity entity)
         {
             throw new NotImplementedException();
         }

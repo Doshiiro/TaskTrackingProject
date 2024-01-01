@@ -34,12 +34,14 @@
             this.dungeonLabel2 = new ReaLTaiizor.Controls.DungeonLabel();
             this.dungeonLabel3 = new ReaLTaiizor.Controls.DungeonLabel();
             this.dungeonLabel4 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.dungeonLabel5 = new ReaLTaiizor.Controls.DungeonLabel();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.passwordTxt = new CustomControls.RJControls.RJTextBox();
             this.kullaniciAdiTxt = new CustomControls.RJControls.RJTextBox();
             this.emailTxt = new CustomControls.RJControls.RJTextBox();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.SuspendLayout();
             // 
             // bigLabel1
@@ -102,6 +104,40 @@
             this.dungeonLabel4.TabIndex = 14;
             this.dungeonLabel4.Text = "Şifre";
             // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Location = new System.Drawing.Point(106, 208);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(250, 29);
+            this.metroComboBox1.TabIndex = 16;
+            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
+            // 
+            // metroComboBox2
+            // 
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 23;
+            this.metroComboBox2.Items.AddRange(new object[] {
+            "Yönetici",
+            "Kullanıcı"});
+            this.metroComboBox2.Location = new System.Drawing.Point(106, 303);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.Size = new System.Drawing.Size(250, 29);
+            this.metroComboBox2.TabIndex = 18;
+            // 
+            // dungeonLabel5
+            // 
+            this.dungeonLabel5.AutoSize = true;
+            this.dungeonLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel5.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.dungeonLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonLabel5.Location = new System.Drawing.Point(7, 303);
+            this.dungeonLabel5.Name = "dungeonLabel5";
+            this.dungeonLabel5.Size = new System.Drawing.Size(40, 20);
+            this.dungeonLabel5.TabIndex = 17;
+            this.dungeonLabel5.Text = "Yetki";
+            // 
             // rjButton2
             // 
             this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -113,7 +149,7 @@
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(172, 326);
+            this.rjButton2.Location = new System.Drawing.Point(179, 352);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(106, 35);
             this.rjButton2.TabIndex = 15;
@@ -208,21 +244,13 @@
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(106, 208);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(250, 29);
-            this.metroComboBox1.TabIndex = 16;
-            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
-            // 
             // modelForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(439, 409);
+            this.Controls.Add(this.metroComboBox2);
+            this.Controls.Add(this.dungeonLabel5);
             this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.dungeonLabel4);
@@ -258,5 +286,7 @@
         private CustomControls.RJControls.RJTextBox passwordTxt;
         private CustomControls.RJControls.RJButton rjButton2;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox metroComboBox2;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel5;
     }
 }
