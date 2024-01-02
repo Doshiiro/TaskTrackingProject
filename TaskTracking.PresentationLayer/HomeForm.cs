@@ -35,6 +35,9 @@ namespace TaskTracking.PresentationLayer
         public int projeAccessId;
         public int projeDepIDAccess;
 
+        public int projeEventAccesID;
+        //public int projeEventEmpID;
+
         private void HomeForm_Load(object sender, EventArgs e)
         {
             crownLabel1.Text = emp_UserName;
@@ -140,6 +143,8 @@ namespace TaskTracking.PresentationLayer
         {
             formSubmenu2.ProjeAccess = projeAccessId;
             formSubmenu2.ProjeDepID = projeDepIDAccess;
+            formSubmenu2.projeEventEmpID = projeEventAccesID;
+            
             if (sub2 == null)
             {
                 sub2 = new formSubmenu2();

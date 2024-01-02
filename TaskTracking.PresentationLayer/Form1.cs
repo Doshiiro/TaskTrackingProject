@@ -136,6 +136,10 @@ namespace TaskTracking.PresentationLayer
                 homeForm.projeAccessId = verifyData.Access;
                 homeForm.projeDepIDAccess = verifyData.DepartmentID;
 
+
+                homeForm.projeEventAccesID = verifyData.emp_ID;
+
+
                 homeForm.emp_id = verifyData.emp_ID;
                 homeForm.emp_calendarAccess = verifyData.Access;
 

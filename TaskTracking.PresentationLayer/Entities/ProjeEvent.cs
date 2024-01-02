@@ -12,9 +12,10 @@ namespace TaskTracking.PresentationLayer.Entities
         [Key]
         public int ProjeEventID { get; set; }
         public string ProjeDescription { get; set; }
-        
+
+        public bool Status { get; set; }
         //Kullanıcı adı
-        public int EventEmpFK_ID{ get; set; }
+        public int EventEmpFK_ID { get; set; }
         public Employee Employees { get; set; }
 
         //eventler ile ilişkili proje

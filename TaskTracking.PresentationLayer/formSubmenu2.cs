@@ -22,6 +22,7 @@ namespace TaskTracking.PresentationLayer
         }
         static public int ProjeAccess;
         static public int ProjeDepID;
+        static public int projeEventEmpID;
         private void formSubmenu2_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
@@ -37,7 +38,6 @@ namespace TaskTracking.PresentationLayer
             ProjectRepository projectRepository = new ProjectRepository();
             var datacal = projectRepository.GetAll();
 
-
             TaskTrackingContext context = new TaskTrackingContext();
 
             foreach (var item in datacal)
@@ -45,26 +45,39 @@ namespace TaskTracking.PresentationLayer
                 var empFKName = context.Employees.Where(emp => emp.emp_ID == item.projectEmp_ID).FirstOrDefault();
                 var empDepName = context.Departments.Where(d => d.DepID == empFKName.DepartmentID).FirstOrDefault();
 
-
                 //kullanıcının olduğu departmanda ki projeleri görebilir.
                 if (ProjeDepID == item.DepartmentID)
                 {
                     dataGridView1.Rows.Add(item.ProjectName, empFKName.UserName, empDepName.DepartmentName);
-
                 }
             }
+
+            //giren kullanıcının id'sini almam lazım eğer id proje event tablosu ile eşit ise dgw yazdır
+
             var projeEvents = context.ProjeEvent.ToList();
+
             foreach (var item in projeEvents)
             {
-                dataGridView2.Rows.Add(item.ProjeDescription, item.EventEmpFK_ID);
-            }
+                var projectName = context.Projects.Where(p => p.ProjectID == item.ProjectID).FirstOrDefault();
 
+                if (projeEventEmpID == item.EventEmpFK_ID)
+                {
+                    dataGridView2.Rows.Add(item.ProjeDescription, projectName.ProjectName);
+                }
+            }
 
         }
         private void eventShowBtn_Click(object sender, EventArgs e)
         {
             PopupFormDesign popupFormDesign = new PopupFormDesign();
             popupFormDesign.Popup<ProjeAddForm>();
+        }
+
+        private void eventbtn_Click(object sender, EventArgs e)
+        {
+            ProjectEventForm projectEventForm = new ProjectEventForm();
+            ProjectEventForm.ProjeEventEmpID2 = projeEventEmpID;
+            projectEventForm.Show();
         }
     }
 }
