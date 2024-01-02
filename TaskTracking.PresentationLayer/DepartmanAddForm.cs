@@ -36,9 +36,11 @@ namespace TaskTracking.PresentationLayer
                 {
                     context.Add(_department);
                     context.SaveChanges();
+                    MessageBox.Show("Departman Eklendi");
                 }
 
             }
+
 
         }
         private void rjButton1_Click(object sender, EventArgs e)

@@ -37,8 +37,19 @@ namespace TaskTracking.PresentationLayer
             foreach (var item in datas)
             {
                 var dataDep = context.Departments.FirstOrDefault(d => d.DepID == item.DepartmentID);
+                if (item.Access == 1)
+                {
+                    poisonDataGridView1.Rows.Add(item.emp_ID, item.UserName, dataDep.DepartmentName, item.Email, item.Password, "Admin");
+                }
+                else if (item.Access == 2)
+                {
+                    poisonDataGridView1.Rows.Add(item.emp_ID, item.UserName, dataDep.DepartmentName, item.Email, item.Password, "Yönetici");
+                }
+                else
+                {
+                    poisonDataGridView1.Rows.Add(item.emp_ID, item.UserName, dataDep.DepartmentName, item.Email, item.Password, "Kullanıcı");
+                }
 
-                poisonDataGridView1.Rows.Add(item.emp_ID, item.UserName, dataDep.DepartmentName, item.Email);
             }
 
             poisonDataGridView1.AllowUserToAddRows = false;
@@ -46,6 +57,13 @@ namespace TaskTracking.PresentationLayer
 
 
             DepartmanShow();
+
+
+            var departments = context.Departments.ToList();
+            foreach (var item in departments)
+            {
+                metroComboBox1.Items.Add(item.DepartmentName);
+            }
 
         }
         public void DepartmanShow()
@@ -72,8 +90,18 @@ namespace TaskTracking.PresentationLayer
             foreach (var item in datas)
             {
                 var dataDep = context.Departments.FirstOrDefault(d => d.DepID == item.DepartmentID);
-
-                poisonDataGridView1.Rows.Add(item.emp_ID, item.UserName, dataDep.DepartmentName, item.Email);
+                if (item.Access == 1)
+                {
+                    poisonDataGridView1.Rows.Add(item.emp_ID, item.UserName, dataDep.DepartmentName, item.Email, item.Password, "Admin");
+                }
+                else if (item.Access == 2)
+                {
+                    poisonDataGridView1.Rows.Add(item.emp_ID, item.UserName, dataDep.DepartmentName, item.Email, item.Password, "Yönetici");
+                }
+                else
+                {
+                    poisonDataGridView1.Rows.Add(item.emp_ID, item.UserName, dataDep.DepartmentName, item.Email, item.Password, "Kullanıcı");
+                }
             }
         }
 
@@ -117,5 +145,104 @@ namespace TaskTracking.PresentationLayer
             poisonDataGridView2.Rows.Clear();
             DepartmanShow();
         }
+
+        private void DepartmanDelete_Click(object sender, EventArgs e)
+        {
+            using (TaskTrackingContext context = new TaskTrackingContext())
+            {
+                if (poisonDataGridView2.SelectedRows.Count > 0)
+                {
+                    var deletedData = poisonDataGridView2.SelectedRows[0].Cells["departmanID"].Value.ToString();
+                    int departmentId = Convert.ToInt32(deletedData);
+
+                    var departmentToRemove = context.Departments.FirstOrDefault(d => d.DepID == departmentId);
+
+                    if (departmentToRemove != null)
+                    {
+                        context.Departments.Remove(departmentToRemove);
+                        context.SaveChanges();
+                        poisonDataGridView2.DataSource = null;
+                        poisonDataGridView2.Rows.Clear();
+                        DepartmanShow();
+                    }
+                }
+            }
+        }
+
+        private void poisonDataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            txtEmpid.Text = poisonDataGridView1.CurrentRow.Cells[0].Value.ToString();
+
+            kullaniciAdiTxt.Texts = poisonDataGridView1.CurrentRow.Cells[1].Value.ToString();
+
+            metroComboBox1.SelectedItem = poisonDataGridView1.CurrentRow.Cells[2].Value.ToString();
+
+            emailTxt.Texts = poisonDataGridView1.CurrentRow.Cells[3].Value.ToString();
+
+            passwordTxt.Texts = poisonDataGridView1.CurrentRow.Cells[4].Value.ToString();
+
+            metroComboBox2.SelectedItem = poisonDataGridView1.CurrentRow.Cells[5].Value.ToString();
+
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            string departman = metroComboBox1.SelectedItem.ToString();
+            int accessUpdate;
+            if (metroComboBox2.SelectedItem.ToString() == "Kullanıcı")
+            {
+                accessUpdate = 0;
+            }
+            else
+            {
+                accessUpdate = 2;
+            }
+            var depData = context.Departments.Where(d => d.DepartmentName == departman).FirstOrDefault();
+            Employee _employee = new Employee()
+            {
+                emp_ID = Convert.ToInt32(txtEmpid.Text),
+                UserName = kullaniciAdiTxt.Texts,
+                Password = passwordTxt.Texts,
+                Email = emailTxt.Texts,
+                DepartmentID = depData.DepID,
+                Access = accessUpdate
+            };
+            if (_employee != null)
+            {
+                context.Employees.Update(_employee);
+                context.SaveChanges();
+                MessageBox.Show("Kullanıcı güncellendi");
+            }
+            else
+            {
+                MessageBox.Show("nesne hatası");
+            }
+
+        }
+
+        private void poisonDataGridView2_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            depUpdateid.Text = poisonDataGridView2.CurrentRow.Cells[0].Value.ToString();
+            departmantUpdatetxt.Texts = poisonDataGridView2.CurrentRow.Cells[1].Value.ToString();
+        }
+        private void depUpdatebtn_Click(object sender, EventArgs e)
+        {
+            int depID = Convert.ToInt32(depUpdateid.Text);
+            var existingDepartment = context.Departments.FirstOrDefault(d => d.DepID == depID);
+
+            if (existingDepartment != null)
+            {
+                // Mevcut nesneyi güncelle
+                existingDepartment.DepartmentName = departmantUpdatetxt.Texts;
+
+                context.SaveChanges();
+                MessageBox.Show("Departman Adı Güncellendi");
+            }
+            else
+            {
+                MessageBox.Show("Nesne hatası: Departman bulunamadı");
+            }
+        }
+
     }
 }
