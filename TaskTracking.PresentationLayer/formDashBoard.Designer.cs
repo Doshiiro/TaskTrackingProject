@@ -37,12 +37,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formDashBoard));
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.poisonDataGridView1 = new ReaLTaiizor.Controls.PoisonDataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Access = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.poisonDataGridView2 = new ReaLTaiizor.Controls.PoisonDataGridView();
-            this.dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
-            this.dungeonLabel2 = new ReaLTaiizor.Controls.DungeonLabel();
             this.departmanID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmanName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.dungeonLabel2 = new ReaLTaiizor.Controls.DungeonLabel();
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.dungeonLabel5 = new ReaLTaiizor.Controls.DungeonLabel();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
@@ -51,12 +57,6 @@
             this.dungeonLabel6 = new ReaLTaiizor.Controls.DungeonLabel();
             this.dungeonLabel7 = new ReaLTaiizor.Controls.DungeonLabel();
             this.txtEmpid = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Access = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.depUpdateid = new System.Windows.Forms.TextBox();
             this.departmantUpdatetxt = new CustomControls.RJControls.RJTextBox();
             this.depUpdatebtn = new CustomControls.RJControls.RJButton();
@@ -80,11 +80,11 @@
             this.bigLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel1.Font = new System.Drawing.Font("Segoe UI", 25F);
             this.bigLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel1.Location = new System.Drawing.Point(824, 725);
+            this.bigLabel1.Location = new System.Drawing.Point(898, 725);
             this.bigLabel1.Name = "bigLabel1";
-            this.bigLabel1.Size = new System.Drawing.Size(290, 46);
+            this.bigLabel1.Size = new System.Drawing.Size(207, 46);
             this.bigLabel1.TabIndex = 0;
-            this.bigLabel1.Text = "Admin Dashboard";
+            this.bigLabel1.Text = "Admin Panel";
             // 
             // poisonDataGridView1
             // 
@@ -140,6 +140,40 @@
             this.poisonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.poisonDataGridView1_CellContentClick);
             this.poisonDataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.poisonDataGridView1_CellEnter);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Departman";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Email";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 200;
+            // 
+            // password
+            // 
+            this.password.HeaderText = "Şifre";
+            this.password.Name = "password";
+            this.password.Visible = false;
+            // 
+            // Access
+            // 
+            this.Access.HeaderText = "Yetki";
+            this.Access.Name = "Access";
+            // 
             // poisonDataGridView2
             // 
             this.poisonDataGridView2.AllowUserToResizeRows = false;
@@ -189,6 +223,19 @@
             this.poisonDataGridView2.TabIndex = 6;
             this.poisonDataGridView2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.poisonDataGridView2_CellEnter);
             // 
+            // departmanID
+            // 
+            this.departmanID.HeaderText = "ID";
+            this.departmanID.Name = "departmanID";
+            this.departmanID.ReadOnly = true;
+            // 
+            // departmanName
+            // 
+            this.departmanName.HeaderText = "Departman";
+            this.departmanName.Name = "departmanName";
+            this.departmanName.ReadOnly = true;
+            this.departmanName.Width = 200;
+            // 
             // dungeonLabel1
             // 
             this.dungeonLabel1.AutoSize = true;
@@ -212,19 +259,6 @@
             this.dungeonLabel2.Size = new System.Drawing.Size(132, 28);
             this.dungeonLabel2.TabIndex = 8;
             this.dungeonLabel2.Text = "Departmanlar";
-            // 
-            // departmanID
-            // 
-            this.departmanID.HeaderText = "ID";
-            this.departmanID.Name = "departmanID";
-            this.departmanID.ReadOnly = true;
-            // 
-            // departmanName
-            // 
-            this.departmanName.HeaderText = "Departman";
-            this.departmanName.Name = "departmanName";
-            this.departmanName.ReadOnly = true;
-            this.departmanName.Width = 200;
             // 
             // metroComboBox2
             // 
@@ -314,40 +348,6 @@
             this.txtEmpid.Size = new System.Drawing.Size(100, 20);
             this.txtEmpid.TabIndex = 30;
             this.txtEmpid.Visible = false;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Departman";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Email";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 200;
-            // 
-            // password
-            // 
-            this.password.HeaderText = "Şifre";
-            this.password.Name = "password";
-            this.password.Visible = false;
-            // 
-            // Access
-            // 
-            this.Access.HeaderText = "Yetki";
-            this.Access.Name = "Access";
             // 
             // depUpdateid
             // 

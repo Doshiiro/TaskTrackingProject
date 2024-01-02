@@ -232,3 +232,4 @@ C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTra
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.ProjeAddForm.resources
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.ProjectEventForm.resources
 C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.DepartmanAddForm.resources
+C:\Users\makyi\OneDrive\Masaüstü\Task Tracking App\TaskTrackingProject\TaskTracking.PresentationLayer\obj\Debug\TaskTracking.PresentationLayer.EmployeeSettingsForm.resources

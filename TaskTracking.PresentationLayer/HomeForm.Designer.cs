@@ -34,24 +34,25 @@
             this.sidebartransition = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
+            this.closeBtn = new CustomControls.RJControls.RJButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new ReaLTaiizor.Controls.Panel();
+            this.menubtn = new CustomControls.RJControls.RJButton();
             this.panel6 = new ReaLTaiizor.Controls.Panel();
+            this.submenu1btn = new CustomControls.RJControls.RJButton();
             this.panel4 = new ReaLTaiizor.Controls.Panel();
+            this.submenu2btn = new CustomControls.RJControls.RJButton();
             this.panel8 = new ReaLTaiizor.Controls.Panel();
+            this.submenu3btn = new CustomControls.RJControls.RJButton();
+            this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.pnSettings = new ReaLTaiizor.Controls.Panel();
+            this.calenderbtn = new CustomControls.RJControls.RJButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.crownLabel1 = new ReaLTaiizor.Controls.CrownLabel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.closeBtn = new CustomControls.RJControls.RJButton();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.menubtn = new CustomControls.RJControls.RJButton();
-            this.submenu1btn = new CustomControls.RJControls.RJButton();
-            this.submenu2btn = new CustomControls.RJControls.RJButton();
-            this.submenu3btn = new CustomControls.RJControls.RJButton();
-            this.rjButton2 = new CustomControls.RJControls.RJButton();
-            this.calenderbtn = new CustomControls.RJControls.RJButton();
+            this.settingsBtn = new CustomControls.RJControls.RJButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuContainer.SuspendLayout();
@@ -96,6 +97,26 @@
             this.bigLabel1.TabIndex = 24;
             this.bigLabel1.Text = "Task Tracking Otomasyon Projesi";
             // 
+            // closeBtn
+            // 
+            this.closeBtn.BackColor = System.Drawing.Color.Gray;
+            this.closeBtn.BackgroundColor = System.Drawing.Color.Gray;
+            this.closeBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.closeBtn.BorderRadius = 0;
+            this.closeBtn.BorderSize = 0;
+            this.closeBtn.FlatAppearance.BorderSize = 0;
+            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.closeBtn.ForeColor = System.Drawing.Color.White;
+            this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
+            this.closeBtn.Location = new System.Drawing.Point(1080, 0);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(44, 46);
+            this.closeBtn.TabIndex = 23;
+            this.closeBtn.TextColor = System.Drawing.Color.White;
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
@@ -108,6 +129,29 @@
             this.panel2.Size = new System.Drawing.Size(234, 423);
             this.panel2.TabIndex = 8;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
+            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 0;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Image = ((System.Drawing.Image)(resources.GetObject("rjButton1.Image")));
+            this.rjButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rjButton1.Location = new System.Drawing.Point(3, 3);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Padding = new System.Windows.Forms.Padding(1);
+            this.rjButton1.Size = new System.Drawing.Size(228, 62);
+            this.rjButton1.TabIndex = 5;
+            this.rjButton1.Text = "Dashboard";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // menuContainer
             // 
@@ -134,134 +178,6 @@
             this.panel3.TabIndex = 9;
             this.panel3.Text = "panel3";
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.panel6.Controls.Add(this.submenu1btn);
-            this.panel6.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.panel6.Location = new System.Drawing.Point(3, 64);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(5);
-            this.panel6.Size = new System.Drawing.Size(237, 50);
-            this.panel6.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel6.TabIndex = 11;
-            this.panel6.Text = "panel6";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.panel4.Controls.Add(this.submenu2btn);
-            this.panel4.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.panel4.Location = new System.Drawing.Point(3, 120);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(5);
-            this.panel4.Size = new System.Drawing.Size(237, 50);
-            this.panel4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel4.TabIndex = 12;
-            this.panel4.Text = "panel4";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.panel8.Controls.Add(this.submenu3btn);
-            this.panel8.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.panel8.Location = new System.Drawing.Point(3, 176);
-            this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(5);
-            this.panel8.Size = new System.Drawing.Size(237, 50);
-            this.panel8.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel8.TabIndex = 14;
-            this.panel8.Text = "panel8";
-            // 
-            // pnSettings
-            // 
-            this.pnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
-            this.pnSettings.Controls.Add(this.calenderbtn);
-            this.pnSettings.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.pnSettings.Location = new System.Drawing.Point(0, 68);
-            this.pnSettings.Name = "pnSettings";
-            this.pnSettings.Padding = new System.Windows.Forms.Padding(5);
-            this.pnSettings.Size = new System.Drawing.Size(226, 61);
-            this.pnSettings.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.pnSettings.TabIndex = 10;
-            this.pnSettings.Text = "Settings";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 102);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 71);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // crownLabel1
-            // 
-            this.crownLabel1.AutoSize = true;
-            this.crownLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.crownLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.crownLabel1.Location = new System.Drawing.Point(97, 131);
-            this.crownLabel1.Name = "crownLabel1";
-            this.crownLabel1.Size = new System.Drawing.Size(93, 20);
-            this.crownLabel1.TabIndex = 25;
-            this.crownLabel1.Text = "Kullanıcı Adı";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
-            this.panel5.Controls.Add(this.crownLabel1);
-            this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Controls.Add(this.panel2);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(237, 819);
-            this.panel5.TabIndex = 9;
-            // 
-            // closeBtn
-            // 
-            this.closeBtn.BackColor = System.Drawing.Color.Gray;
-            this.closeBtn.BackgroundColor = System.Drawing.Color.Gray;
-            this.closeBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.closeBtn.BorderRadius = 0;
-            this.closeBtn.BorderSize = 0;
-            this.closeBtn.FlatAppearance.BorderSize = 0;
-            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.closeBtn.ForeColor = System.Drawing.Color.White;
-            this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
-            this.closeBtn.Location = new System.Drawing.Point(1096, 0);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(29, 32);
-            this.closeBtn.TabIndex = 23;
-            this.closeBtn.TextColor = System.Drawing.Color.White;
-            this.closeBtn.UseVisualStyleBackColor = false;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Image = ((System.Drawing.Image)(resources.GetObject("rjButton1.Image")));
-            this.rjButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rjButton1.Location = new System.Drawing.Point(3, 3);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Padding = new System.Windows.Forms.Padding(1);
-            this.rjButton1.Size = new System.Drawing.Size(228, 62);
-            this.rjButton1.TabIndex = 5;
-            this.rjButton1.Text = "Dashboard";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
-            // 
             // menubtn
             // 
             this.menubtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
@@ -284,6 +200,19 @@
             this.menubtn.TextColor = System.Drawing.Color.White;
             this.menubtn.UseVisualStyleBackColor = false;
             this.menubtn.Click += new System.EventHandler(this.menubtn_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.panel6.Controls.Add(this.submenu1btn);
+            this.panel6.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.panel6.Location = new System.Drawing.Point(3, 64);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(5);
+            this.panel6.Size = new System.Drawing.Size(237, 50);
+            this.panel6.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.panel6.TabIndex = 11;
+            this.panel6.Text = "panel6";
             // 
             // submenu1btn
             // 
@@ -308,6 +237,19 @@
             this.submenu1btn.UseVisualStyleBackColor = false;
             this.submenu1btn.Click += new System.EventHandler(this.submenu1btn_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.panel4.Controls.Add(this.submenu2btn);
+            this.panel4.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.panel4.Location = new System.Drawing.Point(3, 120);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(5);
+            this.panel4.Size = new System.Drawing.Size(237, 50);
+            this.panel4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.panel4.TabIndex = 12;
+            this.panel4.Text = "panel4";
+            // 
             // submenu2btn
             // 
             this.submenu2btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
@@ -330,6 +272,19 @@
             this.submenu2btn.TextColor = System.Drawing.Color.White;
             this.submenu2btn.UseVisualStyleBackColor = false;
             this.submenu2btn.Click += new System.EventHandler(this.submenu2btn_Click_1);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.panel8.Controls.Add(this.submenu3btn);
+            this.panel8.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.panel8.Location = new System.Drawing.Point(3, 176);
+            this.panel8.Name = "panel8";
+            this.panel8.Padding = new System.Windows.Forms.Padding(5);
+            this.panel8.Size = new System.Drawing.Size(237, 50);
+            this.panel8.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.panel8.TabIndex = 14;
+            this.panel8.Text = "panel8";
             // 
             // submenu3btn
             // 
@@ -376,6 +331,19 @@
             this.rjButton2.UseVisualStyleBackColor = false;
             this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
+            // pnSettings
+            // 
+            this.pnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
+            this.pnSettings.Controls.Add(this.calenderbtn);
+            this.pnSettings.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.pnSettings.Location = new System.Drawing.Point(0, 68);
+            this.pnSettings.Name = "pnSettings";
+            this.pnSettings.Padding = new System.Windows.Forms.Padding(5);
+            this.pnSettings.Size = new System.Drawing.Size(226, 61);
+            this.pnSettings.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.pnSettings.TabIndex = 10;
+            this.pnSettings.Text = "Settings";
+            // 
             // calenderbtn
             // 
             this.calenderbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
@@ -398,6 +366,63 @@
             this.calenderbtn.TextColor = System.Drawing.Color.White;
             this.calenderbtn.UseVisualStyleBackColor = false;
             this.calenderbtn.Click += new System.EventHandler(this.calenderbtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 102);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(79, 71);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // crownLabel1
+            // 
+            this.crownLabel1.AutoSize = true;
+            this.crownLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.crownLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.crownLabel1.Location = new System.Drawing.Point(97, 131);
+            this.crownLabel1.Name = "crownLabel1";
+            this.crownLabel1.Size = new System.Drawing.Size(93, 20);
+            this.crownLabel1.TabIndex = 25;
+            this.crownLabel1.Text = "Kullanıcı Adı";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
+            this.panel5.Controls.Add(this.settingsBtn);
+            this.panel5.Controls.Add(this.crownLabel1);
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Controls.Add(this.panel2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(237, 819);
+            this.panel5.TabIndex = 9;
+            // 
+            // settingsBtn
+            // 
+            this.settingsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
+            this.settingsBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
+            this.settingsBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.settingsBtn.BorderRadius = 0;
+            this.settingsBtn.BorderSize = 0;
+            this.settingsBtn.FlatAppearance.BorderSize = 0;
+            this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.settingsBtn.ForeColor = System.Drawing.Color.White;
+            this.settingsBtn.Image = ((System.Drawing.Image)(resources.GetObject("settingsBtn.Image")));
+            this.settingsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.settingsBtn.Location = new System.Drawing.Point(5, 745);
+            this.settingsBtn.Name = "settingsBtn";
+            this.settingsBtn.Padding = new System.Windows.Forms.Padding(1);
+            this.settingsBtn.Size = new System.Drawing.Size(229, 62);
+            this.settingsBtn.TabIndex = 26;
+            this.settingsBtn.Text = "Kullanıcı Ayarları";
+            this.settingsBtn.TextColor = System.Drawing.Color.White;
+            this.settingsBtn.UseVisualStyleBackColor = false;
+            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
             // 
             // HomeForm
             // 
@@ -451,5 +476,6 @@
         private ReaLTaiizor.Controls.CrownLabel crownLabel1;
         private System.Windows.Forms.Panel panel5;
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
+        private CustomControls.RJControls.RJButton settingsBtn;
     }
 }

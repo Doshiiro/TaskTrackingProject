@@ -56,12 +56,20 @@ namespace TaskTracking.PresentationLayer
             TaskTrackingContext context = new TaskTrackingContext();
             var empdata = context.Employees.FirstOrDefault(emp => emp.UserName == metroComboBox2.Text);
             var projedata = context.Projects.FirstOrDefault(p => p.ProjectName == metroComboBox1.Text);
+
+            if (empdata == null || projedata == null || txtDescription.Texts == "")
+            {
+                MessageBox.Show("Lütfen bütün alanları doldurunuz");
+                return;
+            }
+
             ProjeEvent _proje = new ProjeEvent()
             {
                 EventEmpFK_ID = empdata.emp_ID,
                 ProjeDescription = txtDescription.Texts,
                 ProjectID = projedata.ProjectID
             };
+
             context.Add(_proje);
             context.SaveChanges();
 

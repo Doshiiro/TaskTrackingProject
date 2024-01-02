@@ -46,18 +46,25 @@ namespace TaskTracking.PresentationLayer
         {
             TaskTrackingContext context = new TaskTrackingContext();
             var data = context.Employees.FirstOrDefault(emp => emp.UserName == metroComboBox1.Text && emp.Access == 2);
-
-            ProjectEntity _project = new ProjectEntity()
+            if (projeNameTxt.Texts != "")
             {
-                ProjectName = projeNameTxt.Texts,
-                projectEmp_ID = data.emp_ID,
-                DepartmentID = data.DepartmentID
-            };
-            context.Add(_project);
-            context.SaveChanges();
-            MessageBox.Show("Proje Eklendi");
+                ProjectEntity _project = new ProjectEntity()
+                {
+                    ProjectName = projeNameTxt.Texts,
+                    projectEmp_ID = data.emp_ID,
+                    DepartmentID = data.DepartmentID
+                };
+                context.Add(_project);
+                context.SaveChanges();
+                MessageBox.Show("Proje Eklendi");
 
-            projeNameTxt.Texts = "";
+                projeNameTxt.Texts = "";
+            }
+            else
+            {
+                MessageBox.Show("Proje ismi giriniz");
+            }
+
         }
 
     }

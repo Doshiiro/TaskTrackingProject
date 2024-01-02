@@ -215,6 +215,12 @@
     </Compile>
     <Compile Include="DesignForm\CustomCenter.cs" />
     <Compile Include="DesignForm\PopupFormDesign.cs" />
+    <Compile Include="EmployeeSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeSettingsForm.Designer.cs">
+      <DependentUpon>EmployeeSettingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\CalendarEntity.cs" />
     <Compile Include="Entities\Department.cs" />
     <Compile Include="Entities\Dto\DtoEmployee.cs" />
@@ -369,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DepartmanAddForm.resx">
       <DependentUpon>DepartmanAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeSettingsForm.resx">
+      <DependentUpon>EmployeeSettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventForm.resx">
       <DependentUpon>EventForm.cs</DependentUpon>

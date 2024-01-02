@@ -21,7 +21,7 @@ namespace TaskTracking.PresentationLayer
         formSubmenu2 sub2;
         formToDo sub3;
         FormCalendar frmcalendar;
-
+        EmployeeSettingsForm employeeSettingsForm;
 
         public HomeForm()
         {
@@ -38,7 +38,7 @@ namespace TaskTracking.PresentationLayer
         public int projeDepIDAccess;
         public int projeEventAccesID;
 
-        
+
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
@@ -146,7 +146,7 @@ namespace TaskTracking.PresentationLayer
             formSubmenu2.ProjeAccess = projeAccessId;
             formSubmenu2.ProjeDepID = projeDepIDAccess;
             formSubmenu2.projeEventEmpID = projeEventAccesID;
-            
+
             if (sub2 == null)
             {
                 sub2 = new formSubmenu2();
@@ -248,5 +248,27 @@ namespace TaskTracking.PresentationLayer
         {
             sub3 = null;
         }
+
+        private void settingsBtn_Click(object sender, EventArgs e)
+        {
+            EmployeeSettingsForm.empid = emp_id;
+            if (employeeSettingsForm == null)
+            {
+                employeeSettingsForm = new EmployeeSettingsForm();
+                employeeSettingsForm.FormClosed += submenu3_FormClosed;
+                employeeSettingsForm.MdiParent = this;
+                employeeSettingsForm.Dock = DockStyle.Fill;
+                employeeSettingsForm.Show();
+            }
+            else
+            {
+                employeeSettingsForm.Activate();
+            }
+        }
+        private void settings_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            employeeSettingsForm = null;
+        }
+
     }
 }

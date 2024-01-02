@@ -89,7 +89,7 @@ namespace TaskTracking.PresentationLayer
                 tasklbl.Text = projeEventCount.ToString() + "/" + toplamevent.ToString();
 
             }
-            if (ProjeAccess == 0)
+            if (ProjeAccess == 0 || ProjeAccess == 1)
             {
                 eventbtn.Visible = false;
             }
