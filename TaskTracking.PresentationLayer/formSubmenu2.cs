@@ -34,7 +34,10 @@ namespace TaskTracking.PresentationLayer
             {
                 eventShowBtn.Visible = false;
             }
-
+            if (ProjeAccess == 0)
+            {
+                eventbtn.Visible = false;
+            }
             ProjectRepository projectRepository = new ProjectRepository();
             var datacal = projectRepository.GetAll();
 
@@ -50,12 +53,15 @@ namespace TaskTracking.PresentationLayer
                 {
                     dataGridView1.Rows.Add(item.ProjectName, empFKName.UserName, empDepName.DepartmentName);
                 }
+
             }
 
             //giren kullanıcının id'sini almam lazım eğer id proje event tablosu ile eşit ise dgw yazdır
 
             var projeEvents = context.ProjeEvent.ToList();
-
+            int projeCount = 0;
+            int projeEventCount = 0;
+            int projeEventStatusFalse = 0;
             foreach (var item in projeEvents)
             {
                 var projectName = context.Projects.Where(p => p.ProjectID == item.ProjectID).FirstOrDefault();
@@ -63,8 +69,26 @@ namespace TaskTracking.PresentationLayer
                 if (projeEventEmpID == item.EventEmpFK_ID)
                 {
                     dataGridView2.Rows.Add(item.ProjeDescription, projectName.ProjectName);
+                    if (item.Status == true)
+                    {
+                        projeEventCount++;
+                    }
+                    else
+                    {
+                        projeEventStatusFalse++;
+                    }
+
+                }
+                if (item.EventEmpFK_ID == projeEventEmpID)
+                {
+                    projeCount++;
                 }
             }
+
+
+            //ilişkili projeleri projeler label'a yazdırma
+            projelbl.Text = "Çalışılan Projeler: " + projeCount.ToString();
+            tasklbl.Text = projeEventCount.ToString() + "/" + projeEventStatusFalse.ToString();
 
         }
         private void eventShowBtn_Click(object sender, EventArgs e)

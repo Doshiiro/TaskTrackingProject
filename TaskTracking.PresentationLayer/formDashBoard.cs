@@ -24,7 +24,7 @@ namespace TaskTracking.PresentationLayer
         {
             InitializeComponent();
         }
-        
+
         TaskTrackingContext context = new TaskTrackingContext();
 
         private void formDashBoard_Load(object sender, EventArgs e)
@@ -44,8 +44,25 @@ namespace TaskTracking.PresentationLayer
             poisonDataGridView1.AllowUserToAddRows = false;
             poisonDataGridView1.ClearSelection();
 
-        }
 
+            DepartmanShow();
+
+        }
+        public void DepartmanShow()
+        {
+            poisonDataGridView2.DataSource = null;
+            poisonDataGridView2.Rows.Clear();
+            using (TaskTrackingContext context = new TaskTrackingContext())
+            {
+                var departmentData = context.Departments.ToList();
+                foreach (var item in departmentData)
+                {
+                    poisonDataGridView2.Rows.Add(item.DepID, item.DepartmentName);
+                }
+                poisonDataGridView2.AllowUserToAddRows = false;
+                poisonDataGridView2.ClearSelection();
+            }
+        }
         private void rjButton2_Click(object sender, EventArgs e)
         {
             poisonDataGridView1.DataSource = null;
@@ -86,6 +103,19 @@ namespace TaskTracking.PresentationLayer
         private void poisonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void departmanAdd_Click(object sender, EventArgs e)
+        {
+            DepartmanAddForm depform = new DepartmanAddForm();
+            depform.Show();
+        }
+
+        private void DepartmanRefresh_Click(object sender, EventArgs e)
+        {
+            poisonDataGridView2.DataSource = null;
+            poisonDataGridView2.Rows.Clear();
+            DepartmanShow();
         }
     }
 }

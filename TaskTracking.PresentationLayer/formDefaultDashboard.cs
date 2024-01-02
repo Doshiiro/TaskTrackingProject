@@ -36,15 +36,17 @@ namespace TaskTracking.PresentationLayer
 
             foreach (var item in calendarEvent)
             {
-                dataGridView2.Rows.Add(item.date, item.events, item.status);
                 if (item.status != null)
                 {
                     calStatusData++;
+                    dataGridView2.Rows.Add(item.date, item.events, item.status);
 
                 }
                 else
                 {
                     calStatusNullData++;
+                    dataGridView2.Rows.Add(item.date, item.events, "Yapılmadı");
+
                 }
             }
             tasklbl.Text = calStatusData + " / " + calendarEvent.Count.ToString();
@@ -57,23 +59,64 @@ namespace TaskTracking.PresentationLayer
             chart1.Series["s1"].Points[1].Color = Color.FromArgb(239, 98, 98);//kırmızı
 
 
-            string  resultPercentage= "%" + Math.Round((((double)calStatusData / calenderTotalEvent) * 100)).ToString();
-           
-            if (resultPercentage=="%NaN")
+            string resultPercentage = "%" + Math.Round((((double)calStatusData / calenderTotalEvent) * 100)).ToString();
+
+            if (resultPercentage == "%NaN")
             {
                 graphPercentage.Text = "Görev yok";
             }
             else
             {
-                graphPercentage.Text=resultPercentage;
+                graphPercentage.Text = resultPercentage;
             }
 
-            dataGridView2.ReadOnly= true;
+            dataGridView2.ReadOnly = true;
 
             dataGridView2.Sort(dataGridView2.Columns[0], ListSortDirection.Ascending);
             dataGridView2.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
             dataGridView2.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
 
+
+
+
+            var projectEvent = context.ProjeEvent.Where(p => p.EventEmpFK_ID == taskListId).ToList();
+            int ProjeCount = projectEvent.Count();
+            int yapilanProjeler = 0;
+            int yapilmayanProjeler = 0;
+            foreach (var item in projectEvent)
+            {
+                if (item.Status == true)
+                {
+                    yapilanProjeler++;
+                    dataGridView1.Rows.Add(item.ProjeDescription,"Yapıldı");
+
+                }
+                else
+                {
+                    yapilmayanProjeler++;
+                    dataGridView1.Rows.Add(item.ProjeDescription, "Yapılmadı");
+
+                }
+            }
+            projelbl.Text = yapilanProjeler.ToString() + "/" + ProjeCount.ToString();
+
+            string resultProje = "%" + Math.Round((((double)yapilanProjeler / ProjeCount) * 100)).ToString();
+
+            if (resultProje == "%NaN")
+            {
+                projeGraphtxt.Text = "Görev yok";
+            }
+            else
+            {
+                projeGraphtxt.Text = resultProje;
+            }
+
+            chart2.Series["s1"].Points.AddY(yapilanProjeler);
+            chart2.Series["s1"].Points.AddY(yapilmayanProjeler);
+
+
+            chart2.Series["s1"].Points[0].Color = Color.FromArgb(176, 217, 177);//yeşil
+            chart2.Series["s1"].Points[1].Color = Color.FromArgb(239, 98, 98);//kırmızı
 
         }
         public void DatagridviewSetting(DataGridView dataGridView)

@@ -207,6 +207,12 @@
     <Compile Include="DefaultUserEvent.Designer.cs">
       <DependentUpon>DefaultUserEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="DepartmanAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmanAddForm.Designer.cs">
+      <DependentUpon>DepartmanAddForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DesignForm\CustomCenter.cs" />
     <Compile Include="DesignForm\PopupFormDesign.cs" />
     <Compile Include="Entities\CalendarEntity.cs" />
@@ -308,6 +314,10 @@
     <Compile Include="Migrations\20240101182437_resettestinit1.designer.cs">
       <DependentUpon>20240101182437_resettestinit1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20240102064556_projeEventStatusinit.cs" />
+    <Compile Include="Migrations\20240102064556_projeEventStatusinit.designer.cs">
+      <DependentUpon>20240102064556_projeEventStatusinit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\TaskTrackingContextModelSnapshot.cs" />
     <Compile Include="modelForm1.cs">
       <SubType>Form</SubType>
@@ -356,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DefaultUserEvent.resx">
       <DependentUpon>DefaultUserEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmanAddForm.resx">
+      <DependentUpon>DepartmanAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventForm.resx">
       <DependentUpon>EventForm.cs</DependentUpon>

@@ -123,7 +123,7 @@ namespace TaskTracking.PresentationLayer
             {
                 MessageBox.Show("Lütfen yapılan görevi seçiniz");
             }
-            
+
 
         }
         private void rjButton2_Click(object sender, EventArgs e)
@@ -145,9 +145,40 @@ namespace TaskTracking.PresentationLayer
             }
         }
 
-        private void test ()
+        private void test()
         {
-           
+
+        }
+
+        private void statusFalseShowbtn_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            using (TaskTrackingContext context = new TaskTrackingContext())
+            {
+
+                var calendarEvent = context.Calendars
+                    .Where(c => c.emp_ID == taskEmp_Fk).ToList();
+                if (calendarEvent != null)
+                {
+                    foreach (var item in calendarEvent)
+                    {
+                        if (item.status == null)
+                        {
+                            item.status = "Yapılmadı";
+                            dataGridView1.Rows.Add(item.date, item.events, item.status, item.calender_ID);
+                        }
+
+                    }
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            EventShow();
         }
     }
 }

@@ -19,6 +19,7 @@ namespace TaskTracking.PresentationLayer
         formDefaultDashboard defaultDashboard;
         formSubmenu1 sub1;
         formSubmenu2 sub2;
+        formToDo sub3;
         FormCalendar frmcalendar;
 
 
@@ -32,11 +33,12 @@ namespace TaskTracking.PresentationLayer
         public int emp_calendarAccess;
         public string emp_UserName;
 
+        //proje sayfası
         public int projeAccessId;
         public int projeDepIDAccess;
-
         public int projeEventAccesID;
-        //public int projeEventEmpID;
+
+        
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
@@ -219,6 +221,32 @@ namespace TaskTracking.PresentationLayer
         private void closeBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void submenu3btn_Click(object sender, EventArgs e)
+        {
+            formToDo.eventEmpID = emp_id;
+            if (sub3 == null)
+            {
+                sub3 = new formToDo();
+                sub3.FormClosed += submenu3_FormClosed;
+                sub3.MdiParent = this;
+                sub3.Dock = DockStyle.Fill;
+                sub3.Show();
+            }
+            else
+            {
+                sub3.Activate();
+            }
+        }
+        private void submenu3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            sub3 = null;
         }
     }
 }

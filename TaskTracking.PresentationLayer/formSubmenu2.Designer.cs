@@ -200,10 +200,10 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.projelbl);
-            this.panel4.Location = new System.Drawing.Point(380, 62);
+            this.panel4.Location = new System.Drawing.Point(221, 62);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(177, 85);
+            this.panel4.Size = new System.Drawing.Size(336, 85);
             this.panel4.TabIndex = 17;
             // 
             // panel1
@@ -213,10 +213,10 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(380, 11);
+            this.panel1.Location = new System.Drawing.Point(221, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(177, 50);
+            this.panel1.Size = new System.Drawing.Size(336, 50);
             this.panel1.TabIndex = 16;
             // 
             // panel3
@@ -371,7 +371,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(105, 8);
+            this.pictureBox3.Location = new System.Drawing.Point(252, 7);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(68, 69);
             this.pictureBox3.TabIndex = 6;
@@ -383,11 +383,11 @@
             this.projelbl.BackColor = System.Drawing.Color.Transparent;
             this.projelbl.Font = new System.Drawing.Font("Segoe UI", 17F);
             this.projelbl.ForeColor = System.Drawing.Color.Black;
-            this.projelbl.Location = new System.Drawing.Point(28, 26);
+            this.projelbl.Location = new System.Drawing.Point(18, 26);
             this.projelbl.Name = "projelbl";
-            this.projelbl.Size = new System.Drawing.Size(47, 31);
+            this.projelbl.Size = new System.Drawing.Size(161, 31);
             this.projelbl.TabIndex = 5;
-            this.projelbl.Text = "2/3";
+            this.projelbl.Text = "İlişkili Projeleri";
             // 
             // formSubmenu2
             // 

@@ -177,7 +177,9 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDescription);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ProjectEventForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProjectEventForm";
             this.Load += new System.EventHandler(this.ProjectEventForm_Load);
             this.ResumeLayout(false);

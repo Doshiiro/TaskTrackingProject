@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formDefaultDashboard));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.hopeGroupBox1 = new ReaLTaiizor.Controls.HopeGroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.projelbl = new ReaLTaiizor.Controls.BigLabel();
@@ -48,6 +50,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.hopeGroupBox3 = new ReaLTaiizor.Controls.HopeGroupBox();
             this.dungeonLabel3 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eventColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statuColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dungeonLabel6 = new ReaLTaiizor.Controls.DungeonLabel();
@@ -55,27 +61,30 @@
             this.dungeonLabel5 = new ReaLTaiizor.Controls.DungeonLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.graphPercentage = new ReaLTaiizor.Controls.BigLabel();
-            this.bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
+            this.projeGraphtxt = new ReaLTaiizor.Controls.BigLabel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dungeonLabel7 = new ReaLTaiizor.Controls.DungeonLabel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dungeonLabel8 = new ReaLTaiizor.Controls.DungeonLabel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eventColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statuColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hopeGroupBox4 = new ReaLTaiizor.Controls.HopeGroupBox();
+            this.dungeonLabel4 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hopeGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.hopeGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.hopeGroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.hopeGroupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // hopeGroupBox1
@@ -225,6 +234,64 @@
             this.dungeonLabel3.TabIndex = 1;
             this.dungeonLabel3.Text = "Görevler";
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(45)))), ((int)(((byte)(76)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView2.ColumnHeadersHeight = 45;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dateColumn,
+            this.eventColumn,
+            this.statuColumn});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView2.EnableHeadersVisualStyles = false;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 38);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowTemplate.Height = 40;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(654, 240);
+            this.dataGridView2.TabIndex = 14;
+            this.dataGridView2.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView2_CellPainting);
+            // 
+            // dateColumn
+            // 
+            this.dateColumn.HeaderText = "Tarih";
+            this.dateColumn.Name = "dateColumn";
+            this.dateColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dateColumn.Width = 150;
+            // 
+            // eventColumn
+            // 
+            this.eventColumn.HeaderText = "Görev";
+            this.eventColumn.Name = "eventColumn";
+            this.eventColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.eventColumn.Width = 300;
+            // 
+            // statuColumn
+            // 
+            this.statuColumn.HeaderText = "Durum";
+            this.statuColumn.Name = "statuColumn";
+            this.statuColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.statuColumn.Width = 185;
+            // 
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
@@ -309,17 +376,17 @@
             this.graphPercentage.TabIndex = 10;
             this.graphPercentage.Text = "%";
             // 
-            // bigLabel2
+            // projeGraphtxt
             // 
-            this.bigLabel2.AutoSize = true;
-            this.bigLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            this.bigLabel2.Font = new System.Drawing.Font("Segoe UI", 17F);
-            this.bigLabel2.ForeColor = System.Drawing.Color.White;
-            this.bigLabel2.Location = new System.Drawing.Point(816, 596);
-            this.bigLabel2.Name = "bigLabel2";
-            this.bigLabel2.Size = new System.Drawing.Size(33, 31);
-            this.bigLabel2.TabIndex = 13;
-            this.bigLabel2.Text = "%";
+            this.projeGraphtxt.AutoSize = true;
+            this.projeGraphtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.projeGraphtxt.Font = new System.Drawing.Font("Segoe UI", 17F);
+            this.projeGraphtxt.ForeColor = System.Drawing.Color.White;
+            this.projeGraphtxt.Location = new System.Drawing.Point(816, 596);
+            this.projeGraphtxt.Name = "projeGraphtxt";
+            this.projeGraphtxt.Size = new System.Drawing.Size(33, 31);
+            this.projeGraphtxt.TabIndex = 13;
+            this.projeGraphtxt.Text = "%";
             // 
             // panel4
             // 
@@ -393,63 +460,84 @@
             this.chart2.TabIndex = 11;
             this.chart2.Text = "chart2";
             // 
-            // dataGridView2
+            // hopeGroupBox4
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(45)))), ((int)(((byte)(76)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView2.ColumnHeadersHeight = 45;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dateColumn,
-            this.eventColumn,
-            this.statuColumn});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 38);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowTemplate.Height = 40;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(654, 240);
-            this.dataGridView2.TabIndex = 14;
-            this.dataGridView2.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView2_CellPainting);
+            this.hopeGroupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.hopeGroupBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.hopeGroupBox4.Controls.Add(this.dungeonLabel4);
+            this.hopeGroupBox4.Controls.Add(this.dataGridView1);
+            this.hopeGroupBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.hopeGroupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.hopeGroupBox4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.hopeGroupBox4.Location = new System.Drawing.Point(12, 481);
+            this.hopeGroupBox4.Name = "hopeGroupBox4";
+            this.hopeGroupBox4.ShowText = false;
+            this.hopeGroupBox4.Size = new System.Drawing.Size(654, 284);
+            this.hopeGroupBox4.TabIndex = 14;
+            this.hopeGroupBox4.TabStop = false;
+            this.hopeGroupBox4.Text = "hopeGroupBox4";
+            this.hopeGroupBox4.ThemeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
             // 
-            // dateColumn
+            // dungeonLabel4
             // 
-            this.dateColumn.HeaderText = "Tarih";
-            this.dateColumn.Name = "dateColumn";
-            this.dateColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dateColumn.Width = 150;
+            this.dungeonLabel4.AutoSize = true;
+            this.dungeonLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.dungeonLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dungeonLabel4.Location = new System.Drawing.Point(5, 8);
+            this.dungeonLabel4.Name = "dungeonLabel4";
+            this.dungeonLabel4.Size = new System.Drawing.Size(146, 25);
+            this.dungeonLabel4.TabIndex = 1;
+            this.dungeonLabel4.Text = "Proje Görevleri";
             // 
-            // eventColumn
+            // dataGridView1
             // 
-            this.eventColumn.HeaderText = "Görev";
-            this.eventColumn.Name = "eventColumn";
-            this.eventColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.eventColumn.Width = 300;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(45)))), ((int)(((byte)(76)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.ColumnHeadersHeight = 45;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 38);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 40;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(654, 240);
+            this.dataGridView1.TabIndex = 14;
             // 
-            // statuColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.statuColumn.HeaderText = "Durum";
-            this.statuColumn.Name = "statuColumn";
-            this.statuColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.statuColumn.Width = 185;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Görev Açıklama";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.Width = 450;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Durum";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn3.Width = 185;
             // 
             // formDefaultDashboard
             // 
@@ -457,7 +545,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(25)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1120, 777);
-            this.Controls.Add(this.bigLabel2);
+            this.Controls.Add(this.hopeGroupBox4);
+            this.Controls.Add(this.projeGraphtxt);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.hopeGroupBox2);
             this.Controls.Add(this.graphPercentage);
@@ -479,13 +568,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.hopeGroupBox3.ResumeLayout(false);
             this.hopeGroupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.hopeGroupBox4.ResumeLayout(false);
+            this.hopeGroupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,7 +602,7 @@
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel6;
         private System.Windows.Forms.Panel panel3;
         private ReaLTaiizor.Controls.BigLabel graphPercentage;
-        private ReaLTaiizor.Controls.BigLabel bigLabel2;
+        private ReaLTaiizor.Controls.BigLabel projeGraphtxt;
         private System.Windows.Forms.Panel panel4;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel7;
         private System.Windows.Forms.Panel panel5;
@@ -522,5 +614,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eventColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statuColumn;
+        private ReaLTaiizor.Controls.HopeGroupBox hopeGroupBox4;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }
