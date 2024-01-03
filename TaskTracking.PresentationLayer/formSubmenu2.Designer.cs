@@ -57,13 +57,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.eventShowBtn = new ReaLTaiizor.Controls.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eventid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eventbtn = new ReaLTaiizor.Controls.Button();
             this.projeDeletebtn = new ReaLTaiizor.Controls.Button();
             this.button1 = new ReaLTaiizor.Controls.Button();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eventid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -364,28 +364,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(890, 247);
             this.dataGridView2.TabIndex = 29;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.FillWeight = 152.2842F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Görev Açıklama";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.FillWeight = 73.85783F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Proje İsmi";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // eventid
-            // 
-            this.eventid.HeaderText = "id";
-            this.eventid.Name = "eventid";
-            this.eventid.ReadOnly = true;
-            // 
             // eventbtn
             // 
             this.eventbtn.BackColor = System.Drawing.Color.Transparent;
@@ -459,6 +437,29 @@
             this.rjButton2.UseVisualStyleBackColor = false;
             this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.FillWeight = 152.2842F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Görev Açıklama";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.FillWeight = 73.85783F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Proje İsmi";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // eventid
+            // 
+            this.eventid.HeaderText = "id";
+            this.eventid.Name = "eventid";
+            this.eventid.ReadOnly = true;
+            this.eventid.Visible = false;
+            // 
             // formSubmenu2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -521,9 +522,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private ReaLTaiizor.Controls.Button button1;
+        private CustomControls.RJControls.RJButton rjButton2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn eventid;
-        private CustomControls.RJControls.RJButton rjButton2;
     }
 }

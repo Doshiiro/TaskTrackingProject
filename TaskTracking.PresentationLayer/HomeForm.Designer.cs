@@ -53,6 +53,7 @@
             this.crownLabel1 = new ReaLTaiizor.Controls.CrownLabel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.settingsBtn = new CustomControls.RJControls.RJButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuContainer.SuspendLayout();
@@ -63,6 +64,7 @@
             this.pnSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuTransition
@@ -124,7 +126,7 @@
             this.panel2.Controls.Add(this.menuContainer);
             this.panel2.Controls.Add(this.rjButton2);
             this.panel2.Controls.Add(this.pnSettings);
-            this.panel2.Location = new System.Drawing.Point(3, 212);
+            this.panel2.Location = new System.Drawing.Point(3, 271);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(234, 423);
             this.panel2.TabIndex = 8;
@@ -370,7 +372,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 102);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 161);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(79, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -382,7 +384,7 @@
             this.crownLabel1.AutoSize = true;
             this.crownLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.crownLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.crownLabel1.Location = new System.Drawing.Point(97, 131);
+            this.crownLabel1.Location = new System.Drawing.Point(97, 190);
             this.crownLabel1.Name = "crownLabel1";
             this.crownLabel1.Size = new System.Drawing.Size(93, 20);
             this.crownLabel1.TabIndex = 25;
@@ -391,6 +393,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
+            this.panel5.Controls.Add(this.pictureBox2);
             this.panel5.Controls.Add(this.settingsBtn);
             this.panel5.Controls.Add(this.crownLabel1);
             this.panel5.Controls.Add(this.pictureBox1);
@@ -424,6 +427,16 @@
             this.settingsBtn.UseVisualStyleBackColor = false;
             this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(60, 30);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(130, 94);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 26;
+            this.pictureBox2.TabStop = false;
+            // 
             // HomeForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -449,6 +462,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -477,5 +491,6 @@
         private System.Windows.Forms.Panel panel5;
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
         private CustomControls.RJControls.RJButton settingsBtn;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
