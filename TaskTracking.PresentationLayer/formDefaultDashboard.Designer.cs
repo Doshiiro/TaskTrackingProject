@@ -51,9 +51,6 @@
             this.hopeGroupBox3 = new ReaLTaiizor.Controls.HopeGroupBox();
             this.dungeonLabel3 = new ReaLTaiizor.Controls.DungeonLabel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eventColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statuColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dungeonLabel6 = new ReaLTaiizor.Controls.DungeonLabel();
@@ -71,6 +68,10 @@
             this.hopeGroupBox4 = new ReaLTaiizor.Controls.HopeGroupBox();
             this.dungeonLabel4 = new ReaLTaiizor.Controls.DungeonLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rjButton2 = new CustomControls.RJControls.RJButton();
+            this.dateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eventColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statuColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hopeGroupBox1.SuspendLayout();
@@ -270,27 +271,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(654, 240);
             this.dataGridView2.TabIndex = 14;
             this.dataGridView2.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView2_CellPainting);
-            // 
-            // dateColumn
-            // 
-            this.dateColumn.HeaderText = "Tarih";
-            this.dateColumn.Name = "dateColumn";
-            this.dateColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dateColumn.Width = 150;
-            // 
-            // eventColumn
-            // 
-            this.eventColumn.HeaderText = "Görev";
-            this.eventColumn.Name = "eventColumn";
-            this.eventColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.eventColumn.Width = 300;
-            // 
-            // statuColumn
-            // 
-            this.statuColumn.HeaderText = "Durum";
-            this.statuColumn.Name = "statuColumn";
-            this.statuColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.statuColumn.Width = 185;
             // 
             // chart1
             // 
@@ -525,10 +505,54 @@
             this.dataGridView1.Size = new System.Drawing.Size(654, 240);
             this.dataGridView1.TabIndex = 14;
             // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.Transparent;
+            this.rjButton2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton2.BorderRadius = 0;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Image = ((System.Drawing.Image)(resources.GetObject("rjButton2.Image")));
+            this.rjButton2.Location = new System.Drawing.Point(1069, 43);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(39, 31);
+            this.rjButton2.TabIndex = 15;
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
+            // 
+            // dateColumn
+            // 
+            this.dateColumn.HeaderText = "Tarih";
+            this.dateColumn.Name = "dateColumn";
+            this.dateColumn.ReadOnly = true;
+            this.dateColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dateColumn.Width = 150;
+            // 
+            // eventColumn
+            // 
+            this.eventColumn.HeaderText = "Görev";
+            this.eventColumn.Name = "eventColumn";
+            this.eventColumn.ReadOnly = true;
+            this.eventColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.eventColumn.Width = 300;
+            // 
+            // statuColumn
+            // 
+            this.statuColumn.HeaderText = "Durum";
+            this.statuColumn.Name = "statuColumn";
+            this.statuColumn.ReadOnly = true;
+            this.statuColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.statuColumn.Width = 185;
+            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "Görev Açıklama";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn2.Width = 450;
             // 
@@ -536,6 +560,7 @@
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "Durum";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn3.Width = 185;
             // 
@@ -545,6 +570,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(25)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1120, 777);
+            this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.hopeGroupBox4);
             this.Controls.Add(this.projeGraphtxt);
             this.Controls.Add(this.panel4);
@@ -611,12 +637,13 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel2;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eventColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statuColumn;
         private ReaLTaiizor.Controls.HopeGroupBox hopeGroupBox4;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private CustomControls.RJControls.RJButton rjButton2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eventColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statuColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }

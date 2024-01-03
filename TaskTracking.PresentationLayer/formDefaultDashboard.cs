@@ -26,6 +26,11 @@ namespace TaskTracking.PresentationLayer
         private void formDefaultDashboard_Load(object sender, EventArgs e)
         {
 
+            showDatas();
+
+        }
+        public void showDatas()
+        {
             TaskTrackingContext context = new TaskTrackingContext();
             var calendarEvent = context.Calendars
                     .Where(c => c.emp_ID == taskListId).ToList();
@@ -88,7 +93,7 @@ namespace TaskTracking.PresentationLayer
                 if (item.Status == true)
                 {
                     yapilanProjeler++;
-                    dataGridView1.Rows.Add(item.ProjeDescription,"Yapıldı");
+                    dataGridView1.Rows.Add(item.ProjeDescription, "Yapıldı");
 
                 }
                 else
@@ -117,7 +122,6 @@ namespace TaskTracking.PresentationLayer
 
             chart2.Series["s1"].Points[0].Color = Color.FromArgb(176, 217, 177);//yeşil
             chart2.Series["s1"].Points[1].Color = Color.FromArgb(239, 98, 98);//kırmızı
-
         }
         public void DatagridviewSetting(DataGridView dataGridView)
         {
@@ -139,6 +143,19 @@ namespace TaskTracking.PresentationLayer
                 e.AdvancedBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.None;
             }
 
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            dataGridView2.DataSource = null;
+            dataGridView2.Rows.Clear();
+            chart1.Series["s1"].Points.Clear();
+            chart2.Series["s1"].Points.Clear();
+
+
+            showDatas();
         }
     }
 }
