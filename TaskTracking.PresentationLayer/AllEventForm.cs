@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Markup;
+using takvim;
 using TaskTracking.PresentationLayer.DAL;
 using TaskTracking.PresentationLayer.Entities;
 using TaskTracking.PresentationLayer.Management.Concrete;
@@ -20,7 +21,7 @@ namespace TaskTracking.PresentationLayer
         {
             InitializeComponent();
         }
-
+        public int depid = FormCalendar.departmanid;
         private void closeBtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -30,15 +31,22 @@ namespace TaskTracking.PresentationLayer
             CalendarRepository calendarRepository = new CalendarRepository();
             var datacal = calendarRepository.GetAll();
 
+
             EmployeeRepository employeeRepository = new EmployeeRepository();
             var dataemp = employeeRepository.GetAll();
+
+            TaskTrackingContext context = new TaskTrackingContext();
 
             foreach (var item in datacal)
             {
                 var matchingEmployee = dataemp.FirstOrDefault(emp => emp.emp_ID == item.emp_ID);
+                var depMatching = context.Employees.Where(emp => emp.DepartmentID == depid).FirstOrDefault();
                 if (matchingEmployee != null)
                 {
-                    poisonDataGridView1.Rows.Add(item.calender_ID, matchingEmployee.UserName, item.date, item.events, item.emp_ID);
+                    if (depMatching.DepartmentID == matchingEmployee.DepartmentID)
+                    {
+                        poisonDataGridView1.Rows.Add(item.calender_ID, matchingEmployee.UserName, item.date, item.events, item.emp_ID);
+                    }
                 }
             }
 

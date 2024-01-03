@@ -31,15 +31,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formSubmenu2));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tasklbl = new ReaLTaiizor.Controls.BigLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -56,9 +53,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.eventShowBtn = new ReaLTaiizor.Controls.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.eventbtn = new ReaLTaiizor.Controls.Button();
+            this.projeDeletebtn = new ReaLTaiizor.Controls.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new ReaLTaiizor.Controls.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eventbtn = new ReaLTaiizor.Controls.Button();
+            this.eventid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -72,15 +76,12 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -91,11 +92,11 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 29;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.id});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -104,52 +105,24 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(117, 157);
+            this.dataGridView1.Location = new System.Drawing.Point(117, 141);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 50;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(890, 280);
             this.dataGridView1.TabIndex = 27;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 152.2842F;
-            this.Column1.HeaderText = "Proje İsmi";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 73.85783F;
-            this.Column2.HeaderText = "Proje Yöneticisi";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column3.FillWeight = 73.85783F;
-            this.Column3.HeaderText = "Proje Departmanı";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.tasklbl);
             this.panel8.Controls.Add(this.pictureBox2);
-            this.panel8.Location = new System.Drawing.Point(637, 66);
+            this.panel8.Location = new System.Drawing.Point(637, 56);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(177, 85);
@@ -184,7 +157,7 @@
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.label6);
             this.panel5.ForeColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(637, 11);
+            this.panel5.Location = new System.Drawing.Point(637, 1);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(177, 56);
@@ -222,7 +195,7 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.projelbl);
-            this.panel4.Location = new System.Drawing.Point(221, 62);
+            this.panel4.Location = new System.Drawing.Point(221, 52);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(336, 85);
@@ -257,7 +230,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(221, 11);
+            this.panel1.Location = new System.Drawing.Point(221, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(336, 50);
@@ -299,7 +272,7 @@
             this.eventShowBtn.Image = null;
             this.eventShowBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.eventShowBtn.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.eventShowBtn.Location = new System.Drawing.Point(436, 702);
+            this.eventShowBtn.Location = new System.Drawing.Point(116, 697);
             this.eventShowBtn.Name = "eventShowBtn";
             this.eventShowBtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.eventShowBtn.Size = new System.Drawing.Size(121, 47);
@@ -333,7 +306,8 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
+            this.dataGridViewTextBoxColumn2,
+            this.eventid});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -343,17 +317,105 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.Location = new System.Drawing.Point(116, 450);
+            this.dataGridView2.Location = new System.Drawing.Point(116, 436);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 50;
-            this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(890, 247);
             this.dataGridView2.TabIndex = 29;
+            // 
+            // eventbtn
+            // 
+            this.eventbtn.BackColor = System.Drawing.Color.Transparent;
+            this.eventbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.eventbtn.EnteredColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.eventbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.eventbtn.Image = null;
+            this.eventbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.eventbtn.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.eventbtn.Location = new System.Drawing.Point(713, 697);
+            this.eventbtn.Name = "eventbtn";
+            this.eventbtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.eventbtn.Size = new System.Drawing.Size(121, 47);
+            this.eventbtn.TabIndex = 30;
+            this.eventbtn.Text = "Görev Ekle";
+            this.eventbtn.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.eventbtn.Click += new System.EventHandler(this.eventbtn_Click);
+            // 
+            // projeDeletebtn
+            // 
+            this.projeDeletebtn.BackColor = System.Drawing.Color.Transparent;
+            this.projeDeletebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.projeDeletebtn.EnteredColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.projeDeletebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.projeDeletebtn.Image = null;
+            this.projeDeletebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.projeDeletebtn.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.projeDeletebtn.Location = new System.Drawing.Point(263, 697);
+            this.projeDeletebtn.Name = "projeDeletebtn";
+            this.projeDeletebtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.projeDeletebtn.Size = new System.Drawing.Size(170, 47);
+            this.projeDeletebtn.TabIndex = 31;
+            this.projeDeletebtn.Text = "Seçilen Projeyi Sil";
+            this.projeDeletebtn.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.projeDeletebtn.Click += new System.EventHandler(this.projeDeletebtn_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 152.2842F;
+            this.Column1.HeaderText = "Proje İsmi";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 73.85783F;
+            this.Column2.HeaderText = "Proje Yöneticisi";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column3.FillWeight = 73.85783F;
+            this.Column3.HeaderText = "Proje Departmanı";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.EnteredColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Image = null;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.button1.Location = new System.Drawing.Point(853, 697);
+            this.button1.Name = "button1";
+            this.button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.button1.Size = new System.Drawing.Size(154, 47);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Seçilen Görevi Sil";
+            this.button1.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -371,29 +433,19 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // eventbtn
+            // eventid
             // 
-            this.eventbtn.BackColor = System.Drawing.Color.Transparent;
-            this.eventbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.eventbtn.EnteredColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.eventbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.eventbtn.Image = null;
-            this.eventbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.eventbtn.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.eventbtn.Location = new System.Drawing.Point(609, 702);
-            this.eventbtn.Name = "eventbtn";
-            this.eventbtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.eventbtn.Size = new System.Drawing.Size(121, 47);
-            this.eventbtn.TabIndex = 30;
-            this.eventbtn.Text = "Görev Ekle";
-            this.eventbtn.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.eventbtn.Click += new System.EventHandler(this.eventbtn_Click);
+            this.eventid.HeaderText = "id";
+            this.eventid.Name = "eventid";
+            this.eventid.ReadOnly = true;
             // 
             // formSubmenu2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 752);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.projeDeletebtn);
             this.Controls.Add(this.eventbtn);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.eventShowBtn);
@@ -436,16 +488,20 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private ReaLTaiizor.Controls.Button eventShowBtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private ReaLTaiizor.Controls.Button eventbtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private ReaLTaiizor.Controls.BigLabel tasklbl;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private ReaLTaiizor.Controls.BigLabel projelbl;
+        private ReaLTaiizor.Controls.Button projeDeletebtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private ReaLTaiizor.Controls.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eventid;
     }
 }

@@ -167,6 +167,7 @@ namespace TaskTracking.PresentationLayer
 
         private void calenderbtn_Click(object sender, EventArgs e)
         {
+            FormCalendar.departmanid = projeDepIDAccess;
             if (frmcalendar == null)
             {
 

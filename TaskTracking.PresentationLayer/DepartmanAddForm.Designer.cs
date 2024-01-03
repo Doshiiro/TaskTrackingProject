@@ -134,7 +134,9 @@
             this.Controls.Add(this.dungeonLabel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DepartmanAddForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DepartmanAddForm";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

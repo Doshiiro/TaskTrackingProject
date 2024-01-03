@@ -31,10 +31,17 @@ namespace TaskTracking.PresentationLayer
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridView1.AllowUserToAddRows = false;
+            showDatas();
 
+
+        }
+        public void showDatas()
+        {
             if (ProjeAccess == 0 || ProjeAccess == 2)
             {
                 eventShowBtn.Visible = false;
+                projeDeletebtn.Visible = false;
+
                 ProjectRepository projectRepository = new ProjectRepository();
                 var datacal = projectRepository.GetAll();
 
@@ -48,7 +55,7 @@ namespace TaskTracking.PresentationLayer
                     //kullanıcının olduğu departmanda ki projeleri görebilir.
                     if (ProjeDepID == item.DepartmentID)
                     {
-                        dataGridView1.Rows.Add(item.ProjectName, empFKName.UserName, empDepName.DepartmentName);
+                        dataGridView1.Rows.Add(item.ProjectName, empFKName.UserName, empDepName.DepartmentName, item.ProjectID);
                     }
 
                 }
@@ -66,7 +73,7 @@ namespace TaskTracking.PresentationLayer
 
                     if (projeEventEmpID == item.EventEmpFK_ID)
                     {
-                        dataGridView2.Rows.Add(item.ProjeDescription, projectName.ProjectName);
+                        dataGridView2.Rows.Add(item.ProjeDescription, projectName.ProjectName, item.ProjeEventID);
                         if (item.Status == true)
                         {
                             projeEventCount++;
@@ -92,6 +99,8 @@ namespace TaskTracking.PresentationLayer
             if (ProjeAccess == 0 || ProjeAccess == 1)
             {
                 eventbtn.Visible = false;
+                button1.Visible = false;
+
             }
             if (ProjeAccess == 1)
             {
@@ -105,7 +114,7 @@ namespace TaskTracking.PresentationLayer
                     var empFKName = context.Employees.Where(emp => emp.emp_ID == item.projectEmp_ID).FirstOrDefault();
                     var empDepName = context.Departments.Where(d => d.DepID == empFKName.DepartmentID).FirstOrDefault();
 
-                    dataGridView1.Rows.Add(item.ProjectName, empFKName.UserName, empDepName.DepartmentName);
+                    dataGridView1.Rows.Add(item.ProjectName, empFKName.UserName, empDepName.DepartmentName, item.ProjectID);
 
                 }
 
@@ -118,7 +127,7 @@ namespace TaskTracking.PresentationLayer
                     var projectName = context.Projects.Where(p => p.ProjectID == item.ProjectID).FirstOrDefault();
 
 
-                    dataGridView2.Rows.Add(item.ProjeDescription, projectName.ProjectName);
+                    dataGridView2.Rows.Add(item.ProjeDescription, projectName.ProjectName, item.ProjeEventID);
                     if (item.Status == true)
                     {
                         projeEventCount++;
@@ -134,7 +143,6 @@ namespace TaskTracking.PresentationLayer
                     }
                 }
             }
-
         }
         private void eventShowBtn_Click(object sender, EventArgs e)
         {
@@ -147,6 +155,68 @@ namespace TaskTracking.PresentationLayer
             ProjectEventForm projectEventForm = new ProjectEventForm();
             ProjectEventForm.ProjeEventEmpID2 = projeEventEmpID;
             projectEventForm.Show();
+        }
+
+        private void projeDeletebtn_Click(object sender, EventArgs e)
+        {
+            using (TaskTrackingContext context = new TaskTrackingContext())
+            {
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    var deletedData = dataGridView1.SelectedRows[0].Cells["id"].Value.ToString();
+                    int projectID = Convert.ToInt32(deletedData);
+
+                    var projectRemove = context.Projects.FirstOrDefault(p => p.ProjectID == projectID);
+
+                    DialogResult secenek = MessageBox.Show("Projeyi silmek istediğinizden emin misiniz ?", "Proje Silme", MessageBoxButtons.YesNo);
+                    if (secenek == DialogResult.Yes)
+                    {
+                        if (projectRemove != null)
+                        {
+                            context.Projects.Remove(projectRemove);
+                            context.SaveChanges();
+                            MessageBox.Show("Proje silindi");
+                            dataGridView1.DataSource = null;
+                            dataGridView1.Rows.Clear();
+                            dataGridView2.DataSource = null;
+                            dataGridView2.Rows.Clear();
+                            showDatas();
+                        }
+                    }
+
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (TaskTrackingContext context = new TaskTrackingContext())
+            {
+                if (dataGridView2.SelectedRows.Count > 0)
+                {
+                    var deletedData = dataGridView2.SelectedRows[0].Cells["eventid"].Value.ToString();
+                    int projectID = Convert.ToInt32(deletedData);
+
+                    var projectRemove = context.ProjeEvent.FirstOrDefault(p => p.ProjeEventID == projectID);
+
+                    DialogResult secenek = MessageBox.Show("Görevi silmek istediğinizden emin misiniz ?", "Görev Silme", MessageBoxButtons.YesNo);
+                    if (secenek == DialogResult.Yes)
+                    {
+                        if (projectRemove != null)
+                        {
+                            context.ProjeEvent.Remove(projectRemove);
+                            context.SaveChanges();
+                            MessageBox.Show("Görev silindi");
+                            dataGridView1.DataSource = null;
+                            dataGridView1.Rows.Clear();
+                            dataGridView2.DataSource = null;
+                            dataGridView2.Rows.Clear();
+                            showDatas();
+                        }
+                    }
+
+                }
+            }
         }
     }
 }

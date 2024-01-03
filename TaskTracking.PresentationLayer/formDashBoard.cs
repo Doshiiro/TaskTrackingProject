@@ -135,8 +135,8 @@ namespace TaskTracking.PresentationLayer
 
         private void departmanAdd_Click(object sender, EventArgs e)
         {
-            DepartmanAddForm depform = new DepartmanAddForm();
-            depform.Show();
+            PopupFormDesign popupFormDesign = new PopupFormDesign();
+            popupFormDesign.Popup<DepartmanAddForm>();
         }
 
         private void DepartmanRefresh_Click(object sender, EventArgs e)
