@@ -21,7 +21,9 @@ namespace takvim
         int month, year;
 
         public static int static_month, static_year;
+
         public static int departmanid;
+        public static int EmpAccess;
 
         public FormCalendar()
         {
@@ -71,10 +73,9 @@ namespace takvim
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //PopupFormDesign popupFormDesign = new PopupFormDesign();
-            //popupFormDesign.Popup<AllEventForm>();
-            AllEventForm allEventForm = new AllEventForm();
-            allEventForm.Show();
+            PopupFormDesign popupFormDesign = new PopupFormDesign();
+            popupFormDesign.Popup<AllEventForm>();
+           
         }
 
         private void btnsonraki_Click(object sender, EventArgs e)

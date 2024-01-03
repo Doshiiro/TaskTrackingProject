@@ -33,23 +33,25 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllEventForm));
             this.poisonDataGridView1 = new ReaLTaiizor.Controls.PoisonDataGridView();
+            this.ribbonGroupBox1 = new ReaLTaiizor.Controls.RibbonGroupBox();
+            this.poisonDateTime1 = new ReaLTaiizor.Controls.PoisonDateTime();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.closeBtn = new CustomControls.RJControls.RJButton();
+            this.durumtxt = new CustomControls.RJControls.RJTextBox();
+            this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.txtFK = new CustomControls.RJControls.RJTextBox();
+            this.txtCalendarID = new CustomControls.RJControls.RJTextBox();
+            this.txtPersonel = new CustomControls.RJControls.RJTextBox();
+            this.btnSave = new CustomControls.RJControls.RJButton();
+            this.txtEvent = new CustomControls.RJControls.RJTextBox();
             this.CalendarID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PersonelName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CalenderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PersonelEvent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FkID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ribbonGroupBox1 = new ReaLTaiizor.Controls.RibbonGroupBox();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.poisonDateTime1 = new ReaLTaiizor.Controls.PoisonDateTime();
-            this.txtFK = new CustomControls.RJControls.RJTextBox();
-            this.txtCalendarID = new CustomControls.RJControls.RJTextBox();
-            this.txtPersonel = new CustomControls.RJControls.RJTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnSave = new CustomControls.RJControls.RJButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtEvent = new CustomControls.RJControls.RJTextBox();
-            this.closeBtn = new CustomControls.RJControls.RJButton();
+            this.durum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).BeginInit();
             this.ribbonGroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +79,8 @@
             this.PersonelName,
             this.CalenderDate,
             this.PersonelEvent,
-            this.FkID});
+            this.FkID,
+            this.durum});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -107,37 +110,10 @@
             this.poisonDataGridView1.RowTemplate.Height = 25;
             this.poisonDataGridView1.RowTemplate.ReadOnly = true;
             this.poisonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.poisonDataGridView1.Size = new System.Drawing.Size(762, 355);
+            this.poisonDataGridView1.Size = new System.Drawing.Size(799, 355);
             this.poisonDataGridView1.TabIndex = 25;
             this.poisonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.poisonDataGridView1_CellContentClick);
             this.poisonDataGridView1.SelectionChanged += new System.EventHandler(this.poisonDataGridView1_SelectionChanged);
-            // 
-            // CalendarID
-            // 
-            this.CalendarID.HeaderText = "ID";
-            this.CalendarID.Name = "CalendarID";
-            this.CalendarID.Visible = false;
-            // 
-            // PersonelName
-            // 
-            this.PersonelName.HeaderText = "Personel";
-            this.PersonelName.Name = "PersonelName";
-            // 
-            // CalenderDate
-            // 
-            this.CalenderDate.HeaderText = "Tarih";
-            this.CalenderDate.Name = "CalenderDate";
-            // 
-            // PersonelEvent
-            // 
-            this.PersonelEvent.HeaderText = "Görev";
-            this.PersonelEvent.Name = "PersonelEvent";
-            // 
-            // FkID
-            // 
-            this.FkID.HeaderText = "FkId";
-            this.FkID.Name = "FkID";
-            this.FkID.Visible = false;
             // 
             // ribbonGroupBox1
             // 
@@ -147,6 +123,7 @@
             this.ribbonGroupBox1.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(178)))), ((int)(((byte)(172)))));
             this.ribbonGroupBox1.BorderColorC = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(192)))), ((int)(((byte)(200)))));
             this.ribbonGroupBox1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.ribbonGroupBox1.Controls.Add(this.durumtxt);
             this.ribbonGroupBox1.Controls.Add(this.rjButton1);
             this.ribbonGroupBox1.Controls.Add(this.poisonDateTime1);
             this.ribbonGroupBox1.Controls.Add(this.txtFK);
@@ -168,6 +145,84 @@
             this.ribbonGroupBox1.TabIndex = 29;
             this.ribbonGroupBox1.Text = "Düzenle";
             // 
+            // poisonDateTime1
+            // 
+            this.poisonDateTime1.Location = new System.Drawing.Point(55, 76);
+            this.poisonDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
+            this.poisonDateTime1.Name = "poisonDateTime1";
+            this.poisonDateTime1.Size = new System.Drawing.Size(200, 29);
+            this.poisonDateTime1.TabIndex = 32;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(438, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 17);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Personel";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(52, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 17);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Event";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(52, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 17);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Date";
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.BackColor = System.Drawing.Color.Gray;
+            this.closeBtn.BackgroundColor = System.Drawing.Color.Gray;
+            this.closeBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.closeBtn.BorderRadius = 0;
+            this.closeBtn.BorderSize = 0;
+            this.closeBtn.FlatAppearance.BorderSize = 0;
+            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.closeBtn.ForeColor = System.Drawing.Color.White;
+            this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
+            this.closeBtn.Location = new System.Drawing.Point(765, 0);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(37, 32);
+            this.closeBtn.TabIndex = 22;
+            this.closeBtn.TextColor = System.Drawing.Color.White;
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
+            // durumtxt
+            // 
+            this.durumtxt.BackColor = System.Drawing.SystemColors.Window;
+            this.durumtxt.BorderColor = System.Drawing.Color.Silver;
+            this.durumtxt.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
+            this.durumtxt.BorderRadius = 10;
+            this.durumtxt.BorderSize = 2;
+            this.durumtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.durumtxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.durumtxt.Location = new System.Drawing.Point(564, 198);
+            this.durumtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.durumtxt.Multiline = false;
+            this.durumtxt.Name = "durumtxt";
+            this.durumtxt.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.durumtxt.PasswordChar = false;
+            this.durumtxt.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.durumtxt.PlaceholderText = "";
+            this.durumtxt.Size = new System.Drawing.Size(95, 37);
+            this.durumtxt.TabIndex = 34;
+            this.durumtxt.Texts = "";
+            this.durumtxt.UnderlinedStyle = false;
+            this.durumtxt.Visible = false;
+            // 
             // rjButton1
             // 
             this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -187,14 +242,6 @@
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
-            // 
-            // poisonDateTime1
-            // 
-            this.poisonDateTime1.Location = new System.Drawing.Point(55, 76);
-            this.poisonDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
-            this.poisonDateTime1.Name = "poisonDateTime1";
-            this.poisonDateTime1.Size = new System.Drawing.Size(200, 29);
-            this.poisonDateTime1.TabIndex = 32;
             // 
             // txtFK
             // 
@@ -265,15 +312,6 @@
             this.txtPersonel.Texts = "";
             this.txtPersonel.UnderlinedStyle = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(438, 47);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 17);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Personel";
-            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -293,24 +331,6 @@
             this.btnSave.TextColor = System.Drawing.Color.White;
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 17);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Event";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 17);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Date";
             // 
             // txtEvent
             // 
@@ -334,31 +354,43 @@
             this.txtEvent.Texts = "";
             this.txtEvent.UnderlinedStyle = false;
             // 
-            // closeBtn
+            // CalendarID
             // 
-            this.closeBtn.BackColor = System.Drawing.Color.Gray;
-            this.closeBtn.BackgroundColor = System.Drawing.Color.Gray;
-            this.closeBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.closeBtn.BorderRadius = 0;
-            this.closeBtn.BorderSize = 0;
-            this.closeBtn.FlatAppearance.BorderSize = 0;
-            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.closeBtn.ForeColor = System.Drawing.Color.White;
-            this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
-            this.closeBtn.Location = new System.Drawing.Point(727, 0);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(37, 32);
-            this.closeBtn.TabIndex = 22;
-            this.closeBtn.TextColor = System.Drawing.Color.White;
-            this.closeBtn.UseVisualStyleBackColor = false;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            this.CalendarID.HeaderText = "ID";
+            this.CalendarID.Name = "CalendarID";
+            this.CalendarID.Visible = false;
+            // 
+            // PersonelName
+            // 
+            this.PersonelName.HeaderText = "Personel";
+            this.PersonelName.Name = "PersonelName";
+            // 
+            // CalenderDate
+            // 
+            this.CalenderDate.HeaderText = "Tarih";
+            this.CalenderDate.Name = "CalenderDate";
+            // 
+            // PersonelEvent
+            // 
+            this.PersonelEvent.HeaderText = "Görev";
+            this.PersonelEvent.Name = "PersonelEvent";
+            // 
+            // FkID
+            // 
+            this.FkID.HeaderText = "FkId";
+            this.FkID.Name = "FkID";
+            this.FkID.Visible = false;
+            // 
+            // durum
+            // 
+            this.durum.HeaderText = "Durum";
+            this.durum.Name = "durum";
             // 
             // AllEventForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 640);
+            this.ClientSize = new System.Drawing.Size(802, 640);
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.ribbonGroupBox1);
             this.Controls.Add(this.poisonDataGridView1);
@@ -388,12 +420,14 @@
         private CustomControls.RJControls.RJTextBox txtPersonel;
         private CustomControls.RJControls.RJTextBox txtCalendarID;
         private CustomControls.RJControls.RJTextBox txtFK;
+        private ReaLTaiizor.Controls.PoisonDateTime poisonDateTime1;
+        private CustomControls.RJControls.RJButton rjButton1;
+        private CustomControls.RJControls.RJTextBox durumtxt;
         private System.Windows.Forms.DataGridViewTextBoxColumn CalendarID;
         private System.Windows.Forms.DataGridViewTextBoxColumn PersonelName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CalenderDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn PersonelEvent;
         private System.Windows.Forms.DataGridViewTextBoxColumn FkID;
-        private ReaLTaiizor.Controls.PoisonDateTime poisonDateTime1;
-        private CustomControls.RJControls.RJButton rjButton1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn durum;
     }
 }

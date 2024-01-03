@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Markup;
 using takvim;
 using TaskTracking.PresentationLayer.DAL;
 using TaskTracking.PresentationLayer.Entities;
@@ -22,6 +17,7 @@ namespace TaskTracking.PresentationLayer
             InitializeComponent();
         }
         public int depid = FormCalendar.departmanid;
+        public int access = FormCalendar.EmpAccess;
         private void closeBtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -43,10 +39,21 @@ namespace TaskTracking.PresentationLayer
                 var depMatching = context.Employees.Where(emp => emp.DepartmentID == depid).FirstOrDefault();
                 if (matchingEmployee != null)
                 {
+                    if (access == 1)
+                    {
+                        poisonDataGridView1.Rows.Add(item.calender_ID, matchingEmployee.UserName, item.date, item.events, item.emp_ID, item.status);
+
+                    }
+
                     if (depMatching.DepartmentID == matchingEmployee.DepartmentID)
                     {
-                        poisonDataGridView1.Rows.Add(item.calender_ID, matchingEmployee.UserName, item.date, item.events, item.emp_ID);
+                        if (access == 2)
+                        {
+                            poisonDataGridView1.Rows.Add(item.calender_ID, matchingEmployee.UserName, item.date, item.events,item.emp_ID,item.status );
+                        }
                     }
+
+
                 }
             }
 
@@ -82,7 +89,7 @@ namespace TaskTracking.PresentationLayer
                 date = textdate,
                 events = textevent,
                 calender_ID = calID,
-                emp_ID = empFk
+                emp_ID = empFk,
             };
 
             if (calendarEntity != null)
@@ -107,6 +114,14 @@ namespace TaskTracking.PresentationLayer
                 txtPersonel.Texts = poisonDataGridView1.SelectedRows[0].Cells["PersonelName"].Value.ToString();
                 txtCalendarID.Texts = poisonDataGridView1.SelectedRows[0].Cells["CalendarID"].Value.ToString();
                 txtFK.Texts = poisonDataGridView1.SelectedRows[0].Cells["FkID"].Value.ToString();
+
+                //var durumCell = poisonDataGridView1.SelectedRows[0].Cells["durum"];
+
+                //if (durumCell?.Value != null)
+                //{
+                //    durumtxt.Texts = durumCell.Value.ToString();
+                //}
+
             }
         }
 

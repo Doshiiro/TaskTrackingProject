@@ -218,5 +218,14 @@ namespace TaskTracking.PresentationLayer
                 }
             }
         }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            dataGridView2.DataSource = null;
+            dataGridView2.Rows.Clear();
+            showDatas();
+        }
     }
 }

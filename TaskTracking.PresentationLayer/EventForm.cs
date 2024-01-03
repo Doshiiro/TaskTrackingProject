@@ -15,7 +15,8 @@ namespace TaskTracking.PresentationLayer
         {
             InitializeComponent();
         }
-
+        public int depid = FormCalendar.departmanid;
+        public int empaccess = FormCalendar.EmpAccess;
         private void EvenForm_Load(object sender, EventArgs e)
         {
             txtDate.Texts = FormCalendar.static_year + "/" + FormCalendar.static_month + "/" + UserControlDays.static_day;
@@ -25,7 +26,11 @@ namespace TaskTracking.PresentationLayer
             var entity = employeeRepository.GetAll();
             foreach (var item in entity)
             {
-                if (item.Access != 1)
+                if (empaccess == 1)
+                {
+                    metroComboBox1.Items.Add(item.UserName);
+                }
+                else if (item.Access != 1 && item.DepartmentID == depid)
                 {
                     metroComboBox1.Items.Add(item.UserName);
                 }
@@ -63,8 +68,8 @@ namespace TaskTracking.PresentationLayer
                 context.Add(_calendar);
                 context.SaveChanges();
                 MessageBox.Show("Etkinlik eklendi");
-                
-                mailService.SendEventMail(txtEvent.Texts,selectedEmployee.Email);
+
+                mailService.SendEventMail(txtEvent.Texts, selectedEmployee.Email);
 
                 txtEvent.Texts = "";
             }
