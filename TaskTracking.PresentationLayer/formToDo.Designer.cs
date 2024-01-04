@@ -201,6 +201,7 @@
             this.rjButton2.TabIndex = 11;
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // pictureBox3
             // 

@@ -146,6 +146,7 @@ namespace TaskTracking.PresentationLayer
             formSubmenu2.ProjeAccess = projeAccessId;
             formSubmenu2.ProjeDepID = projeDepIDAccess;
             formSubmenu2.projeEventEmpID = projeEventAccesID;
+            formSubmenu2.projeempID = emp_id;
 
             if (sub2 == null)
             {

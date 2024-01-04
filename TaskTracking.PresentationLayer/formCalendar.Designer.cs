@@ -40,6 +40,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbtarih = new System.Windows.Forms.Label();
             this.eventShowBtn = new ReaLTaiizor.Controls.Button();
+            this.button1 = new ReaLTaiizor.Controls.Button();
+            this.button2 = new ReaLTaiizor.Controls.Button();
             this.SuspendLayout();
             // 
             // daycontainer
@@ -52,24 +54,26 @@
             // 
             // btnonce
             // 
-            this.btnonce.Location = new System.Drawing.Point(958, 692);
+            this.btnonce.Location = new System.Drawing.Point(632, 696);
             this.btnonce.Margin = new System.Windows.Forms.Padding(2);
             this.btnonce.Name = "btnonce";
             this.btnonce.Size = new System.Drawing.Size(70, 30);
             this.btnonce.TabIndex = 1;
             this.btnonce.Text = "Sonraki";
             this.btnonce.UseVisualStyleBackColor = true;
+            this.btnonce.Visible = false;
             this.btnonce.Click += new System.EventHandler(this.btnonce_Click);
             // 
             // btnsonraki
             // 
-            this.btnsonraki.Location = new System.Drawing.Point(81, 692);
+            this.btnsonraki.Location = new System.Drawing.Point(406, 696);
             this.btnsonraki.Margin = new System.Windows.Forms.Padding(2);
             this.btnsonraki.Name = "btnsonraki";
             this.btnsonraki.Size = new System.Drawing.Size(62, 30);
             this.btnsonraki.TabIndex = 1;
             this.btnsonraki.Text = "Önceki";
             this.btnsonraki.UseVisualStyleBackColor = true;
+            this.btnsonraki.Visible = false;
             this.btnsonraki.Click += new System.EventHandler(this.btnsonraki_Click);
             // 
             // label1
@@ -178,11 +182,49 @@
             this.eventShowBtn.TextAlignment = System.Drawing.StringAlignment.Center;
             this.eventShowBtn.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.EnteredColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Image = null;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.button1.Location = new System.Drawing.Point(940, 689);
+            this.button1.Name = "button1";
+            this.button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.button1.Size = new System.Drawing.Size(97, 34);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Sonraki";
+            this.button1.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.EnteredColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button2.Image = null;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.button2.Location = new System.Drawing.Point(81, 692);
+            this.button2.Name = "button2";
+            this.button2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.button2.Size = new System.Drawing.Size(97, 34);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Önceki";
+            this.button2.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FormCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 732);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.eventShowBtn);
             this.Controls.Add(this.lbtarih);
             this.Controls.Add(this.label7);
@@ -220,6 +262,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbtarih;
         private ReaLTaiizor.Controls.Button eventShowBtn;
+        private ReaLTaiizor.Controls.Button button1;
+        private ReaLTaiizor.Controls.Button button2;
     }
 }
 

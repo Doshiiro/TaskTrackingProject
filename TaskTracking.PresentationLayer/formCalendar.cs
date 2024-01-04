@@ -78,7 +78,47 @@ namespace takvim
            
         }
 
-        private void btnsonraki_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            daycontainer.Controls.Clear();
+
+
+            month++;
+            if (month == 13)
+            {
+                month = 1;
+                year++;
+            }
+
+            static_month = month;
+            static_year = year;
+
+
+            string ayismi = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            lbtarih.Text = ayismi + " " + year;
+
+            DateTime aybaslangic = new DateTime(year, month, 1);
+
+            int gunler = DateTime.DaysInMonth(year, month);
+
+
+            int haftaningunleri = ((int)aybaslangic.DayOfWeek - 1 + 7) % 7;
+
+            for (int i = 0; i < haftaningunleri; i++)
+            {
+                UserControlBlank ucblank = new UserControlBlank();
+                daycontainer.Controls.Add(ucblank);
+            }
+            for (int i = 1; i <= gunler; i++)
+            {
+                UserControlDays ucdays = new UserControlDays();
+                ucdays.days(i);
+                daycontainer.Controls.Add(ucdays);
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             daycontainer.Controls.Clear();
 
@@ -122,44 +162,14 @@ namespace takvim
             }
         }
 
+        private void btnsonraki_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void btnonce_Click(object sender, EventArgs e)
         {
-            daycontainer.Controls.Clear();
-
-
-            month++;
-            if (month == 13)
-            {
-                month = 1;
-                year++;
-            }
-
-            static_month = month;
-            static_year = year;
-
-
-            string ayismi = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-            lbtarih.Text = ayismi + " " + year;
-
-            DateTime aybaslangic = new DateTime(year, month, 1);
-
-            int gunler = DateTime.DaysInMonth(year, month);
-
-
-            int haftaningunleri = ((int)aybaslangic.DayOfWeek - 1 + 7) % 7;
-
-            for (int i = 0; i < haftaningunleri; i++)
-            {
-                UserControlBlank ucblank = new UserControlBlank();
-                daycontainer.Controls.Add(ucblank);
-            }
-            for (int i = 1; i <= gunler; i++)
-            {
-                UserControlDays ucdays = new UserControlDays();
-                ucdays.days(i);
-                daycontainer.Controls.Add(ucdays);
-
-            }
+            
         }
     }
 }

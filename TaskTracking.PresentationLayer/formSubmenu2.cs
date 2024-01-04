@@ -25,6 +25,7 @@ namespace TaskTracking.PresentationLayer
         static public int ProjeAccess;
         static public int ProjeDepID;
         static public int projeEventEmpID;
+        static public int projeempID;
         private void formSubmenu2_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
@@ -37,15 +38,16 @@ namespace TaskTracking.PresentationLayer
         }
         public void showDatas()
         {
-            if (ProjeAccess == 0 || ProjeAccess == 2)
+            ProjectRepository projectRepository = new ProjectRepository();
+            var datacal = projectRepository.GetAll();
+
+            TaskTrackingContext context = new TaskTrackingContext();
+
+            if (ProjeAccess == 0)
             {
                 eventShowBtn.Visible = false;
                 projeDeletebtn.Visible = false;
-
-                ProjectRepository projectRepository = new ProjectRepository();
-                var datacal = projectRepository.GetAll();
-
-                TaskTrackingContext context = new TaskTrackingContext();
+                dataGridView2.Columns[3].Visible = false;
 
                 foreach (var item in datacal)
                 {
@@ -73,7 +75,95 @@ namespace TaskTracking.PresentationLayer
 
                     if (projeEventEmpID == item.EventEmpFK_ID)
                     {
-                        dataGridView2.Rows.Add(item.ProjeDescription, projectName.ProjectName, item.ProjeEventID);
+                        if (item.Status == true)
+                        {
+                            dataGridView2.Rows.Add(item.ProjeDescription, projectName.ProjectName, item.ProjeEventID, "", "Yapıldı");
+
+                            projeEventCount++;
+                        }
+                        else
+                        {
+                            dataGridView2.Rows.Add(item.ProjeDescription, projectName.ProjectName, item.ProjeEventID, "", "Yapılmadı");
+
+                            projeEventStatusFalse++;
+                        }
+                        toplamevent++;
+                    }
+                }
+
+                if (ProjeAccess == 0)
+                {
+                    var projects = context.Projects.ToList();
+                    foreach (var item in projects)
+                    {
+                        var projeEventCountMatch = context.ProjeEvent.Where(p => p.ProjectID == item.ProjectID).FirstOrDefault();
+                        if (projeEventCountMatch != null)
+                        {
+                            projeCount++;
+                        }
+                    }
+                }
+                //ilişkili projeleri projeler label'a yazdırma
+                projelbl.Text = "Çalışılan Projeler: " + projeCount.ToString();
+                tasklbl.Text = projeEventCount.ToString() + "/" + toplamevent.ToString();
+            }
+
+
+            if (ProjeAccess == 2)
+            {
+                eventShowBtn.Visible = false;
+                projeDeletebtn.Visible = false;
+                //yönetici bütün eventleri görebilir.
+
+
+                //bütün projeleri görür
+                foreach (var item in datacal)
+                {
+                    var empFKName = context.Employees.Where(emp => emp.emp_ID == item.projectEmp_ID).FirstOrDefault();
+                    var empDepName = context.Departments.Where(d => d.DepID == empFKName.DepartmentID).FirstOrDefault();
+
+                    //kullanıcının olduğu departmanda ki projeleri görebilir.
+                    if (ProjeDepID == item.DepartmentID)
+                    {
+                        dataGridView1.Rows.Add(item.ProjectName, empFKName.UserName, empDepName.DepartmentName, item.ProjectID);
+                    }
+                }
+
+                //bütün görevler gözükür
+                var projeEventsMatch = context.ProjeEvent.ToList();
+                foreach (var eventItem in projeEventsMatch)
+                {
+                    //eğer uygulamaya giren kullanıcının departman id si eşitse. proje eventlerini döndürsün.
+
+                    var projectMatch = context.Projects.Where(proje => proje.ProjectID == eventItem.ProjectID).FirstOrDefault();
+                    var employeeMatch = context.Employees.Where(emp => emp.emp_ID == eventItem.EventEmpFK_ID).FirstOrDefault();
+                    if (projectMatch.DepartmentID == ProjeDepID)
+                    {
+                        if (eventItem.Status == true)
+                        {
+                            dataGridView2.Rows.Add(eventItem.ProjeDescription, projectMatch.ProjectName, eventItem.ProjeEventID, employeeMatch.UserName, "Yapıldı");
+
+                        }
+                        else
+                        {
+                            dataGridView2.Rows.Add(eventItem.ProjeDescription, projectMatch.ProjectName, eventItem.ProjeEventID, employeeMatch.UserName, "Yapılmadı");
+
+                        }
+                    }
+
+                }
+
+                var projeEvents = context.ProjeEvent.ToList();
+                int projeCount = 0;
+                int projeEventCount = 0;
+                int projeEventStatusFalse = 0;
+                int toplamevent = 0;
+                foreach (var item in projeEvents)
+                {
+                    var projectName = context.Projects.Where(p => p.ProjectID == item.ProjectID).FirstOrDefault();
+
+                    if (projeEventEmpID == item.EventEmpFK_ID)
+                    {
                         if (item.Status == true)
                         {
                             projeEventCount++;
@@ -84,18 +174,20 @@ namespace TaskTracking.PresentationLayer
                         }
                         toplamevent++;
                     }
-                    if (item.EventEmpFK_ID == projeEventEmpID)
-                    {
-                        projeCount++;
-                    }
                 }
 
+                var projects = context.Projects.Where(p => p.projectEmp_ID == projeempID).ToList();
+                foreach (var item in projects)
+                {
+                    projeCount++;
+                }
 
                 //ilişkili projeleri projeler label'a yazdırma
                 projelbl.Text = "Çalışılan Projeler: " + projeCount.ToString();
                 tasklbl.Text = projeEventCount.ToString() + "/" + toplamevent.ToString();
-
             }
+
+
             if (ProjeAccess == 0 || ProjeAccess == 1)
             {
                 eventbtn.Visible = false;
@@ -104,11 +196,6 @@ namespace TaskTracking.PresentationLayer
             }
             if (ProjeAccess == 1)
             {
-                ProjectRepository projectRepository = new ProjectRepository();
-                var datacal = projectRepository.GetAll();
-
-                TaskTrackingContext context = new TaskTrackingContext();
-
                 foreach (var item in datacal)
                 {
                     var empFKName = context.Employees.Where(emp => emp.emp_ID == item.projectEmp_ID).FirstOrDefault();
@@ -122,26 +209,36 @@ namespace TaskTracking.PresentationLayer
                 int projeCount = 0;
                 int projeEventCount = 0;
                 int projeEventStatusFalse = 0;
+                int toplamevent = 0;
+
                 foreach (var item in projeEvents)
                 {
                     var projectName = context.Projects.Where(p => p.ProjectID == item.ProjectID).FirstOrDefault();
+                    var employeeMatch = context.Employees.Where(emp => emp.emp_ID == item.EventEmpFK_ID).FirstOrDefault();
 
 
-                    dataGridView2.Rows.Add(item.ProjeDescription, projectName.ProjectName, item.ProjeEventID);
+
                     if (item.Status == true)
                     {
+                        dataGridView2.Rows.Add(item.ProjeDescription, projectName.ProjectName, item.ProjeEventID, employeeMatch.UserName, "Yapıldı");
+
                         projeEventCount++;
                     }
                     else
                     {
+                        dataGridView2.Rows.Add(item.ProjeDescription, projectName.ProjectName, item.ProjeEventID, employeeMatch.UserName, "Yapılmadı");
+
                         projeEventStatusFalse++;
                     }
-
-                    if (item.EventEmpFK_ID == projeEventEmpID)
-                    {
-                        projeCount++;
-                    }
                 }
+                var projects = context.Projects.Where(p => p.projectEmp_ID == projeempID);
+                foreach (var item in projects)
+                {
+                    projeCount++;
+                }
+
+                projelbl.Text = "Çalışılan Projeler: " + projeCount.ToString();
+                tasklbl.Text = projeEventCount.ToString() + "/" + projeEventStatusFalse.ToString();
             }
         }
         private void eventShowBtn_Click(object sender, EventArgs e)

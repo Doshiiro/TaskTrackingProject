@@ -69,7 +69,7 @@ namespace TaskTracking.PresentationLayer
                 context.SaveChanges();
                 MessageBox.Show("Etkinlik eklendi");
 
-                mailService.SendEventMail(txtEvent.Texts, selectedEmployee.Email);
+                mailService.SendEventMail(txtEvent.Texts, selectedEmployee.Email, txtDate.Texts);
 
                 txtEvent.Texts = "";
             }

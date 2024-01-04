@@ -49,7 +49,7 @@ namespace TaskTracking.PresentationLayer
                     {
                         if (access == 2)
                         {
-                            poisonDataGridView1.Rows.Add(item.calender_ID, matchingEmployee.UserName, item.date, item.events,item.emp_ID,item.status );
+                            poisonDataGridView1.Rows.Add(item.calender_ID, matchingEmployee.UserName, item.date, item.events, item.emp_ID, item.status);
                         }
                     }
 
@@ -71,7 +71,7 @@ namespace TaskTracking.PresentationLayer
         private async void btnSave_Click(object sender, EventArgs e)
         {
             DateTime selectedDate = poisonDateTime1.Value;
-            string formattedDate = selectedDate.ToString("yyyy/MM/dd");
+            string formattedDate = selectedDate.ToString("yyyy/M/dd");
             string calendarData = formattedDate.Replace(".", "/");
 
             int calID = Convert.ToInt32(txtCalendarID.Texts);

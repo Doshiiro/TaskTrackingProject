@@ -11,7 +11,7 @@ namespace TaskTracking.PresentationLayer.Services
 {
     public class MailSendServices
     {
-        public void SendEventMail(string eventBody, string eventToMail)
+        public void SendEventMail(string eventBody, string eventToMail, string date)
         {
             string fromAddress = "tasktrackingproje@gmail.com";
             string password = "cfvh jflf visu gurh";
@@ -20,7 +20,8 @@ namespace TaskTracking.PresentationLayer.Services
 
             MailMessage message = new MailMessage(fromAddress, toAddress);
             message.Subject = "Yeni Etkinlik";
-            message.Body = eventBody;
+            message.Body = date + "\n\n" + eventBody;
+
 
             SmtpClient smtpClient = new SmtpClient("smtp.gmail.com");
             smtpClient.Port = 587;

@@ -64,6 +64,8 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eventid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emplooyeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -342,7 +344,9 @@
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.eventid});
+            this.eventid,
+            this.emplooyeName,
+            this.status});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -439,7 +443,7 @@
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.FillWeight = 152.2842F;
+            this.dataGridViewTextBoxColumn1.FillWeight = 194.6842F;
             this.dataGridViewTextBoxColumn1.HeaderText = "Görev Açıklama";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -447,7 +451,7 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.FillWeight = 73.85783F;
+            this.dataGridViewTextBoxColumn2.FillWeight = 133.4769F;
             this.dataGridViewTextBoxColumn2.HeaderText = "Proje İsmi";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -459,6 +463,20 @@
             this.eventid.Name = "eventid";
             this.eventid.ReadOnly = true;
             this.eventid.Visible = false;
+            // 
+            // emplooyeName
+            // 
+            this.emplooyeName.FillWeight = 59.40217F;
+            this.emplooyeName.HeaderText = "Çalışan";
+            this.emplooyeName.Name = "emplooyeName";
+            this.emplooyeName.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.FillWeight = 38.57877F;
+            this.status.HeaderText = "Durum";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
             // 
             // formSubmenu2
             // 
@@ -526,5 +544,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn eventid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emplooyeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
     }
 }

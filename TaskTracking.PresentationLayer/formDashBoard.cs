@@ -188,36 +188,35 @@ namespace TaskTracking.PresentationLayer
         private void rjButton1_Click(object sender, EventArgs e)
         {
             string departman = metroComboBox1.SelectedItem.ToString();
-            int accessUpdate;
-            if (metroComboBox2.SelectedItem.ToString() == "Kullanıcı")
-            {
-                accessUpdate = 0;
-            }
-            else
-            {
-                accessUpdate = 2;
-            }
-            var depData = context.Departments.Where(d => d.DepartmentName == departman).FirstOrDefault();
-            Employee _employee = new Employee()
-            {
-                emp_ID = Convert.ToInt32(txtEmpid.Text),
-                UserName = kullaniciAdiTxt.Texts,
-                Password = passwordTxt.Texts,
-                Email = emailTxt.Texts,
-                DepartmentID = depData.DepID,
-                Access = accessUpdate
-            };
-            if (_employee != null)
-            {
-                context.Employees.Update(_employee);
-                context.SaveChanges();
-                MessageBox.Show("Kullanıcı güncellendi");
-            }
-            else
-            {
-                MessageBox.Show("nesne hatası");
-            }
+            int accessUpdate = (metroComboBox2.SelectedItem.ToString() == "Kullanıcı") ? 0 : 2;
 
+            var depData = context.Departments.SingleOrDefault(d => d.DepartmentName == departman);
+
+            if (depData != null)
+            {
+                Employee existingEmployee = context.Employees.FirstOrDefault(emp => emp.emp_ID == Convert.ToInt32(txtEmpid.Text));
+
+                if (existingEmployee != null)
+                {
+                    // Mevcut nesneyi güncelle
+                    existingEmployee.UserName = kullaniciAdiTxt.Texts;
+                    existingEmployee.Password = passwordTxt.Texts;
+                    existingEmployee.Email = emailTxt.Texts;
+                    existingEmployee.DepartmentID = depData.DepID;
+                    existingEmployee.Access = accessUpdate;
+
+                    context.SaveChanges();
+                    MessageBox.Show("Kullanıcı güncellendi");
+                }
+                else
+                {
+                    MessageBox.Show("Kullanıcı bulunamadı");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Departman bulunamadı");
+            }
         }
 
         private void poisonDataGridView2_CellEnter(object sender, DataGridViewCellEventArgs e)

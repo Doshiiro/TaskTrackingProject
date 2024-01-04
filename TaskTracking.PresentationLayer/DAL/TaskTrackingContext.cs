@@ -13,7 +13,7 @@ namespace TaskTracking.PresentationLayer.DAL
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source = DESKTOP-ONGKPN7; Initial Catalog = TaskTrackingDB; Integrated Security=true; MultipleActiveResultSets=true; TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Data Source = DESKTOP-ONGKPN7; Initial Catalog = DemoDB; Integrated Security=true; MultipleActiveResultSets=true; TrustServerCertificate=True;");
         }
 
 
