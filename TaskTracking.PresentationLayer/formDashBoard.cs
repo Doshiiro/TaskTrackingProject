@@ -1,4 +1,6 @@
-﻿using ReaLTaiizor.Forms;
+﻿using FluentValidation;
+using FluentValidation.Results;
+using ReaLTaiizor.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,6 +14,7 @@ using System.Windows.Forms;
 using TaskTracking.PresentationLayer.DAL;
 using TaskTracking.PresentationLayer.DesignForm;
 using TaskTracking.PresentationLayer.Entities;
+using TaskTracking.PresentationLayer.Entities.Validations;
 using TaskTracking.PresentationLayer.Management.Concrete;
 
 namespace TaskTracking.PresentationLayer
@@ -205,6 +208,18 @@ namespace TaskTracking.PresentationLayer
                     existingEmployee.DepartmentID = depData.DepID;
                     existingEmployee.Access = accessUpdate;
 
+
+                    EmployeeValidation validationRules = new EmployeeValidation();
+                    ValidationResult result = validationRules.Validate(existingEmployee);
+                    IList<ValidationFailure> failures = result.Errors;
+                    if (!result.IsValid)
+                    {
+                        foreach (ValidationFailure failure in failures)
+                        {
+                            MessageBox.Show(failure.ErrorMessage, "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
                     context.SaveChanges();
                     MessageBox.Show("Kullanıcı güncellendi");
                 }
@@ -232,7 +247,20 @@ namespace TaskTracking.PresentationLayer
             if (existingDepartment != null)
             {
                 // Mevcut nesneyi güncelle
+
                 existingDepartment.DepartmentName = departmantUpdatetxt.Texts;
+
+                DepartmanValidation validationRules = new DepartmanValidation();
+                ValidationResult result = validationRules.Validate(existingDepartment);
+                IList<ValidationFailure> failures = result.Errors;
+                if (!result.IsValid)
+                {
+                    foreach (ValidationFailure failure in failures)
+                    {
+                        MessageBox.Show(failure.ErrorMessage, "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
 
                 context.SaveChanges();
                 MessageBox.Show("Departman Adı Güncellendi");

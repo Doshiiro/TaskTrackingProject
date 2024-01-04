@@ -227,6 +227,7 @@
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\ProjectEntity.cs" />
     <Compile Include="Entities\ProjeEvent.cs" />
+    <Compile Include="Entities\Validations\DepartmanValidation.cs" />
     <Compile Include="Entities\Validations\EmployeeValidation.cs" />
     <Compile Include="EventForm.cs">
       <SubType>Form</SubType>
