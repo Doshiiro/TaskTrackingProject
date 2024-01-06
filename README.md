@@ -1,3 +1,5 @@
+Işık Üniversitesi Görsel Programalama 2 Proje Ödevi
+
 yönetici girişi için;
  kullanıcı adı : melih
  şifre : 123
